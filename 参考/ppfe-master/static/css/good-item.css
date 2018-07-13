@@ -1,0 +1,75 @@
+.good-main {
+    width: 1136px;
+    height: 350px;
+    padding:30px 0px 30px 10px;
+}
+.good-main .section {
+    position: relative;
+    float: left;
+    width: 260px;
+    height: 285px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+}
+.good-main .section-body {
+    height: 219px;
+    background-color: #fbfbfb;
+}
+.good-main .section-footer {
+    height: 65px;
+    line-height: 65px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+.good-main .section:hover,
+.good-main ul:not(:hover) .section.is-focus {
+    border: 1px solid #139bd4;
+}
+.good-main .label {
+    padding-top: 7px;
+    height: 35px;
+    text-align: center;
+}
+.good-main h4 {
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+}
+.good-main .price-number {
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+    color: #139bd4;
+    text-align: center;
+}
+.good-main .price-number span {
+    margin-left: -1.8em;
+    margin-right: -0.25em;
+    vertical-align: 1.2em;
+    font-size: 18px;
+}
+.good-main .description {
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+    font-size: 13px;
+    color: #333;
+}
+.good-main .good-variation {
+    height: 64px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+.good-main .good-variation span {
+    color: #139bd4;
+}
+.good-main .good-variation img {
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}

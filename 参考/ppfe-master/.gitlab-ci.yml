@@ -1,0 +1,67 @@
+stages:
+  - build
+  - docker_build
+  - deploy
+build_dist:
+  image: 'node:latest'
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - 'sed -i "s|__BUILD_NUMBER__|$CI_PIPELINE_ID|g" static/config/config.js'
+    - 'npm --registry=https://registry.npm.taobao.org install'
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+  tags:
+    - docker
+build_docker_image:
+  image: docker
+  stage: docker_build
+  script:
+    - 'docker login -u gitlab-ci-token -p $CI_JOB_TOKEN git.yunbaoguan.cn:5005'
+    - 'docker build -t git.yunbaoguan.cn:5005/zhijian/passport/ppfe/image:$CI_PIPELINE_ID .'
+    - 'docker push git.yunbaoguan.cn:5005/zhijian/passport/ppfe/image:$CI_PIPELINE_ID'
+  tags:
+    - image
+  only:
+    - master@zhijian/passport/ppfe
+deploy_dev:
+  image: docker
+  stage: deploy
+  environment:
+    name: dev
+    url: 'http://192.168.3.146:81'
+  script:
+    - 'docker -H 192.168.3.146 login -u gitlab-ci-token -p $CI_JOB_TOKEN git.yunbaoguan.cn:5005'
+    - 'docker -H 192.168.3.146 pull git.yunbaoguan.cn:5005/zhijian/passport/ppfe/image:$CI_PIPELINE_ID || true'
+    - 'docker -H 192.168.3.146 stop zhijian-ppfe || true'
+    - 'docker -H 192.168.3.146 rm zhijian-ppfe || true'
+    - 'docker -H 192.168.3.146 run -d --restart=always -p 81:80 --name zhijian-ppfe -e BACKEND_ENDPOINT=http://192.168.3.146:8082 -e  OFFICIAL_WEBSITE=http://192.168.53.77:8086 -e EXPERIMENTAL=9 git.yunbaoguan.cn:5005/zhijian/passport/ppfe/image:$CI_PIPELINE_ID'
+  tags:
+    - image
+  only:
+    - master@zhijian/passport/ppfe
+deploy_prod:
+  stage: deploy 
+  environment:
+    name: prod
+    url: 'https://passport.yunbaoguan.cn'
+  before_script:
+    - 'eval $(ssh-agent -s)'
+    - 'ssh-add <(echo "$SSH_PRIVATE_KEY")'
+    - 'mkdir -p ~/.ssh'
+    - 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - 'docker login -u gitlab-ci-token -p $CI_JOB_TOKEN git.yunbaoguan.cn:5005'
+    - 'docker pull git.yunbaoguan.cn:5005/zhijian/passport/ppfe/image:$CI_PIPELINE_ID'
+    - 'docker save git.yunbaoguan.cn:5005/zhijian/passport/ppfe/image:$CI_PIPELINE_ID | bzip2 | pv | ssh deployer@ppbe.yunbaoguan.cn "bunzip2 | docker load"'
+    - 'ssh deployer@ppbe.yunbaoguan.cn "( docker stop ppfe ; docker rm ppfe ) || true"'
+    - 'ssh deployer@ppbe.yunbaoguan.cn "docker run -d --restart=always --name=ppfe -e VIRTUAL_HOST=passport.yunbaoguan.cn -e OFFICIAL_WEBSITE=http://www.yunbaoguan.cn -e LETSENCRYPT_EMAIL=kmtong@yunbaoguan.cn -e BACKEND_ENDPOINT=https://ppbe.yunbaoguan.cn -e BAIDU_ANALYTICS=cf4079bbad97a52a4c53e0698b190cf4 -e EXPERIMENTAL=0 git.yunbaoguan.cn:5005/zhijian/passport/ppfe/image:$CI_PIPELINE_ID"'
+  tags:
+    - shell
+  when: manual
+  only:
+    - master@zhijian/passport/ppfe

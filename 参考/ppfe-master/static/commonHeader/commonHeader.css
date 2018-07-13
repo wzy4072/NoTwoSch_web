@@ -1,0 +1,375 @@
+#common-header {
+    height: 65px;
+    background-color: #139bd4;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    min-width: 1430px;
+    width: 100%;
+}
+#common-header * {
+    box-sizing: border-box;
+}
+#common-header a,#common-header a:hover,#common-header a:visited,#common-header a:link,#common-header a:active  {
+    text-decoration: none;
+    outline: none;
+}
+#common-header ul,#common-header li {
+    list-style: none;
+}
+#common-header p {
+    margin: 0px;
+}
+.header-clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+#common-header-title {
+    position: relative;
+    height: 65px;
+    width: 250px;
+    float: left;
+    padding-left: 30px;
+    padding-top: 6px;
+}
+#common-header-title .header-title-left{
+    float: left;
+
+}
+#common-header-title .header-title-right {
+    position: relative;
+    float: left;
+    width: 150px;
+    font-size: 12px;
+    margin-left: 20px;
+    padding-top: 5px;
+    text-align: left;
+}
+#common-header-title .header-title-right p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#common-header-brand {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+#common-header-title .header-title-text {
+    font-size: 15px;
+}
+#header-title-select {
+    position: absolute;
+    top:10px;
+    right: -30px;
+    font-size: 12px;
+}
+#header-title-select-btn {
+    cursor: pointer;
+    padding: 6px;
+    background-color: #4faef1;
+}
+#header-title-select-btn:hover {
+    background-color: #1f89d6;
+}
+#header-title-select-btn .header-title-select-span {
+    position: relative;
+    top:5px;
+
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white;
+    border-bottom: 6px solid transparent;
+}
+#header-title-select-items {
+    position: absolute;
+    top: 59px;
+    left: -111px;
+    display: none;
+    z-index: 1000;
+}
+#header-title-select-items li{
+    width: 110px;
+    height: 30px;
+    background-color: #999;
+    padding-left: 10px;
+}
+#header-title-select-items a{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#header-title-select-items li:hover {
+    background-color: #1f89d6;
+}
+#common-header-nav {
+    width: 100%;
+    margin:0 -250px 0 -330px;
+    padding: 0 250px 0 330px;
+}
+#common-header-nav ._nav {
+    height: 65px;
+    float: left;
+}
+#common-header-nav .header-info-jump {
+    float: left;
+}
+#common-header-nav a,#common-header-contact a, #header-info-message{
+    display: inline-block;
+    padding: 15px 16px;
+    color: #fff;
+    height: 65px;
+}
+#common-header-nav a p,#common-header-contact a p, #header-info-message p{
+    font-size: 12px;
+    height:20px;
+    color: #fff;
+}
+#common-header-nav a img, #common-header-contact a img, #header-info-message img{
+    height:18px;
+}
+#common-header-nav a:hover ,#common-header-contact a:hover, #header-info-message:hover{
+    background-color: #1f89d6;
+}
+#common-nav-config {
+    float: left;
+    height: 88px;
+    padding: 21px 16px 20px 16px;
+    cursor: pointer;
+}
+#common-nav-config:hover {
+    background-color: #1f89d6;
+}
+#common-header-contact {
+    position: relative;
+    width: 290px;
+    float: right;
+    height: 65px;
+}
+#common-header-contact a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#header-contact-1 img,#header-contact-2 img {
+    margin-top: 2px;
+}
+#header-contact-3 {
+    padding: 15px 10px!important;
+}
+#header-contact-3 img {
+    height: 20px!important;
+}
+#common-header-info {
+    position: relative;
+    width: 230px;
+    /*padding-right: 30px;*/
+    float: right;
+    height: 65px;
+}
+#common-header-info > div {
+    float: right;
+    height: 65px;
+}
+#common-header-info .header-info-img-box {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#header-info-message {
+    position: relative;
+}
+#common-header-red-dot {
+    display: none;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+}
+#common-header-profile-picture {
+    display: inline-block;
+    position: relative;
+    top: 14px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+#header-info-select-items {
+    position: absolute;
+    display: none;
+    top: 65px;
+    left: 108px;
+    z-index: 1000;
+    padding: 0;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+}
+#header-info-select-items #header-info-name {
+    font-size: 16px;
+    color: #000;
+    border-bottom: 1px solid #00aee0;
+}
+#header-info-name span {
+    color: #00aee0;
+    font-size: 14px;
+}
+#header-info-select-items li {
+    width: 120px;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #ddd;
+}
+#header-info-select-items img {
+    position: relative;
+    top: 2px;
+    left: -5px;
+    vertical-align: baseline;
+}
+#header-info-select-items a {
+    display: inline-block;
+    width: 120px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+#header-info-select-items a:hover {
+    background-color: #eee;
+}
+#common-header-store {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 88px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    color: #000;
+}
+#common-header-store-cover {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+#common-header-store-show {
+    height: 416px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#common-header-store-show .inner-store {
+    position: relative;
+    width: 800px;
+    margin:0 auto;
+    padding-top: 14px;
+}
+#common-header-store-show .inner-store-hold {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#common-header-store-show .inner-store-no{
+
+}
+#common-header-edit-btn {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    border-radius: 2px;
+    width: 54px;
+    height: 26px;
+    border: 1px solid #ccc;
+}
+#common-header-edit-btn:hover {
+    border: 1px solid #29e;
+    color: #29e;
+}
+#common-header-btn-text {
+    line-height: 26px;
+    font-size: 12px;
+}
+#common-header-store-show .inner-title {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    margin:8px 0;
+}
+#common-header-store-show .inner-title-tip {
+    margin-left: 8px;
+    color: #999;
+    font-weight: 500;
+}
+#common-header-store-show ul {
+    margin-left: -12px;
+}
+#common-header-store-show li {
+    position: relative;
+    width: 72px;
+    height: 68px;
+    float: left;
+}
+#common-header-store-show a {
+    color: #000;
+}
+#common-header-store-show .store-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #24a4ff;
+}
+#common-header-store-show .store-icon img {
+    width: 16px;
+    height: 16px;
+    margin-top: 7px;
+}
+#common-header-stick-top {
+    min-height: 68px;
+}
+#common-header-store-show .store-text {
+    font-size: 12px;
+}
+#common-header-store-show.header-show .common-header-editIcon {
+    display: inline-block;
+}
+#common-header-store-show .common-header-editIcon{
+    display: none;
+    position: absolute;
+    top: -6px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    background-color: rgb(255, 82, 82);
+    cursor: pointer;
+    font-family: "Microsoft YaHei";
+}
+#common-header-store-show .common-header-editIcon.header-edit-icon-small{
+    transform: scale(.8) translateZ(0);
+}
+#common-header-store-show .common-header-editIcon::after {
+    content: "+";
+    color: #fff;
+    position: relative;
+    top: -7px;
+    left: 1px;
+    font-size: 20px;
+    font-weight: 900;
+}
+#common-header-stick-top .common-header-editIcon::after {
+    content: "-";
+}

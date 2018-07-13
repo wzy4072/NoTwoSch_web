@@ -1,0 +1,66 @@
+stages:
+  - build
+  - docker_build
+  - deploy
+build_dist:
+  image: 'node:latest'
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - 'npm --registry=https://registry.npm.taobao.org install'
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+  tags:
+    - docker
+build_docker_image:
+  image: docker
+  stage: docker_build
+  script:
+    - 'docker login -u gitlab-ci-token -p $CI_JOB_TOKEN git.yunbaoguan.cn:5005'
+    - 'docker build -t git.yunbaoguan.cn:5005/zhijian/shipper/spfe/image:$CI_PIPELINE_ID .'
+    - 'docker push git.yunbaoguan.cn:5005/zhijian/shipper/spfe/image:$CI_PIPELINE_ID'
+  tags:
+    - image
+  only:
+    - master@zhijian/shipper/spfe
+deploy_dev:
+  image: docker
+  stage: deploy
+  environment:
+    name: dev
+    url: 'http://192.168.3.146:83'
+  script:
+    - 'docker -H 192.168.3.146 login -u gitlab-ci-token -p $CI_JOB_TOKEN git.yunbaoguan.cn:5005'
+    - 'docker -H 192.168.3.146 pull git.yunbaoguan.cn:5005/zhijian/shipper/spfe/image:$CI_PIPELINE_ID || true'
+    - 'docker -H 192.168.3.146 stop spfe || true'
+    - 'docker -H 192.168.3.146 rm spfe || true'
+    - 'docker -H 192.168.3.146 run -d --restart=always -p 83:80 --name spfe -e APP_ENDPOINT=http://192.168.3.146:8088 -e PASSPORT_ENDPOINT=http://192.168.3.146:8082 -e PASSPORT_URL=http://192.168.3.146:81 git.yunbaoguan.cn:5005/zhijian/shipper/spfe/image:$CI_PIPELINE_ID'
+  tags:
+    - image
+  only:
+    - master@zhijian/shipper/spfe
+deploy_prod:
+  stage: deploy
+  environment:
+    name: prod
+    url: 'https://shipper.yunbaoguan.cn'
+  before_script:
+    - 'eval $(ssh-agent -s)'
+    - 'ssh-add <(echo "$SSH_PRIVATE_KEY")'
+    - 'mkdir -p ~/.ssh'
+    - 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - 'docker login -u gitlab-ci-token -p $CI_JOB_TOKEN git.yunbaoguan.cn:5005'
+    - 'docker pull git.yunbaoguan.cn:5005/zhijian/shipper/spfe/image:$CI_PIPELINE_ID'
+    - 'docker save git.yunbaoguan.cn:5005/zhijian/shipper/spfe/image:$CI_PIPELINE_ID | bzip2 | pv | ssh deployer@ppbe.yunbaoguan.cn "bunzip2 | docker load"'
+    - 'ssh deployer@ppbe.yunbaoguan.cn "( docker stop spfe ; docker rm spfe ) || true"'
+    - 'ssh deployer@ppbe.yunbaoguan.cn "docker run -d --restart=always --name=spfe -e VIRTUAL_HOST=shipper.yunbaoguan.cn -e LETSENCRYPT_HOST=shipper.yunbaoguan.cn -e LETSENCRYPT_EMAIL=kmtong@yunbaoguan.cn -e BACKEND_ENDPOINT=https://spbe.yunbaoguan.cn -e PASSPORT_URL=https://passport.yunbaoguan.cn git.yunbaoguan.cn:5005/zhijian/shipper/spfe/image:$CI_PIPELINE_ID"'
+  tags:
+    - shell
+  when: manual
+  only:
+    - master@zhijian/shipper/spfe

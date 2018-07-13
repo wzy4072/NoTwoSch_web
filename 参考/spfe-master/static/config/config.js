@@ -1,0 +1,3 @@
+window['APP_ENDPOINT_URL'] = '__APP_ENDPOINT__';
+window['ENDPOINT_URL'] = '__PASSPORT_ENDPOINT__';
+window['PASSPORT_URL'] = '__PASSPORT_URL__';

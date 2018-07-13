@@ -1,0 +1,16 @@
+{
+    "posts": [
+        { "id": 1, "title": "json-server", "author": "typicode" }
+    ],
+    "comments": [
+        { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" },
+    "context-login": [
+        {"sessionId":"a477615f-c38c-4e8d-9079-9b8786dc421a","person":{"id":1,"username":"test","name":"Test User","email":"test@test.com","mobile":"15010000000","avatar":null},"currentCorporate":{"id":1,"name":"Test Corporate 测试 企业名","website":"http://www.baidu.com","address":"1 Baidu Street","logo":null},"corporates":[{"id":1,"name":"Test Corporate 测试 企业名","website":"http://www.baidu.com","address":"1 Baidu Street","logo":null},{"id":3,"name":"123","website":"123","address":"311","logo":null},{"id":4,"name":"企业 DOG  沙皮狗贸易公司","website":"www.shapi.com","address":"南山智园天鸽大厦","logo":null}],"name":"test"}
+    ],
+    "context-reload": [
+        {"sessionId":"a477615f-c38c-4e8d-9079-9b8786dc421a","person":{"id":1,"username":"test","name":"Test User","email":"test@test.com","mobile":"15010000000","avatar":null},"currentCorporate":{"id":1,"name":"Test Corporate 测试 企业名","website":"http://www.baidu.com","address":"1 Baidu Street","logo":null},"corporates":[{"id":1,"name":"Test Corporate 测试 企业名","website":"http://www.baidu.com","address":"1 Baidu Street","logo":null},{"id":3,"name":"123","website":"123","address":"311","logo":null},{"id":4,"name":"企业 DOG  沙皮狗贸易公司","website":"www.shapi.com","address":"南山智园天鸽大厦","logo":null}],"name":"test"}
+    ]
+    
+}
