@@ -1,7 +1,7 @@
-import Home from './home`.vue'
+import Home from './home.vue'
 
-import Welcome from './welcome'
-import StuManage from './stuManage'
+import Welcome from '../welcome'
+import StuManage from '../stuManage'
 
 const homeComponent = [
   Home
@@ -17,16 +17,14 @@ const install = function (Vue, opts) {
   homeChildCompents.map(c => Vue.use(c))
 }
 const homeChildRoutes = function () {
-  var childs =  [].concat.apply([],[{path: '',name: 'Home2', component: Home}],homeChildCompents.map(component => component.routes !== undefined ? component.routes() : []))
- console.log(childs);
+  var childs =  [].concat.apply([{path: '',name: 'Home', component: Home}],homeChildCompents.map(component => component.routes !== undefined ? component.routes() : []))
  return childs
 }
-console.log('home-childroutes',homeChildRoutes())
 
 const routes = function () {
   return [{
     path: '/home',
-    name: 'Home',
+    // name: 'Home',
     component: Home,
     children: homeChildRoutes()
   }]

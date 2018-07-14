@@ -1,5 +1,5 @@
-import Login from './login'
-import Home from './home'
+import Login from './login/index.js'
+import Home from './home/index.js'
 const components = [
   Login,
   Home

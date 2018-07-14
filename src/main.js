@@ -2,9 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Element from 'element-ui'
 import App from './App.vue'
-import api from '@/api/common/loginout';
 import EgjComponents from '@/components/index.js'
 import 'element-ui/lib/theme-chalk/index.css'
+
+import api from '@/api/common/loginout';
 Vue.config.productionTip = false
 
 Vue.use(Element)

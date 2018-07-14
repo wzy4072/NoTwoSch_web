@@ -51,17 +51,17 @@ export default {
   },
   methods: {},
   created() {
-    // var _this = this;
-    // setTimeout(function() {
-    //   _this.loggingIn = false;
-    //   _this.accessGranted = true;
-    //   _this.leftMenu = [
-    //     { name: "欢迎页", icon: "menu", route: "/welcome" },
-    //     { name: "学生管理", icon: "goods", route: "/stumanage/list" },
-    //     { name: "二维码", icon: "goods", route: "/qrcode" }
-    //   ];
-    //   _this.$router.push("/welcome");
-    // }, 1000);
+    var _this = this;
+    setTimeout(function() {
+      _this.loggingIn = false;
+      _this.accessGranted = true;
+      _this.leftMenu = [
+        { name: "欢迎页", icon: "menu", route: "/welcome" },
+        { name: "学生管理", icon: "goods", route: "/stumanage/list" },
+        { name: "二维码", icon: "goods", route: "/qrcode" }
+      ];
+      _this.$router.push("/welcome");
+    }, 1000);
 
     // 转到主页
   }
