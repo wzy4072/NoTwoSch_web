@@ -1,7 +1,6 @@
-import Welcome from './welcome.vue'
-
+import Login from './login.vue'
 const components = [
-  Welcome
+  Login
 ]
 const install = function (Vue, opts) {
   components.map(c => {
@@ -10,7 +9,7 @@ const install = function (Vue, opts) {
 }
 const routes = function () {
   return [
-    { path: '/', name: 'Welcome', component: Welcome }
+    { path: '/login', name: 'Login', component: Login },
   ]
 }
 

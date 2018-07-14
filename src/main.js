@@ -1,40 +1,55 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
 import Router from 'vue-router'
-// import Router from './router'
 import Element from 'element-ui'
-import EgjComponents from '@/components'
+import App from './App.vue'
+import api from '@/api/common/loginout';
+import EgjComponents from '@/components/index.js'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false
 
 Vue.use(Element)
 Vue.use(Router)
+
 // 写法1
-// var modules = [
-//   EgjComponents
-// ]
+var modules = [
+  EgjComponents
+]
+var allRoutes = [].concat.apply([], modules
+  .map(m => {
+    Vue.use(m)
+    return m
+  })
+  .map(m => m.routes !== undefined ? m.routes() : [])
+)
 
-// var allRoutes = [].concat.apply([], modules
-//   .map(m => {
-//     Vue.use(m)
-//     return m
-//   })
-//   .map(m => m.routes !== undefined ? m.routes() : [])
-// )
-// 写法2
-Vue.use(EgjComponents)
-var allRoutes = EgjComponents.routes()
+const router = new VueRouter({ routes: allRoutes })
 
-var router = new Router({
-  routes: allRoutes
-})
-
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#admin',
+    render: h => h(App),
+    router: router,
+    // watch:{
+    //     "$route" : 'checkLogin'
+    // },
+    methods:{
+        // checkLogin(){
+        //     if(this.$router.currentRoute.path === "/login") {
+        //         return
+        //     }
+        //     api.checkLogin()
+        //         .then(resp => {})
+        //         .catch(e => {
+        //             if(e.status === 401) { 
+        //                 this.$router.push("/login");
+        //             }else if(e.data){ // 能获取到状态值的其他情况
+        //                 this.$message.error(e.data, 4);
+        //             }else { // 网络连接失败的情况
+        //                 this.$message.error(e, 4);
+        //             }
+        //         })
+        // }
+    },
+    created: function () {
+    }
 })
+
