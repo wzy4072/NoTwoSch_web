@@ -22,10 +22,10 @@ var allRoutes = [].concat.apply([], modules
   .map(m => m.routes !== undefined ? m.routes() : [])
 )
 
-const router = new VueRouter({ routes: allRoutes })
+const router = new Router({ routes: allRoutes })
 
 new Vue({
-    el: '#admin',
+    el: '#app',
     render: h => h(App),
     router: router,
     // watch:{

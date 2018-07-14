@@ -10,7 +10,7 @@ const install = function (Vue, opts) {
 }
 const routes = function () {
   return [
-    { path: '/', name: 'Welcome', component: Welcome }
+    { path: '/Welcome', name: 'Welcome', component: Welcome }
   ]
 }
 

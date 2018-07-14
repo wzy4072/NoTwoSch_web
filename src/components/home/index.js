@@ -17,17 +17,20 @@ const install = function (Vue, opts) {
   homeChildCompents.map(c => Vue.use(c))
 }
 const homeChildRoutes = function () {
-  return [].concat.apply([],[{path: '',name: 'Home', component: Home}],homeChildCompents.map(component => component.routes !== undefined ? component.routes() : []))
+  var childs =  [].concat.apply([],[{path: '',name: 'Home2', component: Home}],homeChildCompents.map(component => component.routes !== undefined ? component.routes() : []))
+ console.log(childs);
+ return childs
 }
+console.log('home-childroutes',homeChildRoutes())
+
 const routes = function () {
   return [{
     path: '/home',
     name: 'Home',
     component: Home,
     children: homeChildRoutes()
-  }, ]
+  }]
 }
-
 export default {
   install,
   routes

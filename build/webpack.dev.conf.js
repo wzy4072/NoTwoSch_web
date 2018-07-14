@@ -53,7 +53,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: 'admin.html',
+      filename: 'index.html',
       template: 'HTML/admin.html',
       inject: true
     }),

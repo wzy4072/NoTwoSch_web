@@ -1,6 +1,6 @@
 <template>
     <div id="login">
-         登录的表单
+        this is login page
     </div>
 </template>
 
@@ -9,8 +9,9 @@
 </style>
 
 <script>
-    import api from '@/api/admin/common';
+    import api from '@/api/common/loginout';
     export default {
+        name:'login',
         data() {
             return {
                 spinning: false,

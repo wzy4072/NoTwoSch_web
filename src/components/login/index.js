@@ -4,12 +4,14 @@ const components = [
 ]
 const install = function (Vue, opts) {
   components.map(c => {
+    console.log(c.name)
     Vue.component(c.name, c)
   })
 }
 const routes = function () {
   return [
-    { path: '/login', name: 'Login', component: Login },
+    { path: '/login', name: 'login', component: Login },
+    { path: '/', name: 'login2', component: Login },
   ]
 }
 
