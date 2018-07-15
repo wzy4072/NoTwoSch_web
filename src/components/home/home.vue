@@ -42,7 +42,9 @@ export default {
       context: null,
       leftMenu: [
         { name: "欢迎页", icon: "menu", route: "/welcome" },
-        { name: "学生管理", icon: "goods", route: "/stumanage/list" },
+        { name: "学生管理", icon: "goods", children :[
+          { name: "学生列表",  route: "/stumanage/list" }          
+        ]},
         { name: "二维码", icon: "goods", route: "/qrcode" }
       ],
       accessGranted: false,
@@ -55,11 +57,6 @@ export default {
     setTimeout(function() {
       _this.loggingIn = false;
       _this.accessGranted = true;
-      _this.leftMenu = [
-        { name: "欢迎页", icon: "menu", route: "/welcome" },
-        { name: "学生管理", icon: "goods", route: "/stumanage/list" },
-        { name: "二维码", icon: "goods", route: "/qrcode" }
-      ];
       _this.$router.push("/welcome");
     }, 1000);
 

@@ -11,7 +11,6 @@ const install = function (Vue, opts = []) {
 const routes = function () {
   return [].concat.apply([], components.map(component => component.routes !== undefined ? component.routes() : []))
 }
-console.log('allroutes',routes())
 export default {
   install,
   routes

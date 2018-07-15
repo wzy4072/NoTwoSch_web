@@ -5,12 +5,14 @@ import App from './App.vue'
 import EgjComponents from '@/components/index.js'
 import 'element-ui/lib/theme-chalk/index.css'
 
+import pubTools from '@/plugins/tools.js'
+
 import api from '@/api/common/loginout';
 Vue.config.productionTip = false
 
 Vue.use(Element)
 Vue.use(Router)
-
+Vue.use(pubTools)
 // 写法1
 var modules = [
   EgjComponents
