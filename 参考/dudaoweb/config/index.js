@@ -1,4 +1,5 @@
 'use strict'
+// 
 // Template version: 1.2.4
 // see http://vuejs-templates.github.io/webpack for documentation.
 //配置本地node服务端读取JSON文件

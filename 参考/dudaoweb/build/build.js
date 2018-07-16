@@ -1,3 +1,4 @@
+// 生产环境 打包时的输入 可以不要
 'use strict'
 require('./check-versions')()
 
