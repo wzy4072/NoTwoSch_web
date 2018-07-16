@@ -15,6 +15,8 @@
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" @click="login('ruleForm')">Login</el-button>
+                    <el-button type="primary" @click="checkLogin">checkLogin</el-button>
+                    
                 </el-form-item>
                 </el-form>
             </el-col>
@@ -32,7 +34,7 @@
 </style>
 
 <script>
-import api from "@/api/common/loginout";
+import api from "@/api/common/account";
 export default {
   name: "login",
   data() {
@@ -71,7 +73,7 @@ export default {
         })
         .then(requst => {
           if (requst.success === true) {
-            this.$router.push("/home");
+            // this.$router.push("/home");
           } else {
             this.$message.error(requst.message, 3);
           }
@@ -81,6 +83,17 @@ export default {
           this.$message.error(message);
           this.showLoading = false;
         });
+    },
+    checkLogin() {
+      // 全局设置loadding
+      api
+        .checkLogin()
+        .then(requst => {
+          if (requst.success === true) {
+          } else {
+            this.$message.error(requst.message, 3);
+          }
+        })
     }
   }
 };
