@@ -1,0 +1,41 @@
+{
+  "code": 1,
+  "desc": "success",
+  "data": null,
+  "token": null,
+  "list": [
+      {
+          "menuId": 693,
+          "menuName": "组织与管理",
+          "menuCode": "1",
+          "menuValue": "组织与管理",
+          "menuType": "PROCESS_SUP_ITEM",
+          "orderId": 1,
+          "parentId": -1,
+          "childMenus": [
+              {
+                  "menuId": 694,
+                  "menuName": "幼儿园管理",
+                  "menuCode": "2",
+                  "menuValue": "幼儿园管理",
+                  "menuType": "PROCESS_SUP_ITEM",
+                  "orderId": 2,
+                  "parentId": 693,
+                  "childMenus": [
+                      {
+                          "menuId": 696,
+                          "menuName": "架构与愿景",
+                          "menuCode": "4",
+                          "menuValue": "架构与愿景",
+                          "menuType": "PROCESS_SUP_ITEM",
+                          "orderId": 4,
+                          "parentId": 694,
+                          "childMenus": []
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "recordCount": 1
+}

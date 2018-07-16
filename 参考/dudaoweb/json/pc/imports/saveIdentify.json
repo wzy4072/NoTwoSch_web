@@ -1,0 +1,54 @@
+{
+  "code": 200,
+  "desc": "success",
+  "data": {
+    "identifyId": 2,
+    "identifyName": "学段",
+    "createrId": null,
+    "createrTime": 1511767116961,
+    "modifyId": null,
+    "modifyTime": null,
+    "isDel": 0,
+    "schoolCode": null,
+    "labelList": [
+      {
+        "labelId": null,
+        "labelPid": -1,
+        "identifyId": 2,
+        "labelName": "小学",
+        "createrId": null,
+        "createrTime": 1511767117023,
+        "modifyId": null,
+        "modifyTime": null,
+        "orderId": 1,
+        "schoolCode": null
+      },
+      {
+        "labelId": null,
+        "labelPid": -1,
+        "identifyId": 2,
+        "labelName": "初中",
+        "createrId": null,
+        "createrTime": 1511767117086,
+        "modifyId": null,
+        "modifyTime": null,
+        "orderId": 2,
+        "schoolCode": null
+      },
+      {
+        "labelId": null,
+        "labelPid": -1,
+        "identifyId": 2,
+        "labelName": "高中",
+        "createrId": null,
+        "createrTime": 1511767117117,
+        "modifyId": null,
+        "modifyTime": null,
+        "orderId": 3,
+        "schoolCode": null
+      }
+    ]
+  },
+  "list": null,
+  "recordCount": null
+}

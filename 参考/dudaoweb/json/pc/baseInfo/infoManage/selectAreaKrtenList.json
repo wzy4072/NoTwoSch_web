@@ -1,0 +1,30 @@
+{
+    "code": 1,
+    "desc": "查询成功",
+    "data": [
+        {
+            "counts": 2,
+            "pesrsons": "督导管理员,123",
+            "krtenCode": "201803001",
+            "krtenName": "小太阳",
+            "superIds": "20,21"
+        },
+        {
+            "counts": 0,
+            "pesrsons": "",
+            "krtenCode": "201803002",
+            "krtenName": "大月亮",
+            "superIds": ""
+        },
+        {
+            "counts": 0,
+            "pesrsons": "",
+            "krtenCode": "201803003",
+            "krtenName": "222",
+            "superIds": ""
+        }
+    ],
+    "token": null,
+    "list": null,
+    "recordCount": null
+}

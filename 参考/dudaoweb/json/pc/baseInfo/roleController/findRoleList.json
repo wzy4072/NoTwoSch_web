@@ -1,0 +1,42 @@
+{
+  "code": 200,
+  "desc": "success",
+  "data": null,
+  "token": null,
+  "list": [{
+    "roleId": 7,
+    "areaCode": "YT",
+    "isUse": 1,
+    "roleType": 1,
+    "krtenCode": null,
+    "roleCode": null,
+    "baseRole": "0",
+    "deptId": null,
+    "deptName": null,
+    "roleName": "督导组长",
+    "roleDesc": null,
+    "createBy": 1,
+    "modifyBy": 1,
+    "createDate": 1523427528000,
+    "modifyDate": 1523427528000,
+    "multiplexId": null
+  }, {
+    "roleId": 8,
+    "areaCode": "YT",
+    "isUse": 0,
+    "roleType": 1,
+    "krtenCode": null,
+    "roleCode": null,
+    "baseRole": "0",
+    "deptId": null,
+    "deptName": null,
+    "roleName": "督导员",
+    "roleDesc": null,
+    "createBy": 1,
+    "modifyBy": 1,
+    "createDate": 1523427538000,
+    "modifyDate": 1523427538000,
+    "multiplexId": null
+  }],
+  "recordCount": 2
+}

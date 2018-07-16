@@ -1,0 +1,27 @@
+{
+    "code": 1,
+    "desc": "success",
+    "data": 0,
+    "token": null,
+    "list": [
+        {
+            "qrcodeId": 1,
+            "questionnaireName": null,
+            "questionnaireId": 8,
+            "code": "syqh2i9",
+            "url": "http://weixin.instai.cn/questionQrcode/scanCode?questionnaireId=8&code=syqh2i9",
+            "isUser": 0,
+            "count": null
+        },
+        {
+            "qrcodeId": 2,
+            "questionnaireName": null,
+            "questionnaireId": 8,
+            "code": "pziv65n",
+            "url": "http://weixin.instai.cn/questionQrcode/scanCode?questionnaireId=8&code=pziv65n",
+            "isUser": 0,
+            "count": null
+        }
+    ],
+    "recordCount": null
+}

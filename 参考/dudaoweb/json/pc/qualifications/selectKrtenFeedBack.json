@@ -1,0 +1,69 @@
+{
+  "code": 1,
+  "desc": null,
+  "data": {
+      "allKrten": [
+          {
+              "krtenCode": "1",
+              "krtenName": "红"
+          },
+          {
+              "krtenCode": "L2018",
+              "krtenName": "黄"
+          },
+          {
+              "krtenCode": "J2018",
+              "krtenName": "蓝"
+          },
+          {
+              "krtenCode": "K2018",
+              "krtenName": "黑"
+          }
+      ],
+      "krtenInfo": [
+          {
+              "feedBackType": 1,
+              "total": 1,
+              "krtenCode": "J2018",
+              "unFinish": 1,
+              "finish": 0,
+              "krtenName": "蓝"
+          },
+          {
+              "feedBackType": 2,
+              "total": 1,
+              "krtenCode": "J2018",
+              "unFinish": 0,
+              "finish": 1,
+              "krtenName": "蓝"
+          },
+          {
+              "feedBackType": 1,
+              "total": 5,
+              "krtenCode": "K2018",
+              "unFinish": 4,
+              "finish": 1,
+              "krtenName": "黑"
+          },
+          {
+              "feedBackType": 2,
+              "total": 1,
+              "krtenCode": "K2018",
+              "unFinish": 0,
+              "finish": 1,
+              "krtenName": "黑"
+          },
+          {
+              "feedBackType": 2,
+              "total": 1,
+              "krtenCode": "L2018",
+              "unFinish": 0,
+              "finish": 1,
+              "krtenName": "黄"
+          }
+      ]
+  },
+  "token": null,
+  "list": null,
+  "recordCount": null
+}

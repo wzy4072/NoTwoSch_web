@@ -1,0 +1,326 @@
+body{font-family:'思源黑体','CN ','苹方','Regular','冬青','微软雅黑'; max-width: 640px;margin:0px auto; }
+.dpn{display:none;}
+.cusp{
+  height: 1.5vh;
+    transform: rotate(45deg);
+    width: 1.5vh;
+    border-width: 2px 2px 0 0;
+    border-color: #c7c7cc;
+    border-style: solid;
+}
+.weui_cell{line-height:2.0em;}
+.weui_cell_bd{font-size:16px;}
+.approval{margin:15px 12px 0;
+        background:#fff;
+        border-radius: 8px;
+        padding: 0px 18px 5px;
+        margin-bottom: 10px;
+        font-weight:normal;}
+.approtitle{line-height: 48px;
+          border-bottom: #eceff4 1px solid;
+          padding-top: 2px;
+          font-size: 18px;}
+.approcontent{color:#7a7a7c;
+            line-height: 30px;
+            font-size: 15px;}
+.approtitle1{color:#18a2fa;}
+.approtitle2{color:#00c246;}
+.approtitle3{color:#ff3e28;}
+.level{background-color:#18a2fa;
+       height:6.0vh;}
+.level span{color:#fff;
+            font-size:18px;
+            padding-left:14px;
+            line-height:6.0vh;}
+.cl{clear:both;}
+
+.w_p40{width:40%;}
+.bg_e{background:#eee;}
+.blue{color:blue;}
+.fc_c{color:#666;}
+.plr_5{padding:0 5px;}
+
+/*右下角添加*/
+      .release{position: fixed;bottom: 2.5vh;right: 2.5vh;z-index: 99;}
+      .hezi{position: relative;}
+      .big{width: 8vh;height:8vh;background: #57cdfc;filter:alpha(opacity=50);  -moz-opacity:0.5;  -khtml-opacity: 0.5;  opacity: 0.5;border-radius: 8vh;text-align: center;}
+      .small{width: 6.5vh;height:6.5vh;background: #57cdfc;border-radius: 6.5vh;display: inline-block;position: absolute;left: 0.75vh;top:0.75vh;}
+      .small img{width: 3.5vh;margin-top:1.5vh;margin-left: 1.5vh;}
+
+ 
+
+.toolbar .title{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* cbz */
+ .inscss {
+  height:0;
+  border-top: 1px solid #C9C9C9;
+    position: relative; 
+   }
+
+ .list_address .weui_cells {
+    margin-top: 0;
+    margin-bottom: -1px;
+  }
+
+ .list_address .weui_cell {
+     margin-left: 40px; 
+  }
+.tchWsElective{width: 22px;margin-top: 12px;margin-left: 4px;}
+
+.overcss{}
+.overcss .weui_cell_ft p{
+ margin :0;
+ line-height:1.3em;
+}
+.t_c{text-align:center;}
+ .absolute_b{position: absolute;z-index: 500;bottom: 0px;width:100%;}
+ .blue_btn{background-color: #18a2fa;color:#fff;}
+ .blue_btn_fixed{padding:2vh;position:fixed;bottom:0;width: 100%;z-index: 9;background: #fff;}
+ .of_h{ overflow: hidden;}
+ .of_s{overflow:scroll;}
+
+
+
+ .yuanjiao {
+  font-family: Arial;
+  border: 1px solid #c8c8cd;
+  border-radius: 5px;
+  padding: 10px 0px 10px 20px;
+  margin: 10px 5px;
+  background-color: #FFFFFF;
+}
+.repairListDiv{
+  padding: 0px 0px;
+  color: #666666;
+  width: 100%;
+  display:block;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.repairItemDiv{
+  border-bottom: 1px solid #C9C9C9;
+  color: #87CEFF;
+  font-size: 25px;
+}
+/*评教*/
+.comTextNumCss{
+    position: absolute;
+    bottom: -7px;
+    right: 20px;
+    color: #ff5722;
+}
+
+   .tablecss{
+            width:100%;
+            text-align:center;
+            border-collapse: collapse;
+        }
+        .tablecss td,.tablecss th{padding:3px;}
+        .tablecss .title th{ 
+            border:1px solid #eee;           
+            background:#58CDF8;
+            color:#fff;
+            font-weight:100;            
+        } 
+        .tablecss td{border:1px solid #BEE5F9;}
+        .b_tl_r{border-top-left-radius: 8px;}
+        .b_tr_r{border-top-right-radius: 8px;}
+        .f_14{font-size:14px;} 
+
+  /* 换行省略号...样式 */
+  .line_clamp{           
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp:1;
+            overflow: hidden;
+        }
+  .weui-popup__overlay {opacity: 0.5;}
+  .weui-uploader__file{position: relative;}
+  .weui-uploader__file .weui-icon-cancel {
+           position: absolute;
+           top: 0px;
+           right: -6px;
+           }
+ /* 标签选择 */
+  .labelCheack{
+    display:inline-block;
+    padding: 1px 5px;
+    color: #04be02;
+    border: 1px solid #04be02;
+    border-radius: 3px;    
+    margin:0 5px 5px 0;
+  }
+
+/*====== 按钮左右切换   动画======*/
+.chk_move{
+    display: none;
+}
+.chk_move + label {
+  background-color: #FFF;   
+  border-radius: 10px;
+  display: inline-block;
+  position: relative;  
+  background: #F7836D;
+    width: 55px;
+    height: 20px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1), 0 0 10px rgba(245, 146, 146, 0.4);
+}
+
+.chk_move + label:before {
+  content: ' ';
+  position: absolute;
+  background: #FFF;
+  top: 0px;
+  z-index: 10;
+  left: 0px;
+  width: 20px;
+  color: #FFF;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 1px rgba(0,0,0,0.6);
+}
+
+.chk_move + label:after {
+  content: '关';  
+  position: absolute;  
+  font-size: 0.5em;
+  color: white;
+  font-weight: 600;
+  left: 8px;  
+  top: -6px;
+  border-radius: 100px;
+}
+.chk_move:checked + label {
+  background: #67A5DF;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1), 0 0 10px rgba(146, 196, 245, 0.4);
+}
+
+.chk_move:checked + label:after {
+  content: '开';
+  left: 10px;
+}
+.chk_move:checked + label:before {
+  content: ' ';
+  position: absolute;
+  z-index: 10;
+  left: 36px;
+}
+.chk_move + label:after {
+  left: 35px; 
+} 
+.chk_move + label:after, .chk_move + label:before{  
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+ 
+
+/* 使用 1 
+.chk_yes_no + label {
+  width:55px;
+}
+.chk_yes_no:checked + label:before{
+  left:36px;
+}
+.chk_yes_no + label:after {
+  content: '否';
+}
+.chk_yes_no:checked + label:after {
+  content: '是'; 
+}  */
+
+/*====== 按钮左右切换   动画======*/
+
+
+/*====== 勾选 圆单选 ======*/
+.magic-radio{
+  position: absolute;
+  display: none;}
+.magic-radio + b{
+  position: relative;  
+  padding-left: 30px;
+  padding-top: 3px;
+  cursor: pointer;
+  vertical-align: middle; 
+}  
+
+
+
+
+   .magic-radio + b:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: '';
+    border: 1px solid #c0c0c0;
+    border-radius: 50%; 
+    }
+
+
+.magic-radio + b:after {
+  transition:all .3s;
+  top: 4px;
+  left: 8px;
+  box-sizing: border-box;
+  width: 6px;
+  height: 12px;
+  position: absolute; 
+  opacity:0;
+  content: ''; 
+  transform: rotate(45deg);
+  border-width: 2px;
+  border-style: solid;
+  border-color: #3e97eb;
+  border-top: 0;
+  border-left: 0;
+}  
+ 
+
+.magic-radio:checked + b:after{  
+  opacity:1;}
+.magic-radio:checked + b:before {
+  border: 1px solid #3e97eb; }
+
+/* 用例 
+<input class="magic-radio" type="radio" name="radio" id="r2" value="" checked="">
+<label for="r2">已选</label> 
+{}  */
+ 
+  
+     
+.animateBody{position:relative;left:2vw;opacity:0;}
+
+/*====== photoBrowser 微信图片浏览器 css ======*/
+.photo-container img{width:100%}
+/*====== 上传文件按钮 css ======*/
+  .updata_filecss{
+        width: 100px;
+        height: 30px;
+        position: relative;
+    }
+.updata_filecss input{
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        z-index: 700;
+        }
+.updata_filecss button{
+        position: absolute;        
+        top: 0;
+        left: 0;
+        margin: 0;
+        }
+
+
+
+
+.grayBox{margin-top: 50px;padding:10px;border-top:1px solid #ccc ;border-bottom: 1px solid #ccc ;text-align: center;background: #eee} 
+
+

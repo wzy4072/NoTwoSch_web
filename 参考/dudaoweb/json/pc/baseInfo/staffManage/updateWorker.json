@@ -1,0 +1,15 @@
+{
+    "code": 1,
+    "desc": "保存成功",
+    "data": {
+        "result": 1,
+        "missSize": 0,
+        "missList": [{
+            "workerName": "啊啊啊",
+            "errorDescription": "教职工证件号码格式不正确,请检查后重新保存"
+        }]
+    },
+    "token": null,
+    "list": null,
+    "recordCount": null
+}

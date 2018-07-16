@@ -1,0 +1,27 @@
+{
+"code": 200,
+"desc": "success",
+"data": [
+    {
+        "workerId": 1,
+        "courseName": "语文,数学",
+        "workerPhone": "15111111111",
+        "workerType": "教师",
+        "workerGender": "男",
+        "workerName": "啊啊啊",
+        "userId": 100
+    },
+    {
+        "workerId": 2,
+        "courseName": "化学",
+        "workerPhone": "15122222222",
+        "workerType": "教师",
+        "workerGender": "女",
+        "workerName": "是是是",
+        "userId": 101
+    }
+],
+"token": null,
+"list": null,
+"recordCount": null
+}

@@ -1,0 +1,78 @@
+{
+  "code": 1,
+  "desc": "success",
+  "data": null,
+  "token": null,
+  "list": [{
+      "pid": "-1",
+      "isParent": 1,
+      "currentId": "B",
+      "name": "教职工",
+      "userId": null,
+      "userName": null,
+      "userType": null,
+      "filled": 0,
+      "list": [{
+        "pid": "B",
+        "isParent": 1,
+        "currentId": "B0",
+        "name": "其他",
+        "userId": null,
+        "userName": null,
+        "userType": null,
+        "filled": 0,
+        "list": [{
+          "pid": "B0",
+          "isParent": 0,
+          "currentId": "245",
+          "name": "张三",
+          "userId": 245,
+          "userName": "张三",
+          "userType": 5,
+          "filled": 0
+        }]
+      }]
+    },
+    {
+      "pid": "-1",
+      "isParent": 1,
+      "currentId": "D",
+      "name": "学生",
+      "userId": null,
+      "userName": null,
+      "userType": null,
+      "filled": 0,
+      "list": [{
+        "pid": "D",
+        "isParent": 1,
+        "currentId": "D235",
+        "name": "中班",
+        "userId": null,
+        "userName": null,
+        "userType": null,
+        "filled": 0,
+        "list": [{
+          "pid": "D235",
+          "isParent": 1,
+          "currentId": "D236",
+          "name": "中班（1）",
+          "userId": null,
+          "userName": null,
+          "userType": null,
+          "filled": 0,
+          "list": [{
+            "pid": "D236",
+            "isParent": 0,
+            "currentId": "308",
+            "name": "学生1",
+            "userId": 308,
+            "userName": "学生1",
+            "userType": 6,
+            "filled": 0
+          }]
+        }]
+      }]
+    }
+  ],
+  "recordCount": null
+}

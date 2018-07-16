@@ -1,0 +1,36 @@
+{
+	"code": 1,
+	"desc": "查询列表成功",
+	"data": [{
+		"qualificationsId": 704,
+		"workerId": 542,
+		"qualificationsName": "111111",
+		"qualificationsPath": "/201803001IMAGE/201803001/201803001_20180528142530696_1886_??.png",
+		"createBy": 1886,
+		"modifyBy": 1886,
+		"createDate": 1527488731000,
+		"modifyDate": 1527488731000,
+		"arg1": null,
+		"arg2": null,
+		"arg3": null,
+		"arg4": null,
+		"arg5": null
+	}, {
+		"qualificationsId": 712,
+		"workerId": 542,
+		"qualificationsName": "毕业证书",
+		"qualificationsPath": "/201803001IMAGE/201803001/201803001_20180531205511017_542.jpg",
+		"createBy": 1319,
+		"modifyBy": 1319,
+		"createDate": 1527771312000,
+		"modifyDate": 1527771312000,
+		"arg1": null,
+		"arg2": null,
+		"arg3": null,
+		"arg4": null,
+		"arg5": null
+	}],
+	"token": null,
+	"list": null,
+	"recordCount": null
+}

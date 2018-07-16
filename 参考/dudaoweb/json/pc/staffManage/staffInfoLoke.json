@@ -1,0 +1,23 @@
+{
+    "code": 1,
+    "desc": "查询成功",
+    "data": null,
+    "token": null,
+    "list": [
+        {
+            "littleNum": 1,
+            "middleNum": 1,
+            "highNum": 0,
+            "otherNum": 0,
+            "unversityNum": 0,
+            "zhuanNum": 0,
+            "workerNum": 0,
+            "masterNum": 0,
+            "doctorNum": 0,
+            "krtenName": "红",
+            "eduId": "1",
+            "middlezhuanNum":0
+        }
+    ],
+    "recordCount": null
+}

@@ -1,0 +1,23 @@
+{
+  "code": 1,
+  "desc": "查询成功",
+  "data": [
+    {
+        "projectId": 1,
+		"projectName": "2016 - 2017 学年过程性专项督导",
+		"areaCode": "YT",
+		"crtateBy": 1,
+		"createDate": 1529564124000,
+		"modifyBy": 1,
+		"modifyDate": 1529564127000,
+		"arg1": null,
+		"arg2": null,
+		"arg3": null,
+		"arg5": null,
+		"arg4": null
+	}
+  ],
+  "token": null,
+  "list": null,
+  "recordCount": null
+}

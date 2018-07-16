@@ -1,0 +1,265 @@
+{
+  "code": 200,
+  "desc": "success",
+  "data": [
+      {
+          "gradeName": "小班wangyue",
+          "gradeId": 141,
+          "gradeCode": "G2018",
+          "workerName": "啊啊啊",
+          "classList": [
+              {
+                  "classCode": "100",
+                  "classId": 1425555,
+                  "className": "1班",
+                  "courseList": [
+                      {
+                          "courseName": "语文",
+                          "courseCode": "1",
+                          "workerName": "444"
+                      },
+                      {
+                          "courseName": "数学1",
+                          "courseCode": "2",
+                          "workerName": "是是是"
+                      },
+                      {
+                          "courseName": "美术",
+                          "courseCode": "3",
+                          "workerName": "777"
+                      },
+                      {
+                          "courseName": "音乐",
+                          "courseCode": "4",
+                          "workerName": "888"
+                      },
+                      {
+                          "courseName": "生活",
+                          "courseCode": "5",
+                          "workerName": "999"
+                      },
+                      {
+                          "courseName": "英语",
+                          "courseCode": "6",
+                          "workerName": "111"
+                      },
+                      {
+                          "courseName": "吉他",
+                          "courseCode": "7",
+                          "workerName": "222"
+                      },
+                      {
+                          "courseName": "皮皮",
+                          "courseCode": "8",
+                          "workerName": "333"
+                      }
+                  ],
+                  "workerName": "是是是"
+              },
+              {
+                "classCode": "100",
+                "classId": 1488882,
+                "className": "1班",
+                "courseList": [
+                    {
+                        "courseName": "语文",
+                        "courseCode": "1",
+                        "workerName": "444"
+                    },
+                    {
+                        "courseName": "数学1",
+                        "courseCode": "2",
+                        "workerName": "是是是"
+                    },
+                    {
+                        "courseName": "美术",
+                        "courseCode": "3",
+                        "workerName": "777"
+                    },
+                    {
+                        "courseName": "音乐",
+                        "courseCode": "4",
+                        "workerName": "888"
+                    },
+                    {
+                        "courseName": "生活",
+                        "courseCode": "5",
+                        "workerName": "999"
+                    },
+                    {
+                        "courseName": "英语",
+                        "courseCode": "6",
+                        "workerName": "111"
+                    },
+                    {
+                        "courseName": "吉他",
+                        "courseCode": "7",
+                        "workerName": "222"
+                    },
+                    {
+                        "courseName": "皮皮",
+                        "courseCode": "8",
+                        "workerName": "333"
+                    }
+                ],
+                "workerName": "是是是"
+            },
+            {
+              "classCode": "100",
+              "classId": 14779992,
+              "className": "1班",
+              "courseList": [
+                  {
+                      "courseName": "语文",
+                      "courseCode": "1",
+                      "workerName": "444"
+                  },
+                  {
+                      "courseName": "数学1",
+                      "courseCode": "2",
+                      "workerName": "是是是"
+                  },
+                  {
+                      "courseName": "美术",
+                      "courseCode": "3",
+                      "workerName": "777"
+                  },
+                  {
+                      "courseName": "音乐",
+                      "courseCode": "4",
+                      "workerName": "888"
+                  },
+                  {
+                      "courseName": "生活",
+                      "courseCode": "5",
+                      "workerName": "999"
+                  },
+                  {
+                      "courseName": "英语",
+                      "courseCode": "6",
+                      "workerName": "111"
+                  },
+                  {
+                      "courseName": "吉他",
+                      "courseCode": "7",
+                      "workerName": "222"
+                  },
+                  {
+                      "courseName": "皮皮",
+                      "courseCode": "8",
+                      "workerName": "333"
+                  }
+              ],
+              "workerName": "是是是"
+          }
+          ]
+      },
+      {
+        "gradeName": "ppppp班wangyue",
+        "gradeId": 144444441,
+        "gradeCode": "G2018",
+        "workerName": "啊啊啊",
+        "classList": [
+            {
+                "classCode": "100",
+                "classId": 1412548,
+                "className": "1班",
+                "courseList": [
+                    {
+                        "courseName": "语文",
+                        "courseCode": "1",
+                        "workerName": "444"
+                    },
+                    {
+                        "courseName": "数学1",
+                        "courseCode": "2",
+                        "workerName": "是是是"
+                    },
+                    {
+                        "courseName": "美术",
+                        "courseCode": "3",
+                        "workerName": "777"
+                    },
+                    {
+                        "courseName": "音乐",
+                        "courseCode": "4",
+                        "workerName": "888"
+                    },
+                    {
+                        "courseName": "生活",
+                        "courseCode": "5",
+                        "workerName": "999"
+                    },
+                    {
+                        "courseName": "英语",
+                        "courseCode": "6",
+                        "workerName": "111"
+                    },
+                    {
+                        "courseName": "吉他",
+                        "courseCode": "7",
+                        "workerName": "222"
+                    },
+                    {
+                        "courseName": "皮皮",
+                        "courseCode": "8",
+                        "workerName": "333"
+                    }
+                ],
+                "workerName": "是是是"
+            },
+            {
+              "classCode": "100",
+              "classId": 142542546,
+              "className": "1班",
+              "courseList": [
+                  {
+                      "courseName": "语文",
+                      "courseCode": "1",
+                      "workerName": "444"
+                  },
+                  {
+                      "courseName": "数学1",
+                      "courseCode": "2",
+                      "workerName": "是是是"
+                  },
+                  {
+                      "courseName": "美术",
+                      "courseCode": "3",
+                      "workerName": "777"
+                  },
+                  {
+                      "courseName": "音乐",
+                      "courseCode": "4",
+                      "workerName": "888"
+                  },
+                  {
+                      "courseName": "生活",
+                      "courseCode": "5",
+                      "workerName": "999"
+                  },
+                  {
+                      "courseName": "英语",
+                      "courseCode": "6",
+                      "workerName": "111"
+                  },
+                  {
+                      "courseName": "吉他",
+                      "courseCode": "7",
+                      "workerName": "222"
+                  },
+                  {
+                      "courseName": "皮皮",
+                      "courseCode": "8",
+                      "workerName": "333"
+                  }
+              ],
+              "workerName": "是是是"
+          }
+        ]
+    }
+  ],
+  "token": null,
+  "list": null,
+  "recordCount": null
+}

@@ -1,0 +1,24 @@
+{
+    "code": 200,
+    "desc": "success",
+    "data": [
+        {
+            "superIntendentName": "我问问",
+            "totalAddRate": 5.1538,
+            "inRate": 0.3846,
+            "superIntendentId": 2,
+            "outRate": 0.1538,
+            "lossNumRate": 0.25,
+            "addNum": 5,
+            "lossNum": 2,
+            "startNum": 0,
+            "krtenCode": "J2018",
+            "totalLossRate": 4.8462,
+            "endNum": 8,
+            "krtenName": "蓝"
+        }
+    ],
+    "token": null,
+    "list": null,
+    "recordCount": null
+}

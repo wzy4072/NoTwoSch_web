@@ -1,0 +1,143 @@
+{
+  "code": 200,
+  "desc": "success",
+  "data": null,
+  "list": [
+    {
+      "chapterId": 1,
+      "treePid": -1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "知识点1",
+      "createrId": 1,
+      "createrTime": 1511776034000,
+      "modifyId": 1,
+      "modifyTime": 1511850781000,
+      "isDel": 0,
+      "pointList": [
+        {
+          "knowledgeId": 112
+        },
+        {
+          "knowledgeId": 121
+        },
+        {
+          "knowledgeId": 122
+        }
+      ]
+    },
+    {
+      "chapterId": 11,
+      "treePid": 1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "name11",
+      "createrId": 1,
+      "createrTime": 1511776067000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "pointList": []
+    },
+	{
+      "chapterId": 111,
+      "treePid": 11,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "name111",
+      "createrId": 1,
+      "createrTime": 1511776067000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "pointList": []
+    },{
+      "chapterId": 112,
+      "treePid": 11,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "name112",
+      "createrId": 1,
+      "createrTime": 1511776067000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "pointList": []
+    },
+    {
+      "chapterId": 12,
+      "treePid": 1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "name12",
+      "createrId": 1,
+      "createrTime": 1511776067000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "pointList": []
+    },
+    {
+      "chapterId": 121,
+      "treePid": 12,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "name121",
+      "createrId": 1,
+      "createrTime": 1511776067000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "pointList": []
+    },{
+      "chapterId": 122,
+      "treePid": 12,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "name122",
+      "createrId": 1,
+      "createrTime": 1511776067000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "pointList": []
+    },{
+      "chapterId": 2,
+      "treePid": -1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "知识点2",
+      "createrId": 1,
+      "createrTime": 1511776034000,
+      "modifyId": 1,
+      "modifyTime": 1511850781000,
+      "isDel": 0,
+      "pointList": []
+    }
+  ],
+  "recordCount": 2
+}

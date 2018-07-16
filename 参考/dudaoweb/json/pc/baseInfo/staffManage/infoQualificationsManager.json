@@ -1,0 +1,76 @@
+{
+    "code": 1,
+    "desc": "删除成功",
+    "data": {
+        "workerCourse": {
+            "workerCourseId": 1,
+            "workerId": 1,
+            "courseCode": "1",
+            "courseName": "语文,数学"
+        },
+        "worker": {
+            "workerId": 1,
+            "krtenCode": "K2018",
+            "workerName": "啊啊啊",
+            "abbreviation": "啊",
+            "userId": 100,
+            "workerType": "1",
+            "workerDeptId": "1",
+            "workerPhone": "15111111111",
+            "officePhone": null,
+            "workerGender": 1,
+            "workerNumber": "",
+            "workerAge": 36,
+            "birthDay": -176979600000,
+            "entryTime": 1491211340000,
+            "departureTime": null,
+            "workStatus": 1,
+            "highestEducation": "1",
+            "educationUpdateDate": 1491211340000,
+            "arg1": null,
+            "arg2": null,
+            "arg3": null,
+            "arg4": null,
+            "arg5": null,
+            "createBy": 0,
+            "modifyBy": 0,
+            "createDate": null,
+            "modifyDate": null
+        },
+        "岗位": "1"
+    },
+    "token": null,
+    "list": [
+        {
+            "qualificationsId": 123,
+            "workerId": 1,
+            "qualificationsName": "毕业证书",
+            "qualificationsPath": "给第三方",
+            "createBy": 0,
+            "modifyBy": 0,
+            "createDate": null,
+            "modifyDate": null,
+            "arg1": null,
+            "arg2": null,
+            "arg3": null,
+            "arg4": null,
+            "arg5": null
+        },
+        {
+            "qualificationsId": 456,
+            "workerId": 1,
+            "qualificationsName": "aaaaa",
+            "qualificationsPath": "问问",
+            "createBy": 0,
+            "modifyBy": 0,
+            "createDate": null,
+            "modifyDate": null,
+            "arg1": null,
+            "arg2": null,
+            "arg3": null,
+            "arg4": null,
+            "arg5": null
+        }
+    ],
+    "recordCount": null
+}

@@ -1,0 +1,40 @@
+{
+  "code": 200,
+  "desc": "success",
+  "data": null,
+  "list": [
+    {
+      "chapterId": 7,
+      "treePid": 1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "第五章 回炉",
+      "createrId": 1,
+      "createrTime": 1511948312880,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "pointList": null
+    },
+    {
+      "chapterId": 8,
+      "treePid": 1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "chapterName": "第六章 重造",
+      "createrId": 1,
+      "createrTime": 1511948312942,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "pointList": null
+    }
+  ],
+  "recordCount": 2
+}

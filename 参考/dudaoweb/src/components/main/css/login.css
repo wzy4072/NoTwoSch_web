@@ -1,0 +1,604 @@
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.h_p100 {
+  height: 100%;
+}
+
+.t_c {
+  text-align: center;
+}
+
+.ps_r {
+  position: relative;
+}
+
+.loginContent {
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
+  min-width: 1228px;
+  position: relative;
+  background-color: #4393ec;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.col_ly_6 {
+  float: left;
+  width: 50%;
+}
+
+.loginfrom {
+  position: absolute;
+  top: 16%;
+  left: 20%;
+  background: #fff;
+  width: 375px;
+  min-height: 435px;
+  border-radius: 4px;
+  padding: 35px 0px 0 0px;
+  float: left;
+}
+
+.thloginlogo {
+  text-align: center;
+  padding-top: 32vh;
+}
+
+.loginfrom h3 {
+  color: #00a9f4;
+  text-align: left;
+  float: left;
+  margin-top: 0;
+}
+
+.thloainpassk {
+  position: relative;
+  width: 100%;
+}
+
+.thloginpass {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  background: url("../../../assets/images/thloginpws.png") no-repeat 0px 0px;
+  width: 22px;
+  height: 22px;
+}
+
+.thloginpass.thloaginzh {
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  background: url("../../../assets/images/thloginperson.png") no-repeat 0px 0px;
+}
+
+.thloainpassk input {
+  font-size: 13px;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,Microsoft YaHei, SimSun, sans-serif;
+  border-radius: 5px;
+  border: 1px #dcdfe6 solid;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px;
+  border-radius: 5px;
+  padding: 0px 44px 0px 44px;
+}
+.thloainpassk input:focus{
+  border-color: #409EFF;
+  outline: none;
+}
+
+.thloainpassk .caret {
+  position: absolute;
+  top: 17px;
+  right: 33px;
+  border-top: 7px solid;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+.verify {
+  overflow: hidden;
+  margin: 10px 0 20px 0;
+}
+
+.verify_box {
+  width: 190px;
+  height: 41px;
+  border: 1px #c0c0c0 solid;
+  float: left;
+  -moz-border-radius: 5px;
+  /* Gecko browsers */
+  -webkit-border-radius: 5px;
+  /* Webkit browsers */
+  border-radius: 5px;
+  /* W3C syntax */
+}
+
+.verify .input_box {
+  width: 170px;
+  height: 36px;
+  line-height: 36px;
+  margin-left: 15px;
+  margin-top: 2px;
+  padding-left: 5px;
+  background-color: transparent;
+  border: none;
+}
+
+.verify .ver_img {
+  width: 90px;
+  height: 30px;
+  overflow: hidden;
+  float: right;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.verify img {
+  width: 100%;
+  height: 100%;
+}
+
+.thlogincz {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.thlogincz a:hover {
+  color: #1b242f;
+  text-decoration: none;
+}
+
+.thlogincz label {
+  font-weight: normal;
+  position: relative;
+  top: -4px;
+  left: 0px;
+  width: 84px;
+}
+
+.thlogincz label .thlremember {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/*首页选框*/
+
+.re_password {
+  overflow: hidden;
+  margin: 10px auto 0 auto;
+}
+.re_password  a {
+   color:#858585;
+  font-size: 13px;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,Microsoft YaHei, SimSun, sans-serif;
+      padding-top: 2px;
+    display: inline-block;
+}
+
+.re_password p {
+  line-height: 30px;
+  float: right;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.re_password p a {
+  color: #3ab1ee;
+  text-decoration: underline;
+}
+
+.re_password .remember {
+  float: left;
+  overflow: hidden;
+  line-height: 30px;
+  width: 200px;
+}
+
+.re_password .remember span {
+   color:#858585;
+  font-size: 13px;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,Microsoft YaHei, SimSun, sans-serif;
+  font-weight: normal;
+  float: left;
+  color: #666;
+}
+.re_password .remember a {
+   color:#858585;
+  font-size: 13px;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,Microsoft YaHei, SimSun, sans-serif;
+}
+
+.re_password .remember .rem_btn {
+  float: left;
+  height: 30px;
+  width: 50px;
+  overflow: hidden;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.magic-radio {
+  position: absolute;
+  display: none;
+}
+
+.magic-radio + label {
+  color:#858585;
+  font-size: 13px;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,Microsoft YaHei, SimSun, sans-serif;
+  position: relative;
+  padding-left: 25px;
+  padding-top: 9px !important;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.magic-radio + label:before {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  content: "";
+  border: 1px solid #c0c0c0;
+  border-radius: 3px;
+}
+
+.magic-radio + label:after {
+  transition: all 0.3s;
+  top: 8px;
+  left: 6px;
+  box-sizing: border-box;
+  width: 6px;
+  height: 12px;
+  position: absolute;
+  opacity: 0;
+  content: "";
+  transform: rotate(45deg);
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  border-top: 0;
+  border-left: 0;
+}
+
+.magic-radio:checked + label:after {
+  opacity: 1;
+}
+
+.magic-radio:checked + label:before {
+  border: 1px solid #00a9f4;
+  background: #00a9f4;
+}
+
+.thlbottom {
+  background: #00a9f4;
+  color: #fff;
+  padding: 8px 0px;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  position: relative;
+}
+
+
+.thloginline {
+  width: 200px;
+  margin: 0 auto;
+  height: 1px;
+  border-top: 1px #858585 solid;
+  position: relative;
+  color: #858585;
+}
+
+.thloginline p {
+  color:#858585;
+  font-size: 13px;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,Microsoft YaHei, SimSun, sans-serif;
+  padding: 0px 10px;
+  background: #fff;
+  position: absolute;
+  top: -12px;
+  left: 50px;
+  cursor: pointer;
+}
+
+.thloginqq {
+  width: 36px;
+  height: 36px;
+  background: url("../../../assets/images/thloginqq.png") no-repeat 0px 0px;
+  display: inline-block;
+  margin-left: 9px;
+}
+
+.thloginqq:hover {
+  cursor: pointer;
+}
+
+.thloginqq.thloginwc {
+  background: url("../../../assets/images/thloginwx.png") no-repeat 0px 0px;
+  margin-left: 10px;
+}
+
+.thlogincp {
+}
+
+.thlogorown {
+  text-align: center;
+  color: #a3a3a3;
+  height: 10%;
+  font-size: 13px;
+  width: 100%;
+  padding-top: 2.3vh;
+  line-height: 30px;
+}
+
+.thlogorownColor {
+  color: #a3a3a3;
+}
+
+.lineSpan {
+  margin: 0 10px;
+  color: #a3a3a3;
+}
+
+.externallinkColor {
+  color: #a3a3a3;
+}
+
+.externallinkColor:hover {
+  color: red;
+}
+
+.thlogorown p {
+  margin-bottom: 0px;
+}
+
+.thlogorown a:hover {
+  text-transform: none;
+}
+
+.h3 {
+  margin-bottom: 25px;
+}
+
+.verify_box.fl {
+  width: 50%;
+}
+
+.verify_box {
+  border-radius: 5px;
+}
+
+.topSty {
+  font-size: 16px;
+  float: right;
+  color: #a3a3a3;
+  border-bottom: 1px solid #ababab;
+}
+
+.topSty:hover {
+  cursor: pointer;
+}
+
+.newStuLogin {
+  display: none;
+  height: 400px;
+}
+
+.hkmovie {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 5px;
+  border-right: 1px solid #ddd;
+}
+
+.hkmovie_hidden {
+  left: -151px;
+  transition: left 0.5s;
+}
+
+.hkmovie_show {
+  left: -31px;
+  transition: left 0.5s;
+}
+
+.pubQrcode {
+  float: left;
+  height: 120px;
+  overflow: hidden;
+}
+
+.guanzhu {
+  height: 120px;
+  width: 30px;
+  font-size: 13px;
+  text-align: center;
+  float: left;
+}
+
+.guanzhu:hover {
+  cursor: pointer;
+}
+
+.guanzhu > p {
+  margin: 0;
+  color: #b0b0b0;
+}
+
+.pubQrcode_hidden {
+  padding: 10px;
+  width: 120px;
+  transition: width 0.5s;
+}
+
+.pubQrcode_show {
+  width: 0;
+  transition: width 0.5s;
+}
+
+.headline {
+  font-size: 42px;
+  color: #fff;
+}
+
+.subhead {
+  color: #fff;
+  font-size: 26px;
+}
+
+.waveImgs {
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.waveImgsBox {
+  width: 200%;
+  height: 180px;
+}
+
+.subWaveImgs1,
+.subWaveImgs2 {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.subWaveImgs1 {
+  margin-top: 37px;
+}
+
+.subWaveImgs2 {
+  margin-top: 37px;
+}
+
+.warningDiv {
+  color: red;
+  text-align: center;
+}
+
+.newrepassword {
+  width: 100%;
+  height: 30px;
+}
+
+.pubQrcodeShow {
+  height: 100%;
+}
+
+.warningDiv {
+  color: red;
+  text-align: center;
+  display: none;
+}
+
+#newmsg {
+  position: absolute;
+  left: 95px;
+  top: 30px;
+}
+
+.thlogorbTwo {
+  padding: 30px 5px 0 5px;
+  min-height: 360px;
+  margin-top: 27%;
+}
+
+.thloainpassk .form-controlTwo,
+.thloainpassk .form-controlTwo1 {
+  display: inline-block;
+  width: 80%;
+  padding: 0 10px 0 10px;
+}
+
+.thloainpassk .form-controlTwo1 {
+  width: 40%;
+}
+
+.inlineSapn {
+  display: inline-block;
+  width: 55px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.thlbottomTwo {
+  margin-bottom: 0;
+  background: #03cd46;
+  color: #fff;
+  font-weight: bold;
+  width: 39%;
+}
+
+.thlbottomTwo1 {
+  width: 40%;
+}
+
+.forgetPwd1 {
+  display: none;
+}
+
+.forgetPwd3 {
+  display: none;
+}
+
+.insertSpan,
+.insertSpan2 {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+  height: 30px;
+}
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

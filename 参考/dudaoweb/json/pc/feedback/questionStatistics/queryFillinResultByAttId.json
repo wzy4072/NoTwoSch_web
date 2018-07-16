@@ -1,0 +1,108 @@
+{
+    "code": 1,
+    "desc": "查询成功",
+    "recordCount": null,
+    "currentPage": null,
+    "data": {
+        "questionnaireId": 1,
+        "questionnaireTitle": "问卷1",
+        "questionnaireIsRealname": 0,
+        "questionnaireExplain": ",1,2,22,33,12,",
+        "subjects": [{
+                "subjectId": 1,
+                "subjectTitle": "您的性别？",
+                "subjectIsOption": 1,
+                "subjectType": 1,
+                "maxSelect": null,
+                "subjectNum": null,
+                "answers": [{
+                        "answerId": 2,
+                        "questionAnswer": "男",
+                        "isSelect": 1,
+                        "answer": null
+                    },
+                    {
+                        "answerId": 3,
+                        "questionAnswer": "女",
+                        "isSelect": 0,
+                        "answer": null
+                    }
+                ]
+            },
+            {
+                "subjectId": 4,
+                "subjectTitle": "您喜欢的游戏?",
+                "subjectIsOption": 1,
+                "subjectType": 2,
+                "maxSelect": 2,
+                "subjectNum": null,
+                "answers": [{
+                        "answerId": 5,
+                        "questionAnswer": "英雄联盟",
+                        "isSelect": 0,
+                        "answer": null
+                    },
+                    {
+                        "answerId": 6,
+                        "questionAnswer": "王者荣耀",
+                        "isSelect": 1,
+                        "answer": null
+                    },
+                    {
+                        "answerId": 7,
+                        "questionAnswer": "热血传奇",
+                        "isSelect": 0,
+                        "answer": null
+                    },
+                    {
+                        "answerId": 8,
+                        "questionAnswer": "极品飞车",
+                        "isSelect": 0,
+                        "answer": null
+                    },
+                    {
+                        "answerId": 9,
+                        "questionAnswer": "梦幻西游",
+                        "isSelect": 0,
+                        "answer": null
+                    },
+                    {
+                        "answerId": 10,
+                        "questionAnswer": "天涯明月刀",
+                        "isSelect": 1,
+                        "answer": null
+                    }
+                ]
+            },
+            {
+                "subjectId": 11,
+                "subjectTitle": "你的梦想是什么?",
+                "subjectIsOption": 1,
+                "subjectType": 3,
+                "maxSelect": null,
+                "subjectNum": null,
+                "answers": [{
+                    "answerId": null,
+                    "questionAnswer": null,
+                    "isSelect": 0,
+                    "answer": "梦想是当警察蜀黍"
+                }]
+            },
+            {
+                "subjectId": 65,
+                "subjectTitle": "你对你自己打多少分",
+                "subjectIsOption": 0,
+                "subjectType": 4,
+                "maxSelect": 100,
+                "subjectNum": null,
+                "answers": [{
+                    "answerId": null,
+                    "questionAnswer": null,
+                    "isSelect": 0,
+                    "answer": "80"
+                }]
+            }
+        ]
+    },
+    "list": null
+}

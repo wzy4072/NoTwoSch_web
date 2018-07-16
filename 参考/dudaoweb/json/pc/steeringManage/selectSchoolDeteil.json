@@ -1,0 +1,20 @@
+{  
+    "code": 1,
+    "desc": "操作成功",
+    "data": [{
+      "KRTEN_NAME": "蓝",
+      "stuCount": 3
+    }, {
+      "KRTEN_NAME": "黑",
+      "stuCount": 1
+    }, {
+        "小班": 1,
+        "krten_name": "红",
+        "中班": 1,
+        "stuCount": 3,
+        "大班": 1
+      }],
+    "token": null,
+    "list": null,
+    "recordCount": null
+  }

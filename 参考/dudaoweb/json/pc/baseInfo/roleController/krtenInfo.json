@@ -1,0 +1,150 @@
+{
+    "code": 200,
+    "desc": "success",
+    "data": {
+        "ParentList":[
+            {
+                "roleUserId": null,
+                "roleId": null,
+                "userId": null,
+                "userName": null,
+                "roleName": "小班1班",
+                "className": "小班1班",
+                "studentName": null,
+                "id": "小班1班",
+                "pid": null
+            },
+            {
+                "roleUserId": 3,
+                "roleId": 1,
+                "userId": 3,
+                "userName": "测试名字1",
+                "roleName": "测试名字1",
+                "className": "",
+                "studentName": "测试名字1",
+                "id": null,
+                "pid": "小班1班",
+                "parentRelationship": "家长" 
+            },
+            {
+                "roleUserId": 4,
+                "roleId": 1,
+                "userId": 4,
+                "userName": "测试名字2",
+                "roleName": "测试名字2",
+                "className": null,
+                "studentName": "测试名字2",
+                "id": null,
+                "pid": "小班1班",
+                "parentRelationship": "家长"
+            },
+            {
+                "roleUserId": 5,
+                "roleId": 1,
+                "userId": 5,
+                "userName": "测试名字3",
+                "roleName": "测试名字3",
+                "className": null,
+                "studentName": "测试名字3",
+                "id": null,
+                "pid": "小班1班",
+                "parentRelationship": "家长"
+            },
+            {
+                "roleUserId": 6,
+                "roleId": 1,
+                "userId": 6,
+                "userName": "测试名字4",
+                "roleName": "测试名字4",
+                "className": null,
+                "studentName": "测试名字4",
+                "id": null,
+                "pid": "小班1班",
+                "parentRelationship": "家长"
+            },
+            {
+                "roleUserId": 7,
+                "roleId": 1,
+                "userId": 7,
+                "userName": "测试名字5",
+                "roleName": "测试名字5",
+                "className": null,
+                "studentName": "测试名字5",
+                "id": null,
+                "pid": "小班1班",
+                "parentRelationship": "家长"
+            }
+        ],
+        "WorkerList":[
+            {
+                "roleUserId": null,
+                "roleId": null,
+                "userId": null,
+                "userName": null,
+                "roleName": "督导组长",
+                "className": null,
+                "studentName": null,
+                "id": "督导组长",
+                "pid": null
+            },
+            {
+                "roleUserId": 8,
+                "roleId": 1,
+                "userId": 3,
+                "userName": "督导员1",
+                "roleName": "督导组长",
+                "className": null,
+                "studentName": null,
+                "id": null,
+                "pid": "督导组长"
+            },
+            {
+                "roleUserId": 9,
+                "roleId": 1,
+                "userId": 4,
+                "userName": "督导员2",
+                "roleName": "督导组长",
+                "className": null,
+                "studentName": null,
+                "id": null,
+                "pid": "督导组长"
+            },
+            {
+                "roleUserId": 10,
+                "roleId": 1,
+                "userId": 5,
+                "userName": "督导员3",
+                "roleName": "督导组长",
+                "className": null,
+                "studentName": null,
+                "id": null,
+                "pid": "督导组长"
+            },
+            {
+                "roleUserId": 11,
+                "roleId": 1,
+                "userId": 6,
+                "userName": "督导员4",
+                "roleName": "督导组长",
+                "className": null,
+                "studentName": null,
+                "id": null,
+                "pid": "督导组长"
+            },
+            {
+                "roleUserId": 12,
+                "roleId": 1,
+                "userId": 7,
+                "userName": "督导员5",
+                "roleName": "督导组长",
+                "className": null,
+                "studentName": null,
+                "id": null,
+                "pid": "督导组长"
+            }
+        ]
+    },
+    "token": null,
+    "list": null,
+    "recordCount": null
+}

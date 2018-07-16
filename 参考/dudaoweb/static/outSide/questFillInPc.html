@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>填写问卷</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link rel="stylesheet" href="jqweiui-1.0/lib/weui.min.css" />
+  <link rel="stylesheet" href="jqweiui-1.0/css/jquery-weui.min.css">
+  <style type="text/css" media="screen">
+    body {
+      color: #343434;
+      font-family: "微软雅黑";
+    }
+
+    .titleCss {
+      font-weight: 600;
+      font-size: 17px;
+      color: black;
+    }
+
+    .answerCss {
+      font-weight: 500;
+      font-size: 15px;
+      width: 96%;
+    }
+
+    .weui-cells:before {
+      border-top: none;
+    }
+
+    .weui-cell:before {
+      border-top: none;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #555;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+      -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    .itemMP {}
+
+  </style>
+</head>
+
+<body>
+  <div style="border: 1px solid green; margin: 15px;">
+    <div class="weui-cells" style="margin-top: 0;padding-top: 1.17647059em;border-bottom: 1px solid green;">
+      <div class="weui-cell" style="position: absolute;top: 4px;right: 0;z-index: 100;background-color: orange;border-radius: 3px;color: #fff;padding:0 5px;height: 25px;">
+        <p style="width: 100%;text-align: center;">
+          <span>计时：</span>
+          <span v-text="timer.str"></span>
+        </p>
+      </div>
+      <div class="weui-cell">
+        <p style="width: 100%;text-align: center;font-size: 25px;" v-text="da.questionnaireTitle"></p>
+      </div>
+      <div class="weui-cell" style="margin: 15px 10px;background-color: #ccc;">
+        <span style="width: 100%;font-size: 16px;">
+          <span v-text="da.questionnaireExplain"></span>
+          <span style="color: blue;" v-if="da.questionnaireIsRealname==1">——该问卷为实名问卷</span>
+          <span style="color: blue;" v-if="da.questionnaireIsRealname==0">——该问卷为匿名问卷</span>
+        </span>
+      </div>
+    </div>
+
+    <div v-for="subject in da.subjectList">
+      <!-- 单选题 -->
+      <div class="weui-cells weui-cells_radio" v-if="subject.subjectType==1" style="margin-top: 0;padding: 0 25px;">
+        <div class="weui-cells__title titleCss">
+          <span v-if="subject.subjectIsOption==1" style="color: red;">*</span>
+          <span v-text="subject.arg1"></span>.
+          <span v-text="subject.subjectTitle"></span>
+        </div>
+        <ul>
+          <li v-for="item in subject.answerList">
+            <div class="input-group" style="padding: 10px 20px;">
+              <input type="radio" name="{{subject.subjectId}}" v-model="subject.radioAnswerId" value="{{item.answerId}}" id="{{item.answerId}}"
+              />
+              <label for="{{item.answerId}}" style="font-weight: normal;">
+                <span v-text="item.questionAnswer"></span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 段落说明 -->
+      <div class="weui-cells__tips" style="background-color: #66cbf8;color: white;padding: 10px 20px" v-if="subject.subjectType==5"
+        v-text="subject.subjectTitle"></div>
+      <!-- 复选框 -->
+      <div class="weui-cells weui-cells_checkbox" v-if="subject.subjectType==2" style="margin-top: 0;padding: 0 25px;">
+        <div class="weui-cells__title titleCss">
+          <span v-if="subject.subjectIsOption==1" style="color: red;">*</span>
+          <span v-text="subject.arg1"></span>.
+          <span v-text="subject.subjectTitle"></span>
+          <span style="color: blue;font-size: 15px;margin-left: 10px;">(最多可选
+            <span v-text="subject.maxSelect"></span>项)</span>
+        </div>
+        <label class="weui-cell weui-check__label" for="{{item.answerId}}" v-for="item in subject.answerList">
+          <div class="weui-cell__hd">
+            <input type="checkbox" class="" name="{{subject.subjectId}}" id="{{item.answerId}}" v-model="item.isSelect">
+          </div>
+          <div class="weui-cell__bd answerCss">
+            <p v-text="item.questionAnswer"></p>
+          </div>
+        </label>
+      </div>
+
+      <!-- 填空题 -->
+      <div v-if="subject.subjectType==3" style="padding: 0 25px;">
+        <div class="weui-cells__title titleCss">
+          <span v-if="subject.subjectIsOption==1" style="color: red;">*</span>
+          <span v-text="subject.arg1"></span>.
+          <span v-text="subject.subjectTitle"></span>
+        </div>
+        <div class="weui-cells">
+          <div class="weui-cell">
+            <div class="panel-body answerCss">
+              <input type="text" class="form-control" v-model="subject.answer" placeholder="请输入文本">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 分数题 -->
+      <div v-if="subject.subjectType==4" style="padding: 0 25px;">
+        <div class="weui-cells__title titleCss">
+          <span v-if="subject.subjectIsOption==1" style="color: red;">*</span>
+          <span v-text="subject.arg1"></span>.
+          <span v-text="subject.subjectTitle"></span>
+          <span style="color: blue;font-size: 15px;margin-left: 10px;">[分数题]</span>
+        </div>
+        <div class="weui-cells">
+          <div class="weui-cell">
+            <ul>
+              <li v-for="(item,key) in subject.maxSelect" style="display: inline-block;">
+                <div class="input-group" style="padding: 10px 20px;">
+                  <input type="radio" name="item" v-model="subject.answer" value="{{item+1}}" />
+                  <label for="{{item}}" style="font-weight: normal;">
+                    <span>{{item+1}}</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="weui-cell" style="font-size: 12px;">
+            <p v-if="subject.maxSelect" style="color: #ccc;">
+              <span style="color: red;">注：</span>分数不超过
+              <span v-text="subject.maxSelect"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="height: 75px;width:300px;">
+      <div class="weui_btn_area" v-if="canUpData" @click="save()" style="width: 80%; margin: 0 auto;padding-top: 10px;">
+        <a href="javascript:;" class="weui-btn weui-btn_primary" style="background-color: #18a2fa;color:#fff;">提交</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="jqweiui-1.0/lib/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="jqweiui-1.0/js/jquery-weui.min.js"></script>
+  <script type="text/javascript" src="js/vue.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      var url=null;
+      $.getJSON("../address.json",function(data){ 
+        url = data.address;
+      });
+      //计时器    
+      function timeFun(tm) {
+        /* 将秒数 转换成  16:50:00 */
+        var retime = '';
+        var h = parseInt(tm / 3600) % 24;
+        h = h < 10 ? '0' + h : h;
+        var m = parseInt(tm / 60) % 60;
+        m = m < 10 ? '0' + m : m;
+        var s = tm % 60;
+        s = s < 10 ? '0' + s : s;
+        return h + ':' + m + ':' + s;
+      }
+      function creatScript(params) {
+        var script = document.createElement('script');
+        script.type="text/javascript";
+        script.src = "http://pv.sohu.com/cityjson?ie=utf-8";
+        document.querySelector('head').appendChild(script);
+      }
+      creatScript();
+      function getlistfun() {
+        $.showLoading();
+        $.ajax({
+          // url: url + "/json/feedback/fillin/selectQues.json",
+          url:url + "feedback/fillin/selectQues",
+          type: "post",
+          data:JSON.stringify({"questionnaireId":GET.questionnaireId}),
+          contentType:'application/json',
+          success: function (re) {
+            if (re.code > 0) {
+              $.hideLoading();
+              vm.da = re.data;
+            } else {
+              $.hideLoading();
+              $.toast("加载失败", "text");
+            }
+          }
+        });
+      }
+      getlistfun(null, '');
+
+
+      function savefun() {
+        
+        //验证提交合法性
+        var tipMsg = "";
+        vm.da.subjectList.forEach(function (v1, k1) {//TODO:必填判空、多选分数提判断是否合法
+          //段落说明 
+          if (v1.subjectType === 5) {return false;}
+          //单选题
+          if (v1.subjectType === 1) {
+            if (!v1.radioAnswerId && v1.subjectIsOption === 1) {
+              tipMsg += v1.arg1 + ' : 未填<br>';
+            }
+          }
+          //多选题
+          if (v1.subjectType === 2) {
+            var isFillin = 0;
+            v1.answerList.forEach(function (v2, k2) {
+              if (v2.isSelect) {
+                isFillin += 1;
+              }
+            });
+            if (isFillin === 0 && v1.subjectIsOption === 1) {
+              tipMsg += v1.arg1 + ' : 未填<br>';
+            }
+            if (isFillin > v1.maxSelect) {
+              tipMsg += v1.arg1 + ' : 勾选超过限定值<br>';
+            }
+
+          }
+
+          //填空
+          if (v1.subjectType === 3) {
+            if (!v1.answer && v1.subjectIsOption === 1) {
+              tipMsg += v1.arg1 + ' : 未填<br>';
+            }
+          }
+          //分数题
+          if (v1.subjectType === 4) {
+            if (!v1.answer && v1.subjectIsOption === 1) {
+              tipMsg += v1.arg1 + ' : 未填<br>';
+            }
+            if (parseInt(v1.answer) > v1.maxSelect || parseInt(v1.answer) < 0) {
+              tipMsg += v1.arg1 + ' : 分数超过范围<br>';
+            }
+
+          }
+        });
+
+        if (tipMsg !== '') {
+          $.toast('还有以下题目需要填写或修改 : <br>' + tipMsg, "text");
+          return false;
+        }
+
+        var senddata = {
+          "qrcodeId":null,
+          "fillinTime": vm.timer.count,
+          "questionnaireId":vm.da.questionnaireId,
+          "ip":returnCitySN.cip,
+          "code":'',
+          "result":[]
+        };
+        //二维码方式进入
+        if (GET) {
+          senddata.questionnaireId = parseInt(GET.questionnaireId);
+          senddata.code = parseInt(GET.version);
+          senddata.qrcodeId = parseInt(GET.qrcodeId);
+        }
+        //筛选合法答案
+        vm.da.subjectList.forEach(function (v1, k1) {
+          //单选题
+          if (v1.subjectType === 1) {
+            if (!v1.radioAnswerId) return;
+            senddata.result.push({
+              "questionnaireId":v1.questionnaireId,
+              "subjectId": v1.subjectId,
+              "subjectType": v1.subjectType,
+              "answerId": v1.radioAnswerId
+            });
+          }
+          //多选题
+          if (v1.subjectType === 2) {
+            v1.answerList.forEach(function (v2, k2) {
+              if (!v2.isSelect) return;
+              senddata.result.push({
+                "questionnaireId":v1.questionnaireId,
+                "subjectId": v1.subjectId,
+                "subjectType": v1.subjectType,
+                "answerId": v2.answerId
+              });
+            });
+          }
+          //填空,分数题
+          if (v1.subjectType === 3 || v1.subjectType === 4) {
+            if (v1.answer !== '' && v1.answer !== undefined && v1.answer !== null) {
+              senddata.result.push({
+                "questionnaireId":v1.questionnaireId,
+                "subjectId": v1.subjectId,
+                "subjectType": v1.subjectType,
+                "answer": v1.answer
+              });
+            }
+          }
+        });
+
+        $.showLoading();
+        $.ajax({
+          // url: url + "/json/feedback/fillin/saveFillinResult.json",
+          url:url + "feedback//outside/saveFillinResult",
+          type: "post",
+          data: JSON.stringify(senddata),
+          contentType:'application/json',
+          success: function (re) {
+            if (re.code > 0) {
+              $.hideLoading();
+              $.toast("保存成功", "text");
+              vm.canUpData = 0;
+              clearInterval(vm.timer.Int);
+            } else {
+              $.hideLoading();
+              $.toast("提交失败", "text");
+            }
+          }
+        });
+      }
+
+
+
+      var vm = new Vue({
+        el: 'body',
+        data: {
+          da: {},
+          canUpData: 1,
+          timer: {
+            str: "00:00:00",
+            count: 0,
+            Int: null
+          }
+        },
+        methods: {
+          save: function () {
+            console.log(this.da);
+            savefun();
+          }
+
+        }
+      })
+
+      vm.timer.Int = setInterval(function (argument) {
+        vm.timer.count += 1;
+        vm.timer.str = timeFun(vm.timer.count);
+      }, 1000);
+    });
+
+  </script>
+</body>
+
+</html>

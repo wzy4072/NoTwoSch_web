@@ -1,0 +1,105 @@
+{
+  "code": 200,
+  "desc": "success",
+  "data": null,
+  "list": [{
+      "identifyId": 3,
+      "identifyCode": 2,
+      "identifyName": "年级",
+      "createrId": 1,
+      "createrTime": 1511769429000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "schoolCode": null,
+      "labelList": [{
+          "labelId": 10,
+          "labelPid": -1,
+          "identifyId": 3,
+          "labelName": "小学一年级",
+          "createrId": 1,
+          "createrTime": 1511769429000,
+          "modifyId": null,
+          "modifyTime": null,
+          "orderId": 1,
+          "schoolCode": null
+        },
+        {
+          "labelId": 11,
+          "labelPid": -1,
+          "identifyId": 3,
+          "labelName": "初中一年级",
+          "createrId": 1,
+          "createrTime": 1511769430000,
+          "modifyId": null,
+          "modifyTime": null,
+          "orderId": 2,
+          "schoolCode": null
+        },
+        {
+          "labelId": 12,
+          "labelPid": -1,
+          "identifyId": 3,
+          "labelName": "高中一年级",
+          "createrId": 1,
+          "createrTime": 1511769430000,
+          "modifyId": null,
+          "modifyTime": null,
+          "orderId": 3,
+          "schoolCode": null
+        }
+      ],
+      "identifyCodes": null
+    },
+    {
+      "identifyId": 4,
+      "identifyCode": 3,
+      "identifyName": "学科",
+      "createrId": 1,
+      "createrTime": 1511769449000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "schoolCode": null,
+      "labelList": [{
+          "labelId": 13,
+          "labelPid": -1,
+          "identifyId": 4,
+          "labelName": "语文",
+          "createrId": 1,
+          "createrTime": 1511769449000,
+          "modifyId": null,
+          "modifyTime": null,
+          "orderId": 1,
+          "schoolCode": null
+        },
+        {
+          "labelId": 14,
+          "labelPid": -1,
+          "identifyId": 4,
+          "labelName": "数学",
+          "createrId": 1,
+          "createrTime": 1511769449000,
+          "modifyId": null,
+          "modifyTime": null,
+          "orderId": 2,
+          "schoolCode": null
+        },
+        {
+          "labelId": 15,
+          "labelPid": -1,
+          "identifyId": 4,
+          "labelName": "英语",
+          "createrId": 1,
+          "createrTime": 1511769449000,
+          "modifyId": null,
+          "modifyTime": null,
+          "orderId": 3,
+          "schoolCode": null
+        }
+      ],
+      "identifyCodes": null
+    }
+  ],
+  "recordCount": 2
+}

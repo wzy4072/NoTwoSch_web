@@ -1,0 +1,127 @@
+{
+    "code": 200,
+    "desc": "success",
+    "data": [{
+        "feedbackId": 17,
+        "feedbackTime": 1517209163000,
+        "feedbackContent": "这个老师学历是假的,这个老师学历是假的,这个老师学历是假的,这个老师学历是假的这个老师学历是假的这个老师学历是假的这个老师学历是假的",
+        "feedbackStatus": "核实中",
+        "tracks": [{
+            "trackId": 6,
+            "feedbackId": 17,
+            "trackContent": "你反应的信息属实",
+            "createBy": null,
+            "createByStr": "啊啊啊",
+            "createTime": 1517209207000
+        }, {
+            "trackId": 7,
+            "feedbackId": 21,
+            "trackContent": "谢谢你反应的真实信息",
+            "createBy": null,
+            "createByStr": "啊啊啊",
+            "createTime": 1517210662000
+        }],
+        "trackCount": 3,
+        "workerName": "发发发",
+        "workerGender": "男",
+        "workerType": "保育员",
+        "courseName": null,
+        "highestEducation": "小学",
+        "qualificationsName": "证书444-111的证书2,证书111-111的证书",
+        "qualificationsPath": "www.baidu3.com,www.baidu5.com",
+        "qualifications": [{
+            "name": "证书444-111的证书2",
+            "type": "证书222",
+            "url": "www.baidu2.com"
+        },
+        {
+            "name": "证书111-111的证书",
+            "type": "证书222",
+            "url": "www.baidu2.com"
+        }],
+        "krtenName": null,
+        "krtenCode": null
+    },{
+        "feedbackId": 18,
+        "feedbackTime": 1517209163000,
+        "feedbackContent": "这个老师学历是假的",
+        "feedbackStatus": "已完结",
+        "tracks": [{
+            "trackId": 5,
+            "feedbackId": 10,
+            "trackContent": "你反应的信息属实",
+            "createBy": null,
+            "createByStr": "啊啊啊",
+            "createTime": 1517209207000
+        }, {
+            "trackId": 4,
+            "feedbackId": 11,
+            "trackContent": "谢谢你反应的真实信息",
+            "createBy": null,
+            "createByStr": "啊啊啊",
+            "createTime": 1517210662000
+        }],
+        "trackCount": 0,
+        "workerName": "李静",
+        "workerGender": "女",
+        "workerType": "保育员",
+        "courseName": null,
+        "highestEducation": "小学",
+        "qualificationsName": "证书444-111的证书2,证书111-111的证书",
+        "qualificationsPath": "www.baidu3.com,www.baidu5.com",
+        "qualifications": [{
+            "name": "证书444-111的证书2",
+            "type": "大学毕业证",
+            "url": "www.baidu2.com"
+        },
+        {
+            "name": "证书111-111的证书",
+            "type": "大学毕业证",
+            "url": "www.baidu2.com"
+        }],
+        "krtenName": null,
+        "krtenCode": null
+    },{
+        "feedbackId": 37,
+        "feedbackTime": 1517209163000,
+        "feedbackContent": "这个老师学历是假的,这个老师学历是假的,这个老师学历是假的,这个老师学历是假的这个老师学历是假的这个老师学历是假的这个老师学历是假的",
+        "feedbackStatus": "核实中",
+        "tracks": [{
+            "trackId": 61,
+            "feedbackId": 12,
+            "trackContent": "你反应的信息属实",
+            "createBy": null,
+            "createByStr": "啊啊啊",
+            "createTime": 1517209207000
+        }, {
+            "trackId": 10,
+            "feedbackId": 23,
+            "trackContent": "谢谢你反应的真实信息",
+            "createBy": null,
+            "createByStr": "啊啊啊",
+            "createTime": 1517210662000
+        }],
+        "trackCount": 1,
+        "workerName": "发发发",
+        "workerGender": "男",
+        "workerType": "保育员",
+        "courseName": null,
+        "highestEducation": "小学",
+        "qualificationsName": "证书444-111的证书2,证书111-111的证书",
+        "qualificationsPath": "www.baidu3.com,www.baidu5.com",
+        "qualifications": [{
+            "name": "证书444-111的证书2",
+            "type": "证书222",
+            "url": "www.baidu2.com"
+        },{
+            "name": "证书111-111的证书",
+            "type": "证书222",
+            "url": "www.baidu2.com"
+        }],
+        "krtenName": null,
+        "krtenCode": null
+    }],
+    "token": null,
+    "list": null,
+    "recordCount": null
+}

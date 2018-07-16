@@ -1,0 +1,19 @@
+{
+	"code": 1,
+	"desc": "操作成功",
+	"data": {
+		"stuNumberSuperviseList": [{
+			"KRTEN_NAME": "222",
+			"stuCount": 0
+		}, {
+			"KRTEN_NAME": "大月亮",
+			"stuCount": 0
+		}, {
+			"KRTEN_NAME": "小太阳3",
+			"stuCount": 9
+		}]
+	},
+	"token": null,
+	"list": null,
+	"recordCount": null
+}

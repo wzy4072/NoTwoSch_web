@@ -1,0 +1,402 @@
+/* 去除默认样式 */
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    body {
+        font-size:@font-size-base;
+        width: inherit;
+        height: inherit;
+        margin: inherit;
+        padding: inherit;
+        font-family: @font-family;
+        #app{
+            width: inherit;
+            height: inherit;
+        }
+    }
+}
+form { margin: 0px; }
+img { border: none; }
+ul, li { list-style: none; border: none; }
+div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+a{
+    color:#fff;
+    cursor: pointer;
+    outline: medium none;
+    text-decoration: none;
+    transition: all 0.2s linear 0s;
+    -moz-transition: all 0.1s linear 0s;
+    -webkit-transition: all 0.1s linear 0s;
+    -o-transition: all 0.1s linear 0s;
+}
+a:link,a:visited,a:hover,a:active {
+    text-decoration: none;
+}
+button,input,select,textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+div,ul{box-sizing: border-box!important;}
+/* 外层页面 */
+.ins-main-con{
+    height: 100%;
+    width:100%;
+    position: relative;
+    padding-top:45px;
+    // 顶部
+    .ins-header{
+        background-color: @primary-color;
+        position: absolute;
+        z-index: 777;
+        width: 100%;
+        top: 0px;
+        height: 45px;
+        line-height: 45px;
+        color:#ffffff;
+        .ins-menu-btn{
+            height:100%;
+            padding:0 40px;
+            float:left;
+            cursor: pointer;
+            &:hover{
+                background-color:#3165D2;
+            }
+            // 菜单样式
+            .ins-nav-con{
+                position:fixed;
+                z-index:999;
+                top: 45px;
+                bottom: 0px;
+                background: #fff;
+                left: 0;
+            }
+        }
+        // 学校logo
+        .ins-sch-logo{
+            float: left;
+            margin-right:20px;
+            img{
+                width: 35px;
+                margin: 3px 10px;
+                vertical-align: middle;
+            }
+        }
+        // 设置 + 用户 +消息通知
+        .ins-setting,.ins-user,.ins-message{
+            margin-right:20px;
+            float: right;
+            &:hover{opacity: 0.8;}
+        }
+    }
+    // 用户功能按钮：退出登录
+    .ins-system-opa{
+        font-size: 15px;
+        z-index:15;
+        position: absolute;
+        width: 90px;
+        right: 50px;
+        top:0px;
+        background: #fff;
+        color: #343434;
+        text-align: center;
+        box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4);
+        transition:top 0.5s;
+        -moz-transition:top 0.5s; /* Firefox 4 */
+        -webkit-transition:top 0.5s; /* Safari and Chrome */
+        -o-transition:top 0.5s; /* Opera */
+        &.ins-show{
+            top:45px;
+            transition:top 0.5s;
+            -moz-transition:top 0.5s; /* Firefox 4 */
+            -webkit-transition:top 0.5s; /* Safari and Chrome */
+            -o-transition:top 0.5s; /* Opera */
+        }
+        li{
+            border-top: 1px solid #017CD2;
+            line-height: normal;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+    
+}
+/* 内层页面 */
+.ins-container{
+    height: 100%;
+    position: relative;
+    padding-top:50px;
+}
+// 页面顶部
+.ins-page-top{
+    position: absolute;
+    top: 0;
+    height:50px;
+    line-height:50px;
+    width:100%;
+    border-bottom:1px solid #edf0f9;
+    font-size: 17px;
+    -webkit-box-shadow: 0 5px 5px -5px #EBEEF5;  
+    -moz-box-shadow: 0 5px 5px -5px #EBEEF5;  
+    -o-box-shadow: 0 5px 5px -5px #EBEEF5;  
+    // 页面标题
+    .ins-page-title{
+        float:left;
+        margin-right:50px;
+        .ins-back-icon{
+            background: #F2F1F4;
+            border:1px solid #D1D1D1;
+            padding: 4px 7px;
+            border-radius: 50%;
+            margin-right: 15px;
+            cursor: pointer;
+            &:hover{opacity:0.8}
+            .el-icon-back{color:#9EA1BC;}
+        }
+    }
+    // tab页切换
+    .ins-tab-label{
+        float:left;
+        // 覆盖element ui 默认样式
+        .el-tabs__item{height: 35px;line-height:35px;font-size:15px;}
+        .el-tabs__header{margin-bottom:0;}
+        .el-tabs__nav-wrap::after{height:1px;background-color:#edf0f9;}
+        .el-tabs__content {display: none;}
+        .el-tabs__active-bar{height:2px;}
+    }
+}
+// 页面主要内容
+.ins-page-con{
+    height:100%;
+    width:100%;
+    background-color:#F5F7Fd;
+}
+// 页面公共类型
+.ins-page-type{
+    // 顶部 search + btn
+    &.type1{
+        padding-top:80px;
+    }
+    height:100%;
+    position: relative;
+}
+// 页面search栏
+.ins-page-search{
+    padding:4px 0px;
+    width: 100%;
+    height:44px;
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+}
+// 页面button栏
+.ins-page-btn{
+    padding:4px 0px;
+    width: 100%;
+    height:42px;
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+}
+// search/button 容器
+.ins-search-con,.ins-opa-btn{
+    display: inline-block;
+    margin-right: 5px;
+}
+// 右侧按钮
+.ins-opa-btn.right{
+    float: right;
+    position: relative;
+    top: 2px;
+}
+// 主要内容
+.ins-page-main{
+    background-color:#fff; 
+    height:100%;
+    border-radius:8px; 
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1),0 0 40px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1),0 0 40px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1),0 0 40px rgba(0,0,0,0.1);
+    -o-box-shadow:0 1px 4px rgba(0,0,0,0.1),0 0 40px rgba(0,0,0,0.1);   
+    padding:20px;
+}
+// table 
+.ins-table{
+    padding-top:40px;
+    &.divide{
+        padding-bottom:50px;
+    }
+    height:100%;
+    position: relative;
+    .ins-tab-con{
+        height:100%;
+        .el-table{ // 覆盖element ui 样式
+            &.el-table--border{
+                border-bottom:1px solid #ebeef5!important;
+            }
+            td,th{
+                padding:6px 0!important; 
+            }
+            .sort-caret{
+                &.ascending{
+                    top:0!important;
+                }
+                &.descending{
+                    bottom:3px!important;
+                }
+            }
+            .caret-wrapper{
+                height:25px!important;
+                float:right;
+            }
+        }
+    }
+    .ins-tab-divide{
+        position: absolute;
+        bottom:0px;
+        width:100%;
+        text-align: center;
+    }
+}
+// other
+.ins-content{
+    &.no-title{
+        padding-top:0;
+    }
+    padding-top:40px;
+    height:100%;
+    position: relative;
+    .ins-content-con{
+        height:100%;
+        padding: 20px;
+        overflow-y: auto;
+        border:1px solid #ebeef5;
+    }
+}
+// 主要内容标题栏
+.ins-title{
+    background-color:#e7e9f0;
+    height:40px;
+    line-height:40px;
+    position: absolute;
+    top: 0;
+    width:100%;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    padding:0 10px 0 20px;
+    .title-icon{
+        position: relative;
+        top: 5px;
+        margin-right: 5px;
+    }
+    .title-input{
+        width:200px;
+        float: right;
+        .el-input__inner{
+            height:34px;
+            line-height: 34px;
+            border: none;
+        }
+    }
+    .tabbar-con {
+        float: right;
+        margin-left: 10px;
+        line-height: normal;
+        position: relative;
+        top:5px;
+    }
+}
+// 其他类型 flex 布局
+.ins-spec-con{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    .ins-spec-top{
+        padding:5px 0;
+        .ins-search-con,.ins-opa-btn{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    .ins-spec-main{
+        flex: 1;
+    }
+}
+/* 媒体查询 */
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+    .ins-page-top,.ins-page-con {
+        padding-right:60px;
+        padding-left:60px;
+    }
+    .ins-page-con{
+        padding-bottom:30px;
+    }
+    .ins-page-type.type2{
+        padding-top:30px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .ins-page-top,.ins-page-con {
+        padding-right:10px;
+        padding-left:10px;
+    }
+    .ins-page-con{
+        padding-bottom:10px;
+    }
+    .ins-page-type.type2{
+        padding-top:10px;
+    }
+}
+@media screen and (min-width: 1300px){
+    .ins-page-top,.ins-page-con{
+        padding-right:5%;
+        padding-left:5%;
+    }
+    .ins-page-con {
+        padding-bottom:40px;
+    }
+    .ins-page-type.type2{
+        padding-top:40px;
+    }
+}
+/* 全局覆盖element ui样式 */
+.el-table td,.el-table th{
+    padding:6px 0!important;
+}
+/* 普通表格 */
+.ins-com-table{ // 复用 el-table el-table--border
+    margin-bottom:20px;
+    &.table-striped{
+        tr:nth-child(even)>td{
+            background: #FAFAFA;
+        }
+        tr:hover>td{
+            background: #f5f7fa;
+        }
+    }
+    th,td{
+        padding:6px 10px!important;
+    }
+    .table-no-data{
+        text-align: center;
+        height: 37px;
+        line-height: 37px;
+        border: 1px solid #ebeef5;
+        border-top: none;
+    }
+}
+/* com 弹框 条目 */
+.ins-com-item{
+    .el-form-item{
+        margin-bottom:5px;
+        .el-form-item__label,.el-form-item__content{
+            line-height: 25px;
+        }
+    }
+}

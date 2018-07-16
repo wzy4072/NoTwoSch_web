@@ -1,0 +1,51 @@
+{
+    "code": 1,
+    "desc": "查询成功",
+    "recordCount": null,
+    "currentPage": null,
+    "data": {
+        "rows": [{
+            "1": "男",
+            "4": "王者荣耀|天涯明月刀",
+            "11": "梦想是当警察蜀黍",
+            "65": "80",
+            "attendancerecordsId": "8",
+            "gradeClass": "高二,高三-2",
+            "attendanceTime": "10",
+            "requestMac": "0sfasfsdfdasdfsd",
+            "createrDate": 1520586000000,
+            "createrName": "管理员"
+        },
+        {
+            "1": "男",
+            "4": "王者荣耀|天涯明月刀",
+            "11": "梦想是当警察蜀黍",
+            "65": "80",
+            "attendancerecordsId": "9",
+            "gradeClass": "高二,高三-2",
+            "attendanceTime": "10",
+            "requestMac": "0sfasfsdfdasdfsd",
+            "createrDate": 1520586000000,
+            "createrName": "管理员"
+        },
+        {
+            "1": "男",
+            "4": "王者荣耀|天涯明月刀",
+            "11": "梦想是当警察蜀黍",
+            "65": "80",
+            "attendancerecordsId": "10",
+            "gradeClass": "高二,高三-2",
+            "attendanceTime": "10",
+            "requestMac": "0sfasfsdfdasdfsd",
+            "createrDate": 1520586000000,
+            "createrName": "管理员"
+        }],
+        "cols": {
+            "1": "您的性别？",
+            "4": "您喜欢的游戏?",
+            "11": "你的梦想是什么?",
+            "65": "你对你自己打多少分"
+        }
+    },
+    "list": null
+}

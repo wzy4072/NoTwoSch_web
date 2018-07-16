@@ -1,0 +1,18 @@
+ {
+    "code": 1,
+    "desc": null,
+    "recordCount": 1,
+    "currentPage": null,
+    "data": null,
+    "list": [
+        {
+            "attId":303,
+            "attUrl": "\\GrowAttachment1\\201608001\\201608001_20161217164956338.mp4",
+            "thumbnailUrl": "\\GrowAttachment1\\201608001\\201608001_20161217165034980.jpg",
+            "fileSize": 13498505,
+            "fileType": "vidio",
+            "businessId": null,
+            "businessType": null
+        }
+    ]
+}

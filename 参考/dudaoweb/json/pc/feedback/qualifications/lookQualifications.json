@@ -1,0 +1,56 @@
+{
+    "code": 200,
+    "desc": "success",
+    "data": [
+        {
+            "workerId": "1",
+            "workerName": "圣诞节",
+            "workerGender": "男",
+            "workerType": "教师",
+            "courseName": "语文,数学",
+            "highestEducation": "小学",
+            "qualificationsName": "证书444-111的证书2,证书111-111的证书",
+            "qualificationsPath": "www.baidu4.com,www.baidu.com",
+            "qualifications": [
+                {
+                    "name": "222的证书",
+                    "type": "证书222",
+                    "url": "www.baidu2.com"
+                }
+            ],
+            "educationUpdateDate": 1491211340000,
+             "parentTel": "1383838438"
+        },
+        {
+            "workerId": "2",
+            "workerName": "阿斯顿",
+            "workerGender": "女",
+            "workerType": "医生",
+            "courseName": "",
+            "highestEducation": "本科",
+            "qualificationsName": "证书444-111的证书2,证书111-111的证书",
+            "qualificationsPath": "www.baidu4.com,www.baidu.com",
+            "qualifications": [
+                {
+                    "name": "333的证书",
+                    "type": "证书333",
+                    "url": "www.baidu2.com"
+                },
+                {
+                    "name": "212的证书",
+                    "type": "证书212",
+                    "url": "www.asfndfsfns.com"
+                },
+                {
+                    "name": "001的证书",
+                    "type": "证书001",
+                    "url": "www.abc.com"
+                }
+            ],
+            "educationUpdateDate": 1491211340000
+        }
+    ],
+    "token": null,
+    "list": null,
+    "recordCount": null
+}

@@ -1,0 +1,27 @@
+{
+    "code": 200,
+    "desc": "success",
+    "data": null,
+    "token": null,
+    "list": [
+        {
+            "confId": 2,
+            "parentId": -1,
+            "dictCode": "1",
+            "dictDesc": "公告类型1",
+            "dictName": "信息公开1",
+            "dictValue": "信息公开1",
+            "dictType": "NOTICE_CATEGORY_GG1"
+        },
+        {
+            "confId": 3,
+            "parentId": -1,
+            "dictCode": "2",
+            "dictDesc": "公告类型2",
+            "dictName": "信息公开2",
+            "dictValue": "信息公开2",
+            "dictType": "NOTICE_CATEGORY_GG2"
+        }
+    ],
+    "recordCount": 2
+}

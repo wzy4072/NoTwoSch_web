@@ -1,0 +1,26 @@
+{
+    "code": 1,
+    "desc": "查询成功",
+    "recordCount": null,
+    "currentPage": null,
+    "data": [{
+            "userName": "管理员1",
+            "answer": "梦想是当科学家",
+            "createDate": 1520503200000,
+            "gradeClass": "高二,高三-2"
+        },
+        {
+            "userName": "管理员",
+            "answer": "梦想是当警察蜀黍",
+            "createDate": 1520503200000,
+            "gradeClass": "无"
+        },
+        {
+            "userName": "非实名",
+            "answer": "梦想是当警察蜀黍1",
+            "createDate": 1520503200000,
+            "gradeClass": "无"
+        }
+    ],
+    "list": null
+}

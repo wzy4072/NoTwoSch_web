@@ -1,0 +1,157 @@
+{
+  "code": 200,
+  "desc": "success",
+  "data": null,
+  "list": [
+    {
+      "knowledgeId": 1,
+      "knowledgePid": -1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "小学语文2017人教版1",
+      "createrId": 1,
+      "createrTime": 1511852772000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": [
+		{
+          "chapterId": 111
+        },
+        {
+          "chapterId": 112
+        },
+        {
+          "chapterId": 121
+        }
+      ]
+    },
+    {
+      "knowledgeId": 11,
+      "knowledgePid": 1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "数与式11(关联111,112,121)",
+      "createrId": 1,
+      "createrTime": 1511852822000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": [
+		{
+          "chapterId": 11
+        },
+		{
+          "chapterId": 111
+        },
+        {
+          "chapterId": 112
+        },
+        {
+          "chapterId": 121
+        }
+	  ]
+    },
+	{
+      "knowledgeId": 111,
+      "knowledgePid": 11,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "数与式子111",
+      "createrId": 1,
+      "createrTime": 1511852822000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": []
+    },
+	{
+      "knowledgeId": 112,
+      "knowledgePid": 11,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "数与式子112",
+      "createrId": 1,
+      "createrTime": 1511852822000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": []
+    },
+    {
+      "knowledgeId": 12,
+      "knowledgePid": 1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "加与减12",
+      "createrId": 1,
+      "createrTime": 1511852838000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": []
+    },{
+      "knowledgeId": 121,
+      "knowledgePid": 12,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "加与减121",
+      "createrId": 1,
+      "createrTime": 1511852838000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": []
+    },{
+      "knowledgeId": 122,
+      "knowledgePid": 12,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "加与减122",
+      "createrId": 1,
+      "createrTime": 1511852838000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": []
+    },      
+	{
+      "knowledgeId": 2,
+      "knowledgePid": -1,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "小学语文2018人教版2",
+      "createrId": 1,
+      "createrTime": 1511852772000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": []
+    }
+  ],
+  "recordCount": 3
+}

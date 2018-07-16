@@ -1,0 +1,122 @@
+{
+    "code": 200,
+    "desc": "success",
+    "data": [{
+        "id": "11",
+        "label": "研发部",
+        "parentid": "1",
+        "order": "99992000",
+        "children": [{
+            "id": "CaoJiangPing",
+            "label": "曹江平",
+            "deptId":"qqq",
+            "deptName":"后端研发部",
+            "department": "[1,11]",
+            "order": "[0,0]",
+            "position": "",
+            "mobile": "15999698656",
+            "gender": "1",
+            "email": "",
+            "isleader": "0",
+            "avatar": "http://p.qlogo.cn/bizmail/lfzMcJqLtmhCRkNmCccI9dPswJmRe8Xk9x4FkhZlQL73wxd1IhXw3A/0",
+            "telephone": "",
+            "english_name": "",
+            "status": "1",
+            "extattr": "{\"attrs\":[]}"
+        }]
+    }, {
+        "id": "12",
+        "label": "后端研发部",
+        "parentid": "11",
+        "order": "100000000",
+        "children": [{
+            "id": "LiuYong",
+            "label": "刘雍",
+            "deptId":"qqq",
+            "deptName":"后端研发部",
+            "department": "[1,12]",
+            "order": "[0,0]",
+            "position": "",
+            "mobile": "",
+            "gender": "1",
+            "email": "",
+            "isleader": "0",
+            "avatar": "http://p.qlogo.cn/bizmail/2fGAf5aiajM7QDAhUkxFiaa6NJDks672Kkfd8etcXfZ9CDbSEWPsiazKw/0",
+            "telephone": "",
+            "english_name": "",
+            "status": "1",
+            "extattr": "{\"attrs\":[]}"
+        }, {
+            "id": "YiLei",
+            "label": "易蕾",
+            "deptId":"qqq",
+            "deptName":"后端研发部",
+            "department": "[1,12]",
+            "order": "[0,0]",
+            "position": "",
+            "mobile": "",
+            "gender": "1",
+            "email": "",
+            "isleader": "0",
+            "avatar": "http://p.qlogo.cn/bizmail/QBV2EOiatib6sF6r5xCfn6iaAbJB0oiaOOIkMFhK3ejBJNT0baV0qBSJSw/0",
+            "telephone": "",
+            "english_name": "",
+            "status": "1",
+            "extattr": "{\"attrs\":[]}"
+        }, {
+            "id": "WangYue",
+            "label": "王越",
+            "deptId":"qqq",
+            "deptName":"后端研发部",
+            "department": "[1,12]",
+            "order": "[0,0]",
+            "position": "",
+            "mobile": "13128905124",
+            "gender": "1",
+            "email": "",
+            "isleader": "0",
+            "avatar": "http://p.qlogo.cn/bizmail/X0piaSMVQaAn18O4Q367ZABbgEBsc50ftOAFRQcibJy5ILOa6wIWm2cw/0",
+            "telephone": "",
+            "english_name": "",
+            "status": "1",
+            "extattr": "{\"attrs\":[]}"
+        }]
+    }, {
+        "id": "13",
+        "label": "前端研发部",
+        "parentid": "11",
+        "order": "99999000",
+        "children": [{
+            "id": "RuanXueZhen",
+            "label": "阮学珍",
+            "deptId":"qqq",
+            "deptName":"前端研发部",
+            "department": "[1,13]",
+            "order": "[0,0]",
+            "position": "",
+            "mobile": "13266682036",
+            "gender": "1",
+            "email": "",
+            "isleader": "0",
+            "avatar": "http://p.qlogo.cn/bizmail/QqmGlvYNWZYicN8alfR4gaiccu7UkXtp0DicLgNKNCFKTOcGl6sibE7cKQ/0",
+            "telephone": "",
+            "english_name": "",
+            "status": "1",
+            "extattr": "{\"attrs\":[]}"
+        }]
+    }, {
+        "id": "14",
+        "label": "测试部",
+        "parentid": "11",
+        "order": "99998000",
+        "children": []
+    }, {
+        "id": "15",
+        "label": "产品设计部",
+        "parentid": "11",
+        "order": "100001000",
+        "children": []
+    }],
+    "list": null,
+    "recordCount": null
+}

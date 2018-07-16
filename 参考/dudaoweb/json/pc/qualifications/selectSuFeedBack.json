@@ -1,0 +1,65 @@
+{
+  "code": 1,
+  "desc": null,
+  "data": {
+      "suInfo": [
+          {
+              "feedBackType": 1,
+              "total": 3,
+              "unFinish": 2,
+              "finish": 1,
+              "suId": 1,
+              "suName": "锵锵锵"
+          },
+          {
+              "feedBackType": 2,
+              "total": 1,
+              "unFinish": 0,
+              "finish": 1,
+              "suId": 1,
+              "suName": "锵锵锵"
+          },
+          {
+              "feedBackType": 1,
+              "total": 2,
+              "unFinish": 2,
+              "finish": 0,
+              "suId": 2,
+              "suName": "我问问"
+          },
+          {
+              "feedBackType": 2,
+              "total": 2,
+              "unFinish": 0,
+              "finish": 2,
+              "suId": 2,
+              "suName": "我问问"
+          },
+          {
+              "feedBackType": 1,
+              "total": 1,
+              "unFinish": 1,
+              "finish": 0,
+              "suId": 3,
+              "suName": "呃呃呃"
+          }
+      ],
+      "allSu": [
+          {
+              "suName": "锵锵锵",
+              "suId": 1
+          },
+          {
+              "suName": "我问问",
+              "suId": 2
+          },
+          {
+              "suName": "呃呃呃",
+              "suId": 3
+          }
+      ]
+  },
+  "token": null,
+  "list": null,
+  "recordCount": null
+}

@@ -1,0 +1,44 @@
+{
+  "code": 1,
+  "desc": "查询成功",
+  "data": null,
+  "token": null,
+  "list": [{
+    "gradeId": null,
+    "gradeCode": "1001",
+    "gradeName": "111",
+    "dictCode": null,
+    "krtenCode": "K2018",
+    "userId": null,
+    "classList": [{
+      "classId": null,
+      "classCode": "10000",
+      "className": "111",
+      "students": [{
+        "stduentId": 17,
+        "krtenCode": null,
+        "userId": 122,
+        "studentName": "易蕾1"
+      }]
+    }]
+  }, {
+    "gradeId": null,
+    "gradeCode": "1001",
+    "gradeName": "2222",
+    "dictCode": null,
+    "krtenCode": "k2018",
+    "userId": null,
+    "classList": [{
+      "classId": null,
+      "classCode": "10001",
+      "className": "3333",
+      "students": [{
+        "stduentId": 100,
+        "krtenCode": null,
+        "userId": 100,
+        "studentName": "易蕾"
+      }]
+    }]
+  }],
+  "recordCount": null
+}

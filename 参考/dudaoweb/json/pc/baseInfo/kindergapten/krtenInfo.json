@@ -1,0 +1,27 @@
+{
+  "code": 1,
+  "desc": "查询成功",
+  "data": [
+      {
+          "krtenId": 1,
+          "areaCode": "YT",
+          "krtenCode": "201803001",
+          "krtenName": "小太阳"
+      },
+      {
+          "krtenId": 2,
+          "areaCode": "YT",
+          "krtenCode": "201803002",
+          "krtenName": "大月亮"
+      },
+      {
+          "krtenId": 3,
+          "areaCode": "YT",
+          "krtenCode": "201803003",
+          "krtenName": "222"
+      }
+  ],
+  "token": null,
+  "list": null,
+  "recordCount": null
+}

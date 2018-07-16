@@ -1,0 +1,128 @@
+{
+  "code": 1,
+  "desc": "查询成功",
+  "data": null,
+  "token": null,
+  "list": [{
+      "groupId": 1,
+      "questionnaireId": 15,
+      "parentId": -1,
+      "groupName": "分组1",
+      "userId": null,
+      "userType": null,
+      "peopleId": null,
+      "name": null,
+      "sonList": [{
+          "groupId": 2,
+          "questionnaireId": 15,
+          "parentId": null,
+          "groupName": "分组1",
+          "userId": 362,
+          "userType": 5,
+          "currentId": "245",
+          "name": "张三",
+          "sonList": null,
+          "areaCode": null,
+          "krtenCode": null
+        },
+        {
+          "groupId": 3,
+          "questionnaireId": 15,
+          "parentId": null,
+          "groupName": "分组1",
+          "userId": 2,
+          "currentId": "308",
+          "name": "学生1",
+          "userType": 5,
+          "peopleId": null,
+          "sonList": null,
+          "areaCode": null,
+          "krtenCode": null
+        }
+      ],
+      "areaCode": "1",
+      "krtenCode": "K2018"
+    },
+    {
+      "groupId": 4,
+      "questionnaireId": 13,
+      "parentId": -1,
+      "groupName": "分组1",
+      "userId": null,
+      "userType": null,
+      "peopleId": null,
+      "name": null,
+      "sonList": [{
+        "groupId": 5,
+        "questionnaireId": 15,
+        "parentId": null,
+        "groupName": "分组1",
+        "userId": 362,
+        "userType": 5,
+        "currentId": "245",
+        "name": "张三",
+        "sonList": null,
+        "areaCode": null,
+        "krtenCode": null
+      },
+      {
+        "groupId": 3,
+        "questionnaireId": 15,
+        "parentId": null,
+        "groupName": "分组1",
+        "userId": 2,
+        "currentId": "308",
+        "name": "学生1",
+        "userType": 5,
+        "peopleId": null,
+        "sonList": null,
+        "areaCode": null,
+        "krtenCode": null
+      }
+      ],
+      "areaCode": "1",
+      "krtenCode": "K2018"
+    },
+    {
+      "groupId": 7,
+      "questionnaireId": 17,
+      "parentId": -1,
+      "groupName": "分组1",
+      "userId": null,
+      "userType": null,
+      "peopleId": null,
+      "name": null,
+      "sonList": [{
+        "groupId": 2,
+        "questionnaireId": 15,
+        "parentId": null,
+        "groupName": "分组1",
+        "userId": 362,
+        "userType": 5,
+        "currentId": "245",
+        "name": "张三",
+        "sonList": null,
+        "areaCode": null,
+        "krtenCode": null
+      },
+      {
+        "groupId": 3,
+        "questionnaireId": 15,
+        "parentId": null,
+        "groupName": "分组1",
+        "userId": 2,
+        "currentId": "308",
+        "name": "学生1",
+        "userType": 5,
+        "peopleId": null,
+        "sonList": null,
+        "areaCode": null,
+        "krtenCode": null
+      }
+      ],
+      "areaCode": "1",
+      "krtenCode": "K2018"
+    }
+  ],
+  "recordCount": null
+}

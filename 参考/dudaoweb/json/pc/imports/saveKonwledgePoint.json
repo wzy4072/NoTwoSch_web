@@ -1,0 +1,55 @@
+{
+  "code": 200,
+  "desc": "success",
+  "data": null,
+  "list": [
+    
+    {
+      "knowledgeId": 225,
+      "knowledgePid": 2,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "225",
+      "createrId": 1,
+      "createrTime": 1511852838000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": []
+    },{
+      "knowledgeId": 224,
+      "knowledgePid": 2,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "224",
+      "createrId": 1,
+      "createrTime": 1511852822000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0
+    },
+    {
+      "knowledgeId": 226,
+      "knowledgePid": 2,
+      "identifyId": null,
+      "textbookNum": 19,
+      "k12Id": 10,
+      "termId": 16,
+      "courseId": 13,
+      "knowledgeName": "226",
+      "createrId": 1,
+      "createrTime": 1511852838000,
+      "modifyId": null,
+      "modifyTime": null,
+      "isDel": 0,
+      "chapterList": []
+    }
+  ],
+  "recordCount": 3
+}

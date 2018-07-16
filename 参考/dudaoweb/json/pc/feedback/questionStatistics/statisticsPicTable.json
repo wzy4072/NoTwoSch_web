@@ -1,0 +1,591 @@
+{
+  "code": 1,
+  "desc": "查询成功",
+  "recordCount": null,
+  "currentPage": null,
+  "data": {
+    "0": {
+      "questionnaireId": 1,
+      "questionnaireTitle": "问卷1",
+      "subjects": [{
+          "subjectId": 1,
+          "subjectTitle": "您的性别？",
+          "subjectIsOption": 1,
+          "subjectType": 1,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 2,
+              "questionAnswer": "男",
+              "selectCount": 1,
+              "ratio": 90
+            },
+            {
+              "answerId": 3,
+              "questionAnswer": "女",
+              "selectCount": 0,
+              "ratio": 10
+            }
+          ]
+        },
+        {
+          "subjectId": 4,
+          "subjectTitle": "您喜欢的游戏?",
+          "subjectIsOption": 1,
+          "subjectType": 2,
+          "maxSelect": 2,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 5,
+              "questionAnswer": "英雄联盟",
+              "selectCount": 1,
+              "ratio": 50
+            },
+            {
+              "answerId": 6,
+              "questionAnswer": "王者荣耀",
+              "selectCount": 0,
+              "ratio": 10
+            },
+            {
+              "answerId": 7,
+              "questionAnswer": "热血传奇",
+              "selectCount": 1,
+              "ratio": 10
+            },
+            {
+              "answerId": 8,
+              "questionAnswer": "极品飞车",
+              "selectCount": 0,
+              "ratio": 10
+            },
+            {
+              "answerId": 9,
+              "questionAnswer": "梦幻西游",
+              "selectCount": 0,
+              "ratio": 10
+            },
+            {
+              "answerId": 10,
+              "questionAnswer": "天涯明月刀",
+              "selectCount": 0,
+              "ratio": 10
+            }
+          ]
+        },
+        {
+          "subjectId": 11,
+          "subjectTitle": "你的梦想是什么?",
+          "subjectIsOption": 1,
+          "subjectType": 3,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": []
+        },
+        {
+          "subjectId": 65,
+          "subjectTitle": "你对你自己打多少分",
+          "subjectIsOption": 0,
+          "subjectType": 4,
+          "maxSelect": 100,
+          "fillinCount": 100,
+          "sum": 100,
+          "average": 25,
+          "answers": []
+        }
+      ]
+    },
+    "K2018": {
+      "questionnaireId": 1,
+      "questionnaireTitle": "问卷1",
+      "subjects": [{
+          "subjectId": 1,
+          "subjectTitle": "您的性别？",
+          "subjectIsOption": 1,
+          "subjectType": 1,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 2,
+              "questionAnswer": "男",
+              "selectCount": 1,
+              "ratio": 90
+            },
+            {
+              "answerId": 3,
+              "questionAnswer": "女",
+              "selectCount": 0,
+              "ratio": 10
+            }
+          ]
+        },
+        {
+          "subjectId": 4,
+          "subjectTitle": "您喜欢的游戏?",
+          "subjectIsOption": 1,
+          "subjectType": 2,
+          "maxSelect": 2,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 5,
+              "questionAnswer": "英雄联盟",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 6,
+              "questionAnswer": "王者荣耀",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 7,
+              "questionAnswer": "热血传奇",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 8,
+              "questionAnswer": "极品飞车",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 9,
+              "questionAnswer": "梦幻西游",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 10,
+              "questionAnswer": "天涯明月刀",
+              "selectCount": 0,
+              "ratio": 0
+            }
+          ]
+        },
+        {
+          "subjectId": 11,
+          "subjectTitle": "你的梦想是什么?",
+          "subjectIsOption": 1,
+          "subjectType": 3,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": []
+        },
+        {
+          "subjectId": 65,
+          "subjectTitle": "你对你自己打多少分",
+          "subjectIsOption": 0,
+          "subjectType": 4,
+          "maxSelect": 100,
+          "fillinCount": null,
+          "sum": null,
+          "average": null,
+          "answers": []
+        }
+      ]
+    },
+    "L2018": {
+      "questionnaireId": 1,
+      "questionnaireTitle": "问卷1",
+      "subjects": [{
+          "subjectId": 1,
+          "subjectTitle": "您的性别？",
+          "subjectIsOption": 1,
+          "subjectType": 1,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 2,
+              "questionAnswer": "男",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 3,
+              "questionAnswer": "女",
+              "selectCount": 0,
+              "ratio": 0
+            }
+          ]
+        },
+        {
+          "subjectId": 4,
+          "subjectTitle": "您喜欢的游戏?",
+          "subjectIsOption": 1,
+          "subjectType": 2,
+          "maxSelect": 2,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 5,
+              "questionAnswer": "英雄联盟",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 6,
+              "questionAnswer": "王者荣耀",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 7,
+              "questionAnswer": "热血传奇",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 8,
+              "questionAnswer": "极品飞车",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 9,
+              "questionAnswer": "梦幻西游",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 10,
+              "questionAnswer": "天涯明月刀",
+              "selectCount": 1,
+              "ratio": 100
+            }
+          ]
+        },
+        {
+          "subjectId": 11,
+          "subjectTitle": "你的梦想是什么?",
+          "subjectIsOption": 1,
+          "subjectType": 3,
+          "maxSelect": null,
+          "fillinCount": null,
+          "sum": null,
+          "average": null,
+          "answers": []
+        },
+        {
+          "subjectId": 65,
+          "subjectTitle": "你对你自己打多少分",
+          "subjectIsOption": 0,
+          "subjectType": 4,
+          "maxSelect": 100,
+          "fillinCount": 1,
+          "sum": 80,
+          "average": 80,
+          "answers": []
+        }
+      ]
+    },
+    "K2018": {
+      "questionnaireId": 1,
+      "questionnaireTitle": "问卷1",
+      "subjects": [{
+          "subjectId": 1,
+          "subjectTitle": "您的性别？",
+          "subjectIsOption": 1,
+          "subjectType": 1,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 2,
+              "questionAnswer": "男",
+              "selectCount": 1,
+              "ratio": 90
+            },
+            {
+              "answerId": 3,
+              "questionAnswer": "女",
+              "selectCount": 0,
+              "ratio": 10
+            }
+          ]
+        },
+        {
+          "subjectId": 4,
+          "subjectTitle": "您喜欢的游戏?",
+          "subjectIsOption": 1,
+          "subjectType": 2,
+          "maxSelect": 2,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 5,
+              "questionAnswer": "英雄联盟",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 6,
+              "questionAnswer": "王者荣耀",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 7,
+              "questionAnswer": "热血传奇",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 8,
+              "questionAnswer": "极品飞车",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 9,
+              "questionAnswer": "梦幻西游",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 10,
+              "questionAnswer": "天涯明月刀",
+              "selectCount": 0,
+              "ratio": 0
+            }
+          ]
+        },
+        {
+          "subjectId": 11,
+          "subjectTitle": "你的梦想是什么?",
+          "subjectIsOption": 1,
+          "subjectType": 3,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": []
+        },
+        {
+          "subjectId": 65,
+          "subjectTitle": "你对你自己打多少分",
+          "subjectIsOption": 0,
+          "subjectType": 4,
+          "maxSelect": 100,
+          "fillinCount": null,
+          "sum": null,
+          "average": null,
+          "answers": []
+        }
+      ]
+    },    
+    "J2018": {
+      "questionnaireId": 1,
+      "questionnaireTitle": "问卷1",
+      "subjects": [{
+          "subjectId": 1,
+          "subjectTitle": "您的性别？",
+          "subjectIsOption": 1,
+          "subjectType": 1,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 2,
+              "questionAnswer": "男",
+              "selectCount": 1,
+              "ratio": 90
+            },
+            {
+              "answerId": 3,
+              "questionAnswer": "女",
+              "selectCount": 0,
+              "ratio": 10
+            }
+          ]
+        },
+        {
+          "subjectId": 4,
+          "subjectTitle": "您喜欢的游戏?",
+          "subjectIsOption": 1,
+          "subjectType": 2,
+          "maxSelect": 2,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 5,
+              "questionAnswer": "英雄联盟",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 6,
+              "questionAnswer": "王者荣耀",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 7,
+              "questionAnswer": "热血传奇",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 8,
+              "questionAnswer": "极品飞车",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 9,
+              "questionAnswer": "梦幻西游",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 10,
+              "questionAnswer": "天涯明月刀",
+              "selectCount": 0,
+              "ratio": 0
+            }
+          ]
+        },
+        {
+          "subjectId": 11,
+          "subjectTitle": "你的梦想是什么?",
+          "subjectIsOption": 1,
+          "subjectType": 3,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": []
+        },
+        {
+          "subjectId": 65,
+          "subjectTitle": "你对你自己打多少分",
+          "subjectIsOption": 0,
+          "subjectType": 4,
+          "maxSelect": 100,
+          "fillinCount": null,
+          "sum": null,
+          "average": null,
+          "answers": []
+        }
+      ]
+    },
+    "P2018": {
+      "questionnaireId": 1,
+      "questionnaireTitle": "问卷1",
+      "subjects": [{
+          "subjectId": 1,
+          "subjectTitle": "您的性别？",
+          "subjectIsOption": 1,
+          "subjectType": 1,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 2,
+              "questionAnswer": "男",
+              "selectCount": 1,
+              "ratio": 90
+            },
+            {
+              "answerId": 3,
+              "questionAnswer": "女",
+              "selectCount": 0,
+              "ratio": 10
+            }
+          ]
+        },
+        {
+          "subjectId": 4,
+          "subjectTitle": "您喜欢的游戏?",
+          "subjectIsOption": 1,
+          "subjectType": 2,
+          "maxSelect": 2,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": [{
+              "answerId": 5,
+              "questionAnswer": "英雄联盟",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 6,
+              "questionAnswer": "王者荣耀",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 7,
+              "questionAnswer": "热血传奇",
+              "selectCount": 1,
+              "ratio": 100
+            },
+            {
+              "answerId": 8,
+              "questionAnswer": "极品飞车",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 9,
+              "questionAnswer": "梦幻西游",
+              "selectCount": 0,
+              "ratio": 0
+            },
+            {
+              "answerId": 10,
+              "questionAnswer": "天涯明月刀",
+              "selectCount": 0,
+              "ratio": 0
+            }
+          ]
+        },
+        {
+          "subjectId": 11,
+          "subjectTitle": "你的梦想是什么?",
+          "subjectIsOption": 1,
+          "subjectType": 3,
+          "maxSelect": null,
+          "fillinCount": 1,
+          "sum": null,
+          "average": null,
+          "answers": []
+        },
+        {
+          "subjectId": 65,
+          "subjectTitle": "你对你自己打多少分",
+          "subjectIsOption": 0,
+          "subjectType": 4,
+          "maxSelect": 100,
+          "fillinCount": null,
+          "sum": null,
+          "average": null,
+          "answers": []
+        }
+      ]
+    }
+  },
+  "list": null
+}

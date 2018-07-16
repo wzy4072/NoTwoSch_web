@@ -1,0 +1,203 @@
+@msg-title-font: 16px;
+@msg-title-color: #363747;
+@msg-title-height: 44px;
+@msg-title-backgroundTwo: #e7e9f0;
+@msg-title-radius: 7px;
+@msg-title-left-background: #719fff;
+@msg-title-left-color: #ffffff;
+@msg-title-left-padding: 0 20px 0 20px;
+@msg-border-color: #e5e9f4;
+@msg-context-font: 14px;
+@msg-sub-title-color: #888888;
+@msg-item-height: 70px;
+@msg-item-hover-color: #1e8df5;
+@msg-item-hover-background: #eff4ff;
+@msg-min-font: 12px;
+@msg-context-color: #555555;
+.height() {
+  height: 100%;
+  overflow: hidden;
+}
+
+.msg-title() {
+  height: @msg-title-height;
+  line-height: @msg-title-height;
+  font-size: @msg-title-font;
+  border-top-left-radius: @msg-title-radius;
+  border-top-right-radius: @msg-title-radius;
+  font-weight: bold;
+  padding: @msg-title-left-padding;
+}
+
+.full-height {
+  .height();
+}
+
+.context-height() {
+  height: 100%;
+  .overflow();
+}
+
+.item-select() {
+  color: @msg-item-hover-color;
+  background: @msg-item-hover-background;
+}
+.overflow() {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.msg {
+  &-left {
+    width: 29%;
+    float: left;
+    .height();
+    padding-bottom: 44px;
+    &-title {
+      .msg-title();
+      background-color: @msg-title-left-background;
+      color: @msg-title-left-color;
+    }
+    &-list {
+      .context-height();
+      &-title {
+        color: @msg-title-color;
+        font-size: @msg-context-font;
+        padding: @msg-title-left-padding;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-left: 1px solid @msg-border-color;
+        border-right: 1px solid @msg-border-color;
+        border-bottom: 1px solid @msg-border-color;  
+        background: @msg-item-hover-background;
+      }
+    }
+    &-item {
+      color: @msg-title-color;
+      font-size: @msg-context-font;
+      padding: @msg-title-left-padding;
+      height: @msg-item-height;
+      padding-top: 16px;
+      border-left: 1px solid @msg-border-color;
+      border-right: 1px solid @msg-border-color;
+      border-bottom: 1px solid @msg-border-color;
+      & > .sub {
+        font-size: @msg-context-font;
+        color: @msg-sub-title-color;
+      }
+      &:hover,
+      &-selected {
+        .item-select();
+        & > .sub {
+          .item-select();
+        }
+      }
+    }
+  }
+  &-middle {
+    width: 40%;
+    float: left;
+    margin-left: 1%;
+    .height();
+    padding-bottom: 44px;
+    &-title {
+      .msg-title();
+      background-color: @msg-title-backgroundTwo;
+      color: @msg-title-color;
+    }
+    &-context {
+      .context-height();
+      border: 1px solid @msg-border-color;
+      padding: 0 20px 50px 20px;
+      .overflow();
+      width: 100%;
+    }
+    &-head {
+      font-size: @msg-title-font;
+      color: @msg-title-color;
+      padding-top: 24px;
+    }
+    &-sub-head {
+      font-size: @msg-min-font;
+      color: @msg-title-color;
+      padding-top: 12px;
+      & > .sub {
+        color: @msg-sub-title-color;
+      }
+    }
+    &-body {
+      padding-top: 24px;
+      font-size: @msg-context-font;
+      color: @msg-context-color;
+    }
+  }
+  &-right {
+    width: 29%;
+    float: right;
+    .height();
+    position: relative;
+    &-top {
+      width: 100%;
+      border: 1px solid @msg-border-color;
+      height: 30%;
+      background: #f8f9fb;
+      border-radius: @msg-title-radius;
+      padding: 14px 10px 50px 104px;
+    }
+    &-one {
+      width: 104px;
+      & > img {
+        margin-left: 20px;
+      }
+      position: absolute;
+      left: 0;
+    }
+    &-two {
+      padding: 12px 0 0 0;
+      & > .btn {
+        float: right;
+      }
+    }
+    &-middle {
+      height: 2%;
+    }
+    &-bottom {
+      width: 100%;
+      border: 1px solid @msg-border-color;
+      height: 68%;
+      border-radius: @msg-title-radius;
+      padding-bottom: 43px;
+    }
+    &-context {
+      padding: 0 20px 0 20px;
+      .overflow();
+      height: 100%;
+    }
+    &-item {
+      border-bottom: 1px solid @msg-border-color;
+      // height: 134px;
+      padding-top: 14px;
+      padding-bottom:38px;
+      & > img {
+        width: 50px;
+        float: left;
+        margin-right: 10px;
+      }
+      & > .sub {
+        font-size: @msg-context-font;
+        color: @msg-sub-title-color;
+        // margin-top: 8px;
+      }
+      & > .context {
+        padding-top:10px;
+        overflow: hidden;
+        // height: 34px;
+      }
+      &-head {
+        padding-top: 8px;
+      }
+    }
+  }
+  &-textarea {
+    height: 100%;
+  }
+}

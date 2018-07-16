@@ -1,0 +1,55 @@
+{
+  "code": 200,
+  "desc": "success",
+  "data": [
+       {
+          "gradeName": "小班wangyue",
+          "gradeId": 110,
+          "gradeCode": "G2018",
+          "workerName": "张三",
+          "class": [
+              {
+                  "classCode": "1000",
+                  "classId": 107,
+                  "className": "1班",
+                  "workerName": "好好"
+              },
+              {
+                  "classCode": "1001",
+                  "classId": 108,
+                  "className": "2班",
+                  "workerName": "基i"
+              },
+              {
+                  "classCode": "1002",
+                  "classId": 109,
+                  "className": "3班",
+                  "workerName": "滚滚滚"
+              }
+          ]
+      },
+      {
+        "gradeName": "大班",
+        "gradeId": 11000,
+        "gradeCode": "G2018",
+        "workerName":"李四",
+        "class": [
+            {
+                "classCode": "1000",
+                "classId": 10788,
+                "className": "5班",
+                "workerName": "啊啊啊"
+            },
+            {
+                "classCode": "1001",
+                "classId": 1055,
+                "className": "6班",
+                "workerName": "王五"
+            }
+        ]
+    }
+  ],
+  "token": null,
+  "list": null,
+  "recordCount": null
+}

@@ -1,0 +1,18 @@
+{
+    "code": 200,
+    "desc": "success",
+    "data": null,
+    "token": null,
+    "list": [
+        {
+            "confId": 2,
+            "parentId": -1,
+            "dictCode": "2",
+            "dictDesc": "章程类型",
+            "dictName": "办学宗旨与教学目标",
+            "dictValue": "章程类型",
+            "dictType": "NOTICE_CATEGORY_ZC"
+        }
+    ],
+    "recordCount": 2
+}

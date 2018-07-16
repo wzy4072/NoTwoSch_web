@@ -1,0 +1,209 @@
+{
+  "code": 1,
+  "desc": "登录成功！",
+  "data": {
+    "gradesMap": {
+      "小班": {
+        "1": [
+          {
+            "studentGender": "1",
+            "studentName": "小明",
+            "gradeCode": "Y2017",
+            "gradeName": "小班",
+            "className": "1班",
+            "entranceCode": "Y2017",
+            "transactionType": "1",
+            "transactionDate": "2017-05-16"
+          },
+          {
+            "studentGender": "2",
+            "studentName": "小花",
+            "gradeCode": "Y2017",
+            "gradeName": "小班",
+            "className": "2班",
+            "entranceCode": "Y2017",
+            "transactionType": "1",
+            "transactionDate": "2017-05-16"
+          }
+        ],
+        "2": [
+          {
+            "studentGender": "1",
+            "studentName": "小猪",
+            "gradeCode": "Y2017",
+            "gradeName": "小班",
+            "className": "1班",
+            "entranceCode": "Y2017",
+            "transactionType": "2",
+            "transactionDate": "2017-05-16"
+          },
+          {
+            "studentGender": "2",
+            "studentName": "小鸡",
+            "gradeCode": "Y2017",
+            "gradeName": "小班",
+            "className": "2班",
+            "entranceCode": "Y2017",
+            "transactionType": "2",
+            "transactionDate": "2017-05-16"
+          }
+        ]
+      },
+      "中班": {
+        "1": [
+          {
+            "studentGender": "1",
+            "studentName": "小三",
+            "gradeCode": "Y2016",
+            "gradeName": "中班",
+            "className": "1班",
+            "entranceCode": "Y2016",
+            "transactionType": "1",
+            "transactionDate": "2017-07-16"
+          },
+          {
+            "studentGender": "2",
+            "studentName": "小狗",
+            "gradeCode": "Y2016",
+            "gradeName": "中班",
+            "className": "2班",
+            "entranceCode": "Y2016",
+            "transactionType": "1",
+            "transactionDate": "2017-06-16"
+          }
+        ],
+        "2": [
+          {
+            "studentGender": "1",
+            "studentName": "小巴",
+            "gradeCode": "Y2016",
+            "gradeName": "中班",
+            "className": "1班",
+            "entranceCode": "Y2016",
+            "transactionType": "2",
+            "transactionDate": "2017-07-16"
+          },
+          {
+            "studentGender": "2",
+            "studentName": "小牛",
+            "gradeCode": "Y2016",
+            "gradeName": "中班",
+            "className": "2班",
+            "entranceCode": "Y2016",
+            "transactionType": "2",
+            "transactionDate": "2017-06-16"
+          }
+        ]
+      },
+      "合计": {
+        "1": [
+          {
+            "studentGender": "1",
+            "studentName": "小明",
+            "gradeCode": "Y2017",
+            "gradeName": "小班",
+            "className": "1班",
+            "entranceCode": "Y2017",
+            "transactionType": "1",
+            "transactionDate": "2017-05-16"
+          },
+          {
+            "studentGender": "2",
+            "studentName": "小花",
+            "gradeCode": "Y2017",
+            "gradeName": "小班",
+            "className": "2班",
+            "entranceCode": "Y2017",
+            "transactionType": "1",
+            "transactionDate": "2017-05-16"
+          },
+          {
+            "studentGender": "1",
+            "studentName": "小三",
+            "gradeCode": "Y2016",
+            "gradeName": "中班",
+            "className": "1班",
+            "entranceCode": "Y2016",
+            "transactionType": "1",
+            "transactionDate": "2017-07-16"
+          },
+          {
+            "studentGender": "2",
+            "studentName": "小狗",
+            "gradeCode": "Y2016",
+            "gradeName": "中班",
+            "className": "2班",
+            "entranceCode": "Y2016",
+            "transactionType": "1",
+            "transactionDate": "2017-06-16"
+          }
+        ],
+        "2": [
+          {
+            "studentGender": "1",
+            "studentName": "小猪",
+            "gradeCode": "Y2017",
+            "gradeName": "小班",
+            "className": "1班",
+            "entranceCode": "Y2017",
+            "transactionType": "2",
+            "transactionDate": "2017-05-16"
+          },
+          {
+            "studentGender": "2",
+            "studentName": "小鸡",
+            "gradeCode": "Y2017",
+            "gradeName": "小班",
+            "className": "2班",
+            "entranceCode": "Y2017",
+            "transactionType": "2",
+            "transactionDate": "2017-05-16"
+          },
+          {
+            "studentGender": "1",
+            "studentName": "小巴",
+            "gradeCode": "Y2016",
+            "gradeName": "中班",
+            "className": "1班",
+            "entranceCode": "Y2016",
+            "transactionType": "2",
+            "transactionDate": "2017-07-16"
+          },
+          {
+            "studentGender": "2",
+            "studentName": "小牛",
+            "gradeCode": "Y2016",
+            "gradeName": "中班",
+            "className": "2班",
+            "entranceCode": "Y2016",
+            "transactionType": "2",
+            "transactionDate": "2017-06-16"
+          }
+        ]
+      }
+    },
+    "stuTranList": [{
+        "studentGender": "1",
+        "studentName": "小明",
+        "gradeCode": "Y2017",
+        "gradeName": "小班",
+        "className": "1班",
+        "entranceCode": "Y2017",
+        "transactionType": "1",
+        "transactionDate": "2017-05-16"
+      },
+      {
+        "studentGender": "0",
+        "studentName": "小花",
+        "gradeCode": "Y2017",
+        "gradeName": "小班",
+        "className": "2班",
+        "entranceCode": "Y2017",
+        "transactionType": "1",
+        "transactionDate": "2017-05-16"
+      }
+    ]
+  },
+  "list": null,
+  "recordCount": null
+}

@@ -1,0 +1,23 @@
+{
+    "code": 1,
+    "desc": "success",
+    "data": null,
+    "token": null,
+    "list": [
+        {
+            "questionnaireId": 2,
+            "questionnaireTitle": "问卷标题",
+            "createrDate": 1520227771000,
+            "isShare": 1,
+            "totalNum": 2,
+            "filled": 0,
+            "questionnairePageviews": 0,
+             "attendanceTime": 0,
+            "questionnaireIsRealname": 0,
+            "questionnaireStatus": 0,
+            "isQrcode": 1,
+            "editable": 1
+        }
+    ],
+    "recordCount": null
+}

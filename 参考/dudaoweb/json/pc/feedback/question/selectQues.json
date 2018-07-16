@@ -1,0 +1,81 @@
+{
+  "code": 1,
+  "desc": "success",
+  "recordCount": null,
+  "currentPage": null,
+  "data": {
+    "questionnaireId": 3,
+    "subjectList": [{
+        "subjectId": 15,
+        "subjectType": 1,
+        "subjectIsOption": 1,
+        "maxSelect": null,
+        "subjectTitle": "您的性别是？",
+        "arg1": "1",
+        "answerList": [{
+            "answerId": 20,
+            "questionAnswer": "男"
+          },
+          {
+            "answerId": 21,
+            "questionAnswer": "女"
+          }
+        ]
+      },
+      {
+        "subjectId": 16,
+        "subjectType": 2,
+        "subjectIsOption": 1,
+        "maxSelect": 2,
+        "subjectTitle": "您喜欢下方哪一门课？",
+        "arg1": "2",
+        "answerList": [{
+            "answerId": 22,
+            "questionAnswer": "语文"
+          },
+          {
+            "answerId": 23,
+            "questionAnswer": "数学"
+          },
+          {
+            "answerId": 24,
+            "questionAnswer": "英语"
+          }
+        ]
+      },
+      {
+        "subjectId": 17,
+        "subjectType": 3,
+        "subjectIsOption": 1,
+        "maxSelect": null,
+        "subjectTitle": "您的梦想是什么？",
+        "arg1": "3",
+        "answerList": []
+      },
+      {
+        "subjectId": 18,
+        "subjectType": 4,
+        "subjectIsOption": 1,
+        "maxSelect": null,
+        "subjectTitle": "请给王老师打分",
+        "arg1": "4",
+        "answerList": []
+      },
+      {
+        "subjectId": 19,
+        "subjectType": 5,
+        "subjectIsOption": 0,
+        "maxSelect": null,
+        "subjectTitle": "段落说明",
+        "arg1": null,
+        "answerList": []
+      }
+    ]
+  },
+  "ranges": [{
+    "userId": 1,
+    "userType": 1,
+    "isAttendance": 1
+  }],
+  "list": null
+}

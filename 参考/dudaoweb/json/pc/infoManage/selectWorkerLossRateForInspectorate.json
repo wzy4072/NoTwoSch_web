@@ -1,0 +1,42 @@
+{
+    "code": 1,
+    "desc": "查询成功",
+    "data": null,
+    "token": null,
+    "list": [
+        {
+            "ldclliushilv": 0,
+            "lclliudonglv": 0,
+            "go": 0,
+            "start": 0,
+            "come": 0,
+            "end": 0,
+            "liushilv": 0,
+            "ldzlliushilv": 0,
+            "ljlliudonglv": 0
+        },
+        {
+            "ldclliushilv": 0,
+            "lclliudonglv": 0,
+            "go": 0,
+            "start": 3,
+            "come": 0,
+            "end": 3,
+            "liushilv": 0,
+            "ldzlliushilv": 0,
+            "ljlliudonglv": 0
+        },
+        {
+            "ldclliushilv": 0,
+            "lclliudonglv": 0,
+            "go": 0,
+            "start": 0,
+            "come": 0,
+            "end": 0,
+            "liushilv": 0,
+            "ldzlliushilv": 0,
+            "ljlliudonglv": 0
+        }
+    ],
+    "recordCount": null
+}

@@ -1,0 +1,52 @@
+{
+  "code": 1,
+  "desc": "操作成功",
+  "data": null,
+  "token": null,
+  "list": [
+      {
+          "confId": 5,
+          "isPrivate": 0,
+          "areaCode": null,
+          "krtenCode": "2018",
+          "parentId": -1,
+          "dictCode": "1",
+          "dictDesc": "章程类型",
+          "dictName": "办学宗旨与教学目标",
+          "dictValue": "办学宗旨与教学目标",
+          "dictType": "NOTICE_CATEGORY_ZC",
+          "orderId": null,
+          "arg1": null,
+          "arg2": null,
+          "arg3": null,
+          "arg4": null,
+          "arg5": null,
+          "createBy": 0,
+          "modifyBy": 0,
+          "createDate": null,
+          "modifyDate": null
+      },  {
+        "confId": 6,
+        "isPrivate": 0,
+        "areaCode": null,
+        "krtenCode": "2018",
+        "parentId": -1,
+        "dictCode": "1",
+        "dictDesc": "章程类型",
+        "dictName": "督学",
+        "dictValue": "督学",
+        "dictType": "NOTICE_CATEGORY_ZC",
+        "orderId": null,
+        "arg1": null,
+        "arg2": null,
+        "arg3": null,
+        "arg4": null,
+        "arg5": null,
+        "createBy": 0,
+        "modifyBy": 0,
+        "createDate": null,
+        "modifyDate": null
+    }
+  ],
+  "recordCount": null
+}

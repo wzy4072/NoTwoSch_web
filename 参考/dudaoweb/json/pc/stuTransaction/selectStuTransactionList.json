@@ -1,0 +1,39 @@
+{
+  "code": 1,
+  "desc": "操作成功",
+  "data": [{
+    "newGradeCode": "1001",
+    "oldEntranceCode": "G2018",
+    "md5Pwd": "B3E62BD8AA171F3C4EC152788E52A60D",
+    "applyReason": "因为爱情",
+    "newGradeName": "中班",
+    "transactionDate": 1517184000000,
+    "studentId": 102,
+    "transactionType": 3,
+    "recordId": 26,
+    "oldClassName": "1班",
+    "oldGradeName": "小班",
+    "modifyTime": 1517277380000,
+    "loginName": "test3",
+    "transactionSchoolName": "黄威学校",
+    "oldGradeCode": "1000"
+  }, {
+    "newGradeCode": "1001",
+    "oldEntranceCode": "G2018",
+    "md5Pwd": "BCD4DEC5207767314D3245CE9556FB53",
+    "applyReason": "因为爱情",
+    "newGradeName": "中班",
+    "transactionDate": 1517184000000,
+    "studentId": 103,
+    "transactionType": 3,
+    "recordId": 27,
+    "oldClassName": "1班",
+    "oldGradeName": "小班",
+    "loginName": "test1004",
+    "transactionSchoolName": "黄威学校",
+    "oldGradeCode": "1000"
+  }],
+  "token": null,
+  "list": null,
+  "recordCount": null
+}

@@ -1,0 +1,21 @@
+{
+    "code": 1,
+    "desc": "success",
+    "data": "0/2",
+    "token": null,
+    "list": [
+        {
+            "workerType": "22",
+            "dictValue": "生活老师",            
+            "courseName": "语文",               
+            "workerPhone": "18890380285",       
+            "isFilled": 1,                       
+            "questionnaireId": 11, 
+            "userType": 5,               
+            "workerGender": 0,                
+            "workerName": "邓杰59",          
+            "userId": 380    
+        }
+    ],
+    "recordCount": null
+}
