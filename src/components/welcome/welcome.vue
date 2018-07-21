@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>Welcome  二高技</h1>
+    <h1>Welcome  </h1>
   </div>
 </template>
 

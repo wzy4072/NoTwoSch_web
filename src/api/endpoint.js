@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export default {
   url() {
-    return "http://localhost:3000"
+    return "http://localhost:8080/api"
   },
   http() {
     var instance = axios.create({

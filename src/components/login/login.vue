@@ -1,26 +1,18 @@
 <template>
     <div id="login" v-loading.fullscreen.lock="showLoading">
-        <el-row>
-            <el-col :span="16">
-        <img class="logbar" src="static/loginbar.jpeg" alt="欢迎您">
-
-            </el-col>
-            <el-col :span="8">
-                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-                <el-form-item label="UserName" prop="username">
-                    <el-input v-model="ruleForm.username"></el-input>
-                </el-form-item>
-                <el-form-item label="PassWord" prop="password">
-                    <el-input type="password" v-model="ruleForm.password"></el-input>
-                </el-form-item>
-                <el-form-item>
-                    <el-button type="primary" @click="login('ruleForm')">Login</el-button>
-                    <el-button type="primary" @click="checkLogin">checkLogin</el-button>
-                    
-                </el-form-item>
-                </el-form>
-            </el-col>
-        </el-row>
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <el-form-item label="UserName" prop="username">
+            <el-input v-model="ruleForm.username"></el-input>
+        </el-form-item>
+        <el-form-item label="PassWord" prop="password">
+            <el-input type="password" v-model="ruleForm.password"></el-input>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="login('ruleForm')">Login</el-button>
+            <el-button type="primary" @click="checkLogin">checkLogin</el-button>
+            
+        </el-form-item>
+        </el-form>
     </div>
 </template>
 
@@ -86,14 +78,12 @@ export default {
     },
     checkLogin() {
       // 全局设置loadding
-      api
-        .checkLogin()
-        .then(requst => {
-          if (requst.success === true) {
-          } else {
-            this.$message.error(requst.message, 3);
-          }
-        })
+      api.checkLogin().then(requst => {
+        if (requst.success === true) {
+        } else {
+          this.$message.error(requst.message, 3);
+        }
+      });
     }
   }
 };
