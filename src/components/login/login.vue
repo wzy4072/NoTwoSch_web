@@ -65,7 +65,7 @@ export default {
         })
         .then(requst => {
           if (requst.success === true) {
-            // this.$router.push("/home");
+            this.$router.push("/home");
           } else {
             this.$message.error(requst.message, 3);
           }

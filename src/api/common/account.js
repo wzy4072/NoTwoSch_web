@@ -14,5 +14,12 @@ export default {
     }).catch(error => {
       throw error
     })
+  },
+  getMenus(){
+    return endpoint.http().post("/getMenus").then(resp => {
+      return resp.data
+    }).catch(error => {
+      throw error
+    })
   }
 }
