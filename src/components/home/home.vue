@@ -1,11 +1,11 @@
 
 <template>
-  <el-container style="height:100%;">
+  <el-container >
     <el-header>
       <el-button type="primary" plain @click="collapse = !collapse">show/hide menus</el-button>
     </el-header>
     <el-container>
-      <el-aside width="auto" style="height:100%;">
+      <el-aside width="auto" >
           <!-- :default-active="defaultActive" -->
           <!-- :default-openeds="defaultOpeneds" -->
         <el-menu
