@@ -4,6 +4,9 @@
 
 const path = require('path')
 
+let servers = require('./readJson.js')
+servers.listen(3001, '127.0.0.1')
+
 module.exports = {
   dev: {
 
@@ -12,7 +15,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://127.0.0.1:3000', // 本地
+        // target: 'http://127.0.0.1:3000', // 本地 nodejs服务 mongodb
+        target: 'http://127.0.0.1:3001', // 本地 json
         changeOrigin: true,
         pathRewrite: {'^/api': ''}
       }

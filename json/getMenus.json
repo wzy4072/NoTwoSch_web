@@ -1,0 +1,30 @@
+{
+    "success": true,
+    "message": "操作成功！",
+    "data": [
+        {
+            "name": "欢迎页",
+            "icon": "menu",
+            "route": "/welcome"
+        },
+        {
+            "name": "学生管理",
+            "icon": "goods",
+            "children": [
+                {
+                    "name": "学生列表",
+                    "route": "/stu/list"
+                },
+                {
+                    "name": "新增学生",
+                    "route": "/stu/add"
+                }
+            ]
+        },
+        {
+            "name": "权限管理",
+            "icon": "menu",
+            "route": "/rightmanage/index"
+        }
+    ]
+}

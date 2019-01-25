@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "data": {
+        "id": 1,
+        "name": "张1",
+        "sex": 0,
+        "age": 11,
+        "grade": 1,
+        "email": "zs1.161.com"
+    },
+    "message": "查询成功！"
+}

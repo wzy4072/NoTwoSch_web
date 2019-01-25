@@ -1,0 +1,38 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "name": "张1",
+            "sex": 0,
+            "age": 11,
+            "grade": 1,
+            "email": "zs1.161.com"
+        },
+        {
+            "id": 2,
+            "name": "张2",
+            "sex": 1,
+            "age": 12,
+            "grade": 2,
+            "email": "zs2.162.com"
+        },
+        {
+            "id": 3,
+            "name": "张3",
+            "sex": 0,
+            "age": 13,
+            "grade": 3,
+            "email": "zs3.163.com"
+        },
+        {
+            "id": 4,
+            "name": "张4",
+            "sex": 1,
+            "age": 14,
+            "grade": 4,
+            "email": "zs4.164.com"
+        }
+    ],
+    "message": "查询成功！"
+}

@@ -1,11 +1,9 @@
 import Stulist from './stuList.vue'
 import StuDetial from './stuDetial.vue'
-import Qrcode from './qrcode.vue'
 
 var components = [
   Stulist,
-  StuDetial,
-  Qrcode
+  StuDetial
 ]
 
 /* istanbul ignore next */
@@ -17,9 +15,8 @@ const install = function (Vue, opts) {
 
 const routes = function () {
   return [
-    { path: '/stumanage/list', name: 'Stulist', component: Stulist },
-    { path: '/stumanage/detial/:id', name: 'StuDetial', component: StuDetial },
-    { path: '/qrcode', name: 'Qrcode', component: Qrcode }
+    { path: '/stu/list', name: 'Stulist', component: Stulist },
+    { path: '/stu/:id', name: 'StuDetial', component: StuDetial },
   ]
 }
 
