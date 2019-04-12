@@ -103,11 +103,16 @@ export default {
       this.isEdit = true;
     },
     save() {
+      var testData = {
+        nickname: "测试",
+        phoneNumber: "18322223432"
+      };
+
       api
-        .addStu(this.form)
+        .addStu(testData)
         .then(resp => {
           if (resp.success) {
-            this.$message({ type: "success", message: "删除成功!" });
+            this.$message({ type: "success", message: "操作成功!" });
           }
         })
         .catch(err => {
@@ -124,7 +129,7 @@ export default {
           .delStu({ id: row.id })
           .then(resp => {
             if (resp.success) {
-              this.$message({ type: "success", message: "删除成功!" });
+              this.$message({ type: "success", message: "操作成功!" });
             }
           })
           .catch(err => {

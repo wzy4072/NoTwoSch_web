@@ -1,7 +1,7 @@
-import Stulist from './stuList.vue'
+import UserList from './userList.vue'
 
 var components = [
-  Stulist
+  UserList
 ]
 
 /* istanbul ignore next */
@@ -13,7 +13,7 @@ const install = function (Vue, opts) {
 
 const routes = function () {
   return [
-    { path: '/stu/list', name: 'Stulist', component: Stulist },
+    { path: '/user', name: 'UserList', component: UserList },
   ]
 }
 

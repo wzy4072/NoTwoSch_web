@@ -1,8 +1,13 @@
 import axios from 'axios'
+const env = process.env.NODE_ENV
 
 export default {
   url() {
-    return "http://localhost:8080/api"
+    if(env === 'production' ){
+      return "http://localhost:3306/"
+    }else{
+      return "http://localhost:8080/api"
+    }
   },
   http() {
     var instance = axios.create({

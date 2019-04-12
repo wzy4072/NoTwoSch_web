@@ -15,7 +15,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        // target: 'http://127.0.0.1:3000', // 本地 nodejs服务 mongodb
+        // target: 'http://127.0.0.1:3306', // 本地 nodejs服务 mongodb
         target: 'http://127.0.0.1:3001', // 本地 json
         changeOrigin: true,
         pathRewrite: {'^/api': ''}
@@ -55,10 +55,10 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../../newEgbe/dist/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../../newEgbe/dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 

@@ -1,17 +1,12 @@
 
 <template>
-  <el-container >
-    <el-header>
-      <el-button type="primary" plain @click="collapse = !collapse">show/hide menus</el-button>
-    </el-header>
+  <el-container>
+    <el-header>大赵小学后台管理系统</el-header>
     <el-container>
-      <el-aside width="auto" >
-          <!-- :default-active="defaultActive" -->
-          <!-- :default-openeds="defaultOpeneds" -->
-        <el-menu
-          :router="true"
-          :collapse="collapse"
-        >
+      <el-aside width="auto">
+        <!-- :default-active="defaultActive" -->
+        <!-- :default-openeds="defaultOpeneds" -->
+        <el-menu :router="true" :collapse="collapse">
           <div v-for="(m,seq) in allMeuns" :key="seq" class="my-menu">
             <el-submenu v-if="m.children != null" :key="seq" :index="seq.toString()">
               <template slot="title">
@@ -31,7 +26,7 @@
         </el-menu>
       </el-aside>
 
-      <el-main  style="height:100%;">
+      <el-main style="height:100%;">
         <div v-if="accessGranted">
           <router-view></router-view>
         </div>
@@ -92,13 +87,9 @@ export default {
   },
   created() {
     this.getMenus();
-    var _this = this;
-    setTimeout(function() {
-      _this.loggingIn = false;
-      _this.accessGranted = true;
-      _this.$router.push("/welcome");
-    }, 1000);
-
+    this.loggingIn = false;
+    this.accessGranted = true;
+    // _this.$router.push("/welcome");
     // 转到主页
   }
 };

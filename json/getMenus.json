@@ -8,23 +8,24 @@
             "route": "/welcome"
         },
         {
-            "name": "学生管理",
+            "name": "人员管理",
             "icon": "goods",
             "children": [
                 {
-                    "name": "学生列表",
+                    "name": "学生管理",
                     "route": "/stu/list"
-                },
-                {
-                    "name": "新增学生",
-                    "route": "/stu/add"
                 }
             ]
         },
         {
-            "name": "权限管理",
+            "name": "用户管理",
             "icon": "menu",
-            "route": "/rightmanage/index"
+            "route": "/user"
+        },
+        {
+            "name": "实验室",
+            "icon": "menu",
+            "route": "/mytest"
         }
     ]
 }

@@ -1,7 +1,7 @@
-import Stulist from './stuList.vue'
+import Menu from './menuTree.vue'
 
 var components = [
-  Stulist
+  Menu
 ]
 
 /* istanbul ignore next */
@@ -13,7 +13,7 @@ const install = function (Vue, opts) {
 
 const routes = function () {
   return [
-    { path: '/stu/list', name: 'Stulist', component: Stulist },
+    { path: '/menu', name: 'Menu', component: Menu },
   ]
 }
 

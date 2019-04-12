@@ -2,15 +2,19 @@ import Home from './home.vue'
 
 import Welcome from '../welcome'
 import StuManage from '../stuManage'
-import RightManage from '../rightManage'
-
+import UserManage from '../userManage'
+import MenuManage from '../menuManage'
+import MyTest from '../wzytest'
 const homeComponent = [
   Home
 ]
 const homeChildCompents = [
-  Welcome, StuManage,RightManage
+  Welcome,
+  StuManage,
+  UserManage,
+  MenuManage,
+  MyTest,
 ]
-
 const install = function (Vue, opts) {
   homeComponent.map(c => {
     Vue.component(c.name, c)
