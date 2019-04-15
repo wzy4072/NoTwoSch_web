@@ -53,6 +53,9 @@ export default {
   },
   created() {
     this.val = giVal(this.value);
+    if (!this.cellInfo.type) {
+      console.error("[error]: cell type is", this.cellInfo.type);
+    }
     // JSON.parse(JSON.stringify())
   },
   watch: {

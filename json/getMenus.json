@@ -24,8 +24,17 @@
         },
         {
             "name": "实验室",
-            "icon": "menu",
-            "route": "/mytest"
+            "icon": "goods",
+            "children": [
+                {
+                    "name": "实验室1",
+                    "route": "/test/t1"
+                },
+                {
+                    "name": "实验室2",
+                    "route": "/test/t2"
+                }
+            ]
         }
     ]
 }

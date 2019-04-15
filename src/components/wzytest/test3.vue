@@ -22,17 +22,20 @@
         </template>
       </el-table-column>
     </el-table>
-
     <el-button @click="checkForm">checkFrom</el-button>
+    <br>
+    <hr>
+    <var-table></var-table>
     <!-- forms{{forms}} -->
   </div>
 </template>
 <script>
-import anyCell from "./anyCell.vue";
-import pageConfig from "./pageConfig.js";
+import anyCell from "./common/anyCell.vue";
+import pageConfig from "./common/pageConfig.js";
+import VarTable from "./common/varTable.vue";
 export default {
-  name: "mytest",
-  components: { anyCell },
+  name: "mytest1",
+  components: { anyCell, VarTable },
   data() {
     return {
       // 思想品德的页面设置

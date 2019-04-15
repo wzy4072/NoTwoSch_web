@@ -1,12 +1,8 @@
 <template>
-  <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0">
+  <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0" style="width:200px;">
     <el-form-item prop="val">
-      <el-input v-model="ruleForm.val" :placeholder="cellInfo.pleaseholder" size="small"></el-input>
+      <el-input v-model="ruleForm.val" :placeholder="cellInfo.pleaseholder" size="small" ></el-input>
     </el-form-item>
-    <!--     
-     pleaseholder:'温馨提示，请输入XXX！',
-              contType:['ch','en','no'],
-    maxLength:20-->
   </el-form>
 </template>
 <script>
@@ -74,7 +70,7 @@ export default {
         "^[" + this.cellInfo.contType.map(r => regInfo[r].regStr).join("") + "]+$"
       );
       const regTip = this.cellInfo.contType.map(r => regInfo[r].tip).join("或");
-      console.log(reg);
+      // console.log(reg);
       if (!reg.test(value)) {
         callback(new Error(`请输入${regTip}！`));
       } else if (value.length > this.cellInfo.maxLength) {

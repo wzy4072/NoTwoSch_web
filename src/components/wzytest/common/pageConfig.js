@@ -30,7 +30,7 @@ let pageConfig =  [
           '10101':'this is text',
           "info10101":{type:'text',
           pleaseholder:'温馨提示，请输入XXX！',
-          maxLength:200
+          maxLength:20
         },
           "10102":[2,3],
           "info10102":{type:'multiselect',options:[2,5,6456,3,5,'asdf','a','abb','avv','bsd','vasdf','edfs','efsd']}
