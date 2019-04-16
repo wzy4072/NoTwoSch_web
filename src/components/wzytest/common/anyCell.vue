@@ -16,7 +16,7 @@ import CellMultiselect from "./cellMultiselect.vue";
 import CellSelect from "./cellSelect.vue";
 import CellText from "./cellText.vue";
 import CellDate from "./cellDate.vue";
-
+// import CellEmpty from "./cellEmpty.vue";
 const typeForCom = {
   input: "CellInput",
   date: "CellDate",
@@ -32,6 +32,14 @@ function giVal(v) {
   }
   return JSON.parse(JSON.stringify(v));
 }
+
+//  cellInfo = {
+//   type: "input",
+//   pleaseholder: "温馨提示，请输入汉字中文英文和数字！",
+//   contType: ["ch", "en", "no"],
+//   maxLength: 8
+// };
+
 export default {
   components: {
     CellInput,

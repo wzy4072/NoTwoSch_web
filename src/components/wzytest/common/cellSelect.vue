@@ -1,9 +1,12 @@
 <template>
   <div>
-    <!-- <el-input v-model="val"  placeholder="请输入内容"  size="small"></el-input> -->
-    <el-select v-model="val" placeholder="请选择" @change="valChange">
-      <el-option v-for="(item,idx) in options" :key="idx" :label="item" :value="item"></el-option>
-    </el-select>
+    <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0" style="width:200px;">
+      <el-form-item prop="val">
+        <el-select v-model="ruleForm.val" placeholder="请选择" @change="valChange">
+          <el-option v-for="(item,idx) in options" :key="idx" :label="item" :value="item"></el-option>
+        </el-select>
+      </el-form-item>
+    </el-form>
   </div>
 </template>
 <script>
@@ -20,14 +23,14 @@ export default {
     }
   },
   created() {
-    this.val = this.value;
+    this.ruleForm.val = this.value;
     if (this.cellInfo.options && this.cellInfo.options.length > 0) {
       this.options = this.cellInfo.options;
     }
   },
   watch: {
     value(nv, ov) {
-      this.val = nv;
+      this.ruleForm.val = nv;
     }
     // val(nv, ov) {
     //   this.$emit("change", this.val);
@@ -35,13 +38,27 @@ export default {
   },
   data() {
     return {
-      val: null,
+      ruleForm: {
+        val: null
+      },
+      // val: null,
+      rules: {
+        val: [{ required: true, message: "必填！", trigger: "change" }]
+      },
+      // { validator: this.validate, trigger: "blur"}
       options: []
     };
   },
   methods: {
     valChange() {
-      this.$emit("change", this.val);
+      this.$emit("change", this.ruleForm.val);
+    },
+    validate(rule, value, callback) {
+      if (!value) {
+        callback(new Error("不能为空！"));
+      } else {
+        callback();
+      }
     }
   }
 };

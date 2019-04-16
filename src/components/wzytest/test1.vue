@@ -6,7 +6,7 @@
     </el-row>
 
     <el-row>
-      <var-table :tTitle="tableTitle" :tData="tableData" @selChange="selChange" @iRow="showiCard"></var-table>
+      <var-tableout :tTitle="tableTitle" :tData="tableData" @selChange="selChange" @iRow="showiCard"></var-tableout>
     </el-row>
 
     <el-row>
@@ -17,7 +17,7 @@
           <span class="diaspan">座号：{{cRow.seatNo}}</span>
         </el-row>
         <!-- <div>{{iptPageInfo}}</div> -->
-        <var-page-table :columns="iptPageInfo.columns" :rows="iptPageInfo.rows"></var-page-table>
+        <card-two :columns="iptPageInfo.columns" :rows="iptPageInfo.rows"></card-two>
 
         <span slot="footer" class="dialog-footer">
           <el-button @click="showIptCard = false">取 消</el-button>
@@ -25,27 +25,18 @@
         </span>
       </el-dialog>
     </el-row>
-
-    <el-row>
-      证明附件上传：
-      <div v-for="(val,idx) in needUploads" :key="idx">
-        <cell-upload :fileList="val.fileList" :upInfo="val.upInfo"></cell-upload>
-      </div>
-    </el-row>
   </div>
 </template>
 <script>
 import TableType from "./common/tableType.vue";
-import VarTable from "./common/varTable.vue";
+import VarTableout from "./common/varTableout.vue";
 import tableResponse from "./common/tableData.js";
-import VarPageTable from "./common/varPageTable.vue";
+import CardTwo from "./common/cardTwo.vue";
 import pageconfigResponse from "./common/typePageConfig.js";
-
-import CellUpload from "./common/cellUpload.vue";
 
 export default {
   name: "mytest1",
-  components: { TableType, VarTable, VarPageTable ,CellUpload},
+  components: { TableType, VarTableout, CardTwo },
   data() {
     return {
       typeId: 1,
@@ -63,15 +54,7 @@ export default {
       // 显示输入弹窗
       showIptCard: false,
       // 录入弹窗的页面设置
-      iptPageInfo: { columns: [], rows: [] },
-      needUploads: [
-        {
-          id: "1231",
-          blockName: "党团活动",
-          fileList: [{ name: "党团一活动", url: "xxxxxxx" }],
-          upInfo: {}
-        }
-      ]
+      iptPageInfo: { columns: [], rows: [] }
     };
   },
   created() {
