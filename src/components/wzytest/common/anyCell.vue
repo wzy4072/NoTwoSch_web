@@ -61,10 +61,14 @@ export default {
   },
   created() {
     this.val = giVal(this.value);
-    if (!this.cellInfo.type) {
-      console.error("[error]: cell type is", this.cellInfo.type);
+    if (!this.cellInfo.fieldType) {
+      console.error("[error]: cell type is", this.cellInfo.fieldType);
     }
     // JSON.parse(JSON.stringify())
+    console.log(
+      " typeForCom[this.cellInfo.fieldType]",
+      typeForCom[this.cellInfo.fieldType]
+    );
   },
   watch: {
     value(nv, ov) {
@@ -73,7 +77,7 @@ export default {
   },
   data() {
     return {
-      anyCell: typeForCom[this.cellInfo.type],
+      anyCell: typeForCom[this.cellInfo.fieldType],
       // this.typeForCom[this.cellInfo.type],
       val: null
     };

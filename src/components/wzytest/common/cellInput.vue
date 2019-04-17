@@ -1,7 +1,7 @@
 <template>
   <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0" style="width:200px;">
     <el-form-item prop="val">
-      <el-input v-model="ruleForm.val" :placeholder="cellInfo.pleaseholder" size="small" ></el-input>
+      <el-input v-model="ruleForm.val" :placeholder="cellInfo.pleaseholder" size="mini" ></el-input>
     </el-form-item>
   </el-form>
 </template>

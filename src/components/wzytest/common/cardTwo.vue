@@ -1,22 +1,11 @@
 <template>
   <div>
-       <!-- // {
-      //                   id: 111,
-      //                   rId: '111-1', // 关联id 可以无关联
-      //                   name: '累计次数',
-      //                   valid: {
-      //                       type: 'input',
-      //                       pleaseholder: '温馨提示，请输入汉字中文英文和数字！',
-      //                       contType: ['ch', 'en', 'no'],
-      //                       maxLength: 8
-      //                   }
-      //               } -->
     <el-table :data="tData" style="width: 100%" size="small" ref="topTable">
       <el-table-column v-for="(col,idx) in tTitle" :key="idx" :label="col.name" :prop="''+col.rId">
         <template slot-scope="scope">
           <div v-if="scope.column.property !== 'undefined'">
             <any-cell
-              :cellInfo="col.valid"
+              :cellInfo="col.cellInfo"
               v-model="scope.row[scope.column.property]"
               @getForm="getFormComponents"
             ></any-cell>
