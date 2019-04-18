@@ -1,31 +1,36 @@
 <template>
   <div>
-    <div class="lev-wrap">
+    <!-- <div class="lev-wrap">
       <span>{{pInfo.checkItemName}}</span>
       <div>
         <el-row>录入权限：有权限</el-row>
         <el-row>目前表格状态：未录入</el-row>
         <el-row>
-          <check-plan :rows="pRows" :cols="pCols" :nUp="needUp"></check-plan>
-          <!-- <card-two :tTitle="tTitle1" :tData="tData1" :pConf1="pConf"></card-two> -->
+          <check-plan :rows="pRows" :cols="pCols" :colForId="colForId" :inited="inited"></check-plan>
+          <plan-uploads :list="pFiles"></plan-uploads>
         </el-row>
         <el-row>
           审核反馈：
           <br>三好学生的荣誉证书照片模糊，请重新上传后再次提交
         </el-row>
       </div>
-    </div>
+    </div>-->
 
-    <!-- <el-row>考核方案：2018级学生高一上学期综合素质考核</el-row>
-    <el-row>当前数据录入学期：2018-2019学年第二学期 姓名：张某某 座号：01</el-row>
-
-    <div class="lev-wrap">
-      <span>{{pConf1.blockName}}</span>
+    <div class="lev-wrap" v-for="(set,idx) in pSet" :key="idx">
+      <span>{{set.checkItemName}}</span>
       <div>
         <el-row>录入权限：有权限</el-row>
         <el-row>目前表格状态：未录入</el-row>
         <el-row>
-          <card-two :tTitle="tTitle1" :tData="tData1" :pConf1="pConf"></card-two>
+          <component
+            :is="set.showAsTable ? 'CheckPlanA': 'CheckPlanB'"
+            :cols="set.cols"
+            :rows="set.rows"
+            :colForId="set.colForId"
+            :inited="set.inited"
+          ></component>
+          <plan-uploads :list="set.needFiles"></plan-uploads>
+          <!-- <check-plan :rows="pRows" :cols="pCols" :colForId="colForId" :inited="inited"></check-plan> -->
         </el-row>
         <el-row>
           审核反馈：
@@ -33,16 +38,19 @@
         </el-row>
       </div>
     </div>
-
-    <el-button @click="submitPage">提交</el-button>-->
+    <el-button @click="submitPage">提交</el-button>
   </div>
 </template>
 <script>
 import newPageConfig from "./common/newPageConfig.js";
 
+import eventHub from "./common/eventHub.js";
+
 import CardOne from "./common/cardOne.vue";
 import CardTwo from "./common/cardTwo.vue";
-import CheckPlan from "./common/checkPlan.vue";
+import CheckPlanA from "./common/checkPlanA.vue";
+import CheckPlanB from "./common/checkPlanB.vue";
+import PlanUploads from "./common/planUploads.vue";
 import api from "./api.js";
 
 export default {
@@ -50,108 +58,212 @@ export default {
   components: {
     CardOne,
     CardTwo,
-    CheckPlan
+    CheckPlanA,
+    CheckPlanB,
+    PlanUploads
   },
   data() {
     return {
+      // 当前块的信息
       pInfo: {},
+      // 当前块整理得到的
       pCols: [],
       pRows: [],
-      needUp:!0
+      colForId: {},
+      // 已有的附件数据展示
+      pFiles: [],
 
-      // pConf1: {},
-      // tTitle1: {},
-      // tData1: [],
-      // pConf: {},
-      // uploadSet:{},
-      // fileList:[],
-      // // 数据id 和 关系id转换
-      // rIdStore: {}
+      // 收集存储 子组件所有组装好的值
+      promiseForm: {
+        files: [],
+        forms: []
+      },
+
+      //-----------------------------------
+      backUpPageData: {},
+      // 整理后的页面数据 如下
+      pSet: []
+      //  {  cols,
+      // rows,
+      // colForId,
+      // inited,
+      // needFiles,
+      // showAsTable,
+      // checkItemName
+      // checkItemId }
     };
   },
   created() {
-    this.getCheckPlanInfoById();
+    this.getStudentApplys();
+    eventHub.$on("files", this.getFiles);
+    eventHub.$on("forms", this.getForms);
   },
   methods: {
-    getCheckPlanInfoById() {
+    getStudentApplys() {
       api
-        .getCheckPlanInfoById(1)
+        .getStudentApplys()
         .then(rsp => {
           if (rsp.code > 0) {
-            this.pInfo = rsp.data;
-            this.initRes();
+            // 思想品德
+            let pageInfo = rsp.list[0].studentApplyDetailList[0];
+            this.backUpPageData = JSON.parse(JSON.stringify(pageInfo));
+
+            // 活动项目 等块信息
+            let cItemList = pageInfo.studentCheckItemList;
+
+            this.pSet = cItemList.map(bInfo => {
+              return this.initPageBlock(bInfo);
+              // console.log(this.initPageBlock(bInfo));
+            });
+
+            // this.pInfo = cItemList[0];
+            // this.initRes();
           } else {
             this.$message.error("error!", 3);
           }
         })
         .catch(e => console.error(e));
     },
-    initRes() {
+    collectUploadsInfo(i) {
+      return {
+        checkItemId: "",
+        name: i.checkDetailName,
+        checkDetailId: i.checkDetailId,
+        singleFileSize: i.singleFileSize,
+        fileCount: i.fileCount
+      };
+    },
+
+    // 根据页面判断使用哪一个页面
+    initPageBlock(bInfo) {
       // get table title
       // 判断是否是表格
-      let needShowAdTable = false;
+      let showAsTable = false;
       // 用于数据渲染 id显示到col下
       let idToCol = {};
-      // 存储 协助统计
+      // 存储 协助统计（表格方式显示时使用）
       let cIdxs = [];
       // 表体 及 单元格格式
       let cols = [];
-      cols.push({ prop: "name", label: this.pInfo.checkItemName });
-      this.pInfo.checkDetailList.map(detail => {
-        detail.detailList.map(vInfo => {
-          const cIdx = vInfo.rowToColIndex;
-          if (cIdx) {
-            needShowAdTable = true;
-            idToCol[vInfo.checkDetailId] = cIdx;
-            if (!cIdxs.includes(cIdx)) {
-              cIdxs.push(cIdx);
+      // !!! 目前只考虑了 table方式和普通方式 其他方式尚未考虑
+
+      // 附件信息
+      let needFiles = [];
+      bInfo.detailList.map(detail => {
+        detail.needFile && needFiles.push(this.collectUploadsInfo(detail));
+        // 假如没有三级数据 // 暂时不考虑 table类型
+        const sIdx = detail.rowToColIndex;
+        if (!detail.detailList || detail.detailList.length === 0) {
+          // if (sIdx) {
+          //   showAsTable = true;
+          //   idToCol[detail.checkDetailId] = sIdx;
+          //   if (!cIdxs.includes(sIdx)) {
+          //     cIdxs.push(sIdx);
+          //     cols.push({
+          //       prop: sIdx,
+          //       label: detail.checkDetailName,
+          //       cellInfo: detail
+          //     });
+          //   }
+          // }
+          // 非 表格方式显示
+          cols.push({
+            prop: detail.checkDetailId,
+            label: detail.checkDetailName,
+            cellInfo: detail
+          });
+        } else {
+          //三级的处理
+          detail.detailList.map(vInfo => {
+            detail.vInfo && needFiles.push(this.collectUploadsInfo(vInfo));
+            const cIdx = vInfo.rowToColIndex;
+            if (cIdx) {
+              showAsTable = true;
+              idToCol[vInfo.checkDetailId] = cIdx;
+              if (!cIdxs.includes(cIdx)) {
+                cIdxs.push(cIdx);
+                cols.push({
+                  prop: cIdx,
+                  label: vInfo.checkDetailName,
+                  cellInfo: vInfo
+                });
+              }
+            } else {
+              // 非 表格方式显示
               cols.push({
-                prop: cIdx,
+                prop: vInfo.checkDetailId,
                 label: vInfo.checkDetailName,
                 cellInfo: vInfo
               });
             }
-          }
-        });
+          });
+        }
       });
       let rows = [];
-      this.pInfo.checkDetailList.map(detail => {
-        // rows.push({ name: detail.checkDetailName [idToCol[detail.]]});
-        let row = { id: detail.checkDetailId, name: detail.checkDetailName }; // 表格首列
-        detail.detailList.map(vInfo => {
-          row[vInfo.rowToColIndex] = ""; // 表格内单元格默认值
-        });
-        rows.push(row);
-      });
+      let colForId = {};
+      if (showAsTable) {
 
-      this.pCols = cols;
-      this.pRows = rows;
-      this.needUp = !this.needUp
+        cols.unshift({ prop: "name", label: bInfo.checkItemName, cellInfo: {} });
+
+        bInfo.detailList.map(detail => {
+          let row = {
+            checkDetailId: detail.checkDetailId,
+            name: detail.checkDetailName
+          }; // 表格首列
+          detail.detailList.map(vInfo => {
+            row[vInfo.rowToColIndex] = "1"; // 表格内单元格默认值
+            // 三级id_列序号 = 值id 为了换算得到id使用
+            colForId[detail.checkDetailId + "_" + vInfo.rowToColIndex] =
+              vInfo.checkDetailId;
+          });
+          rows.push(row);
+        });
+      } 
+
+      let inited = !0;
+      // 根据初始数据 整理出 表头、表体 id查找工具 附件信息
+      return {
+        cols,
+        rows,
+        colForId,
+        inited,
+        needFiles,
+        showAsTable,
+        checkItemName: bInfo.checkItemName,
+        checkItemId: bInfo.checkItemId
+      };
+    },
+  
+    submitPage() {
+      this.promiseForm = {
+        files: [],
+        forms: []
+      };
+      eventHub.$emit("submit");
+      Promise.all(this.promiseForm.forms)
+        .then(([...forms]) => {
+          console.log("收集完毕！form", forms);
+          Promise.all(this.promiseForm.files)
+            .then(([...files]) => {
+              console.log("收集完毕！files", files);
+              console.log(
+                "页面内所有Form和文件上传结果，收集完毕！可以进行提交了！"
+              );
+            })
+            .catch(e => {
+              this.$message.error(e.msg);
+            });
+        })
+        .catch(e => {
+          this.$message.error(e.msg);
+        });
+    },
+    getFiles(f) {
+      this.promiseForm.files.push(f);
+    },
+    getForms(f) {
+      this.promiseForm.forms.push(f);
     }
-    // submitPage() {},
-    // getTTitle() {
-    //   // 存储id - rid  关系
-    //   this.rIdStore = {};
-    //   let column = [];
-    //   let columnIds = [];
-    //   this.pConf1.itemList.map(item => {
-    //     item.values.map(valInfo => {
-    //       this.rIdStore[valInfo.id] = valInfo.rId;
-    //       if (valInfo.rId && !columnIds.includes(valInfo.rId)) {
-    //         column.push(valInfo);
-    //         columnIds.push(valInfo.rId);
-    //       }
-    //     });
-    //   });
-    //   this.tTitle1 = column;
-    // },
-    // getTData() {
-    //   this.tData1 = [
-    //     { "111": "kkk", "111-1": "kkk", "112": 13, "111-2": 13 },
-    //     { "121": "as", "111-1": "as", "122": 15, "111-2": 15 },
-    //     { "131": 12, "111-1": 12, "132": "asdf", "111-2": "asdf" }
-    //   ];
-    // }
   }
 };
 </script>

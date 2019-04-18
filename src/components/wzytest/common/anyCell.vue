@@ -5,6 +5,7 @@
       :cellInfo="cellInfo"
       @change="valChange"
       @getForm="getForm"
+      :size="'mini'"
       v-model="val"
     ></component>
     <!-- this.typeForCom[this.cellInfo.type]:{{this.typeForCom[this.cellInfo.type]}} -->
@@ -19,27 +20,26 @@ import CellDate from "./cellDate.vue";
 // import CellEmpty from "./cellEmpty.vue";
 const typeForCom = {
   input: "CellInput",
+  number: "CellInput",
   date: "CellDate",
-  text: "CellText",
+  // text: "CellText",
+  text: "CellInput",
   select: "CellSelect",
   multiselect: "CellMultiselect"
 };
 
 function giVal(v) {
   const vType = Object.prototype.toString.call(v).slice(8, -1);
-  if (vType === "Number" || vType === "String") {
+  if (vType === "Object") {
+    return JSON.parse(JSON.stringify(v));
+  } else {
+    if (v === undefined) {
+      console.log(this.cellInfo);
+      return "";
+    }
     return v;
   }
-  return JSON.parse(JSON.stringify(v));
 }
-
-//  cellInfo = {
-//   type: "input",
-//   pleaseholder: "温馨提示，请输入汉字中文英文和数字！",
-//   contType: ["ch", "en", "no"],
-//   maxLength: 8
-// };
-
 export default {
   components: {
     CellInput,
@@ -54,21 +54,19 @@ export default {
       required: true
     },
     value: {
-      type: [Object, Number, Array, String],
+      // type: [Object, Number, Array, String, undefined],
       // type: [Object, Number, Array, String, Date],
-      required: true
+      // required: true
     }
   },
   created() {
+    if (this.value == undefined) {
+      console.log(this.cellInfo);
+    }
     this.val = giVal(this.value);
     if (!this.cellInfo.fieldType) {
       console.error("[error]: cell type is", this.cellInfo.fieldType);
     }
-    // JSON.parse(JSON.stringify())
-    console.log(
-      " typeForCom[this.cellInfo.fieldType]",
-      typeForCom[this.cellInfo.fieldType]
-    );
   },
   watch: {
     value(nv, ov) {

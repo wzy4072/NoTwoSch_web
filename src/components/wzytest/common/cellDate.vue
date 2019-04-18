@@ -1,7 +1,12 @@
 <template>
   <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0" style="width:200px;">
-    <el-form-item prop="val">
-      <el-date-picker v-model="val" type="date" value-format="yyyy-MM-dd" placeholder="选择日期"></el-date-picker>
+    <el-form-item prop="val" :size="size">
+      <el-date-picker
+        v-model="ruleForm.val"
+        type="date"
+        value-format="yyyy-MM-dd"
+        placeholder="选择日期"
+      ></el-date-picker>
     </el-form-item>
   </el-form>
 </template>
@@ -17,6 +22,9 @@ export default {
       type: [String],
       // type: [Date, Number, String],
       required: true
+    },
+    size: {
+      type: String
     }
   },
   created() {

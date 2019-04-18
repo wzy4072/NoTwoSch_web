@@ -66,14 +66,14 @@ export default {
   },
   methods: {
     validate(rule, value, callback) {
-      const reg = new RegExp(
-        "^[" + this.cellInfo.contType.map(r => regInfo[r].regStr).join("") + "]+$"
-      );
-      const regTip = this.cellInfo.contType.map(r => regInfo[r].tip).join("或");
-      // console.log(reg);
-      if (!reg.test(value)) {
-        callback(new Error(`请输入${regTip}！`));
-      } else if (value.length > this.cellInfo.maxLength) {
+      // const reg = new RegExp(
+      //   "^[" + this.cellInfo.contType.map(r => regInfo[r].regStr).join("") + "]+$"
+      // );
+      // const regTip = this.cellInfo.contType.map(r => regInfo[r].tip).join("或");
+      // if (!reg.test(value)) {
+      //   callback(new Error(`请输入${regTip}！`));
+      // } else 
+      if (value.length > this.cellInfo.maxLength) {
         callback(new Error(`长度不能超过${this.cellInfo.maxLength}！`));
       } else {
         callback();

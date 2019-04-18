@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0" style="width:200px;">
-      <el-form-item prop="val">
+      <el-form-item prop="val" :size="size">
         <el-select v-model="ruleForm.val" placeholder="请选择" @change="valChange">
           <el-option v-for="(item,idx) in options" :key="idx" :label="item" :value="item"></el-option>
         </el-select>
@@ -20,13 +20,16 @@ export default {
     value: {
       type: [Number, String],
       required: true
+    },
+    size: {
+      type: String
     }
   },
   created() {
     this.ruleForm.val = this.value;
-    if (this.cellInfo.options && this.cellInfo.options.length > 0) {
-      this.options = this.cellInfo.options;
-    }
+    const opts =
+      this.cellInfo.comboOption && this.cellInfo.comboOption.split(";");
+    this.options = opts || [];
   },
   watch: {
     value(nv, ov) {
