@@ -2,14 +2,14 @@
   <div>
     <el-row v-for="(u,i) in list" :key="''+i" class="upload-row">
       <span>{{i + 1 }} .</span>
-      <cell-upload :upInfo="u"></cell-upload>
+      <cell-upload :upInfo="u" :where="where"></cell-upload>
     </el-row>
   </div>
 </template>
 <script>
 import CellUpload from "./cellUpload.vue";
 export default {
-  props: ["list"],
+  props: ["list", "where"],
   components: {
     CellUpload
   },
@@ -20,8 +20,8 @@ export default {
 };
 </script>
 <style scoped>
-.upload-row{
-    margin:4px 0;
+.upload-row {
+  margin: 4px 0;
 }
 </style>
 

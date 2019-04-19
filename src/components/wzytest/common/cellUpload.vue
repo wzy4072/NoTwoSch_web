@@ -24,7 +24,7 @@
 <script>
 import eventHub from "./eventHub.js";
 export default {
-  props: ["upInfo", "name"],
+  props: ["upInfo", "name", "where"],
   data() {
     return {
       fileTypeLimit: ["image/jpeg", "image/png"],
@@ -37,16 +37,17 @@ export default {
       // 收到广播就丢值出去
       const filesInfo = this.initFilesInfo();
       const promiseFiles = new Promise((rs, rj) => {
-        filesInfo.length > 0 ? rs() : rj();
+        // filesInfo.length > 0 ? rs() : rj();
+        rs();
       })
         .then(() => {
           return filesInfo;
         })
         .catch(e => {
-          return { msg: "至少应有一个附件！" }
+          return { msg: "至少应有一个附件！" };
           this.$message.error(e);
         });
-      eventHub.$emit("files", promiseFiles);
+      eventHub.$emit("files", promiseFiles, this.where);
     });
   },
   methods: {

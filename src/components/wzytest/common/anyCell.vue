@@ -17,10 +17,11 @@ import CellMultiselect from "./cellMultiselect.vue";
 import CellSelect from "./cellSelect.vue";
 import CellText from "./cellText.vue";
 import CellDate from "./cellDate.vue";
+import CellNumber from "./cellNumber.vue";
 // import CellEmpty from "./cellEmpty.vue";
 const typeForCom = {
   input: "CellInput",
-  number: "CellInput",
+  number: "CellNumber",
   date: "CellDate",
   // text: "CellText",
   text: "CellInput",
@@ -34,7 +35,6 @@ function giVal(v) {
     return JSON.parse(JSON.stringify(v));
   } else {
     if (v === undefined) {
-      console.log(this.cellInfo);
       return "";
     }
     return v;
@@ -46,7 +46,8 @@ export default {
     CellMultiselect,
     CellSelect,
     CellText,
-    CellDate
+    CellDate,
+    CellNumber
   },
   props: {
     cellInfo: {

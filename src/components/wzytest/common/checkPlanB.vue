@@ -8,6 +8,9 @@
         :label="v.label"
       >
         <template slot-scope="scope">
+          <!-- <div>cellInfo:{{v.cellInfo}}</div> -->
+          <!-- <div>scope.column.property:{{scope.column.property}}</div>
+          <div>scope.row:{{scope.row}}</div>-->
           <any-cell
             :cellInfo="v.cellInfo"
             v-model="scope.row[scope.column.property]"
@@ -23,6 +26,7 @@
         </template>
       </el-table-column>
     </el-table>
+    <div style="display:none;">{{uploadNames}}</div>
   </div>
 </template>
 
@@ -50,6 +54,11 @@ export default {
     colForId: {
       type: Object,
       required: true
+    },
+    // 块id 项目id ，父组件以区分回收数据的存放
+    where: {
+      type: Object,
+      required: true
     }
   },
   components: { anyCell },
@@ -64,10 +73,22 @@ export default {
       this.tableData = [...this.rows];
     }
   },
+  computed: {
+    uploadNames() {
+      const prop = this.cols[0].prop;
+      let upfileNames = this.tableData.map(row => {
+        return row[prop];
+      });
+      this.$emit("upfileNames", upfileNames, this.where);
+      return upfileNames;
+    }
+  },
   created() {
     if (this.tableData.length === 0) {
       // 普通显示 默认给一个空行
-      this.getRowByCol();
+      // this.getRowByCol();
+
+      this.tableData = [this.getRowByCol()];
     } else {
       this.tableData = JSON.parse(JSON.stringify(this.rows));
     }
@@ -75,10 +96,37 @@ export default {
     eventHub.$on("submit", () => {
       // 收到广播 先进行验证
       // 符合的话就丢值出去
-      eventHub.$emit("forms", this.checkForm());
+      eventHub.$emit("forms", this.checkForm(), this.where);
     });
   },
   methods: {
+    // 表单验证
+    checkForm() {
+      let allPass = true;
+      let promises = this.forms.map(
+        f =>
+          new Promise((rs, rj) => {
+            f.validate(valid => {
+              if (valid) {
+                rs(valid);
+              } else {
+                allPass = false;
+                rj(valid);
+              }
+            });
+          })
+      );
+      return Promise.all(promises).then(valids => {
+        if (allPass) {
+          // 表单全部验证通过 则进行整理数据
+          return this.initForms();
+        } else {
+          return {};
+          console.error("please check your form!");
+        }
+      });
+    },
+    // 删除行
     delRow(idx, row) {
       if (this.tableData.length > 1) {
         this.tableData.splice(idx, 1);
@@ -99,9 +147,9 @@ export default {
       let row = {};
       this.cols.map(i => {
         // row[i.prop] = types[i.cellInfo.fieldType];
-        row[i.prop] ='';
+        row[i.prop] = "";
       });
-      this.tableData = [row];
+      // this.tableData = [row];
       return row;
     },
     // 合并表格内数据单元格
@@ -122,56 +170,31 @@ export default {
           class: { addbtn: true },
           attrs: { id: "elem", size: "mini" },
           on: {
-            click: this.getRowByCol
+            click: () => {
+              this.tableData.push(this.getRowByCol());
+            }
           }
         },
         "新增"
       );
     },
-    // 表单验证
-    // checkForm() {
-    //   let allPass = true;
-    //   let promises = this.forms.map(
-    //     f =>
-    //       new Promise((rs, rj) => {
-    //         f.validate(valid => {
-    //           if (valid) {
-    //             rs(valid);
-    //           } else {
-    //             allPass = false;
-    //             rj(valid);
-    //           }
-    //         });
-    //       })
-    //   );
-    //   return Promise.all(promises).then(valids => {
-    //     if (allPass) {
-    //       // 表单全部验证通过 则进行整理数据
-    //       return this.initForms();
-    //     } else {
-    //       return {};
-    //       console.error("please check your form!");
-    //     }
-    //   });
-    // },
-    // // 收集form表单
+    // 收集form表单
     getFormComponents(formCom) {
       this.forms.push(formCom);
+    },
+    // 整理数据提交
+    initForms() {
+      let formValues = [];
+      this.tableData.map((row, k) => {
+        const keys = Object.keys(row);
+        for (let key of keys) {
+          if (/^[0-9]+$/.test(key)) {
+            formValues["checkDetail" + key] = row[key];
+          }
+        }
+      });
+      return formValues;
     }
-    // // 整理数据提交
-    // initForms() {
-    //   let formValues = {};
-    //   this.tableData.map((row, k) => {
-    //     const keys = Object.keys(row);
-    //     for (let key of keys) {
-    //       if (/^[0-9]+$/.test(key)) {
-    //         const vId = this.colForId[row["checkDetailId"] + "_" + key];
-    //         formValues["checkDetail" + vId] = row[key];
-    //       }
-    //     }
-    //   });
-    //   return formValues;
-    // }
   }
 };
 </script>

@@ -41,6 +41,11 @@ export default {
     colForId: {
       type: Object,
       required: true
+    },
+    // 块id 项目id ，父组件以区分回收数据的存放
+    where: {
+      type: Object,
+      required: true
     }
   },
   components: { anyCell },
@@ -59,7 +64,7 @@ export default {
     eventHub.$on("submit", () => {
       // 收到广播 先进行验证
       // 符合的话就丢值出去
-      eventHub.$emit("forms", this.checkForm());
+      eventHub.$emit("forms", this.checkForm(), this.where);
     });
   },
   methods: {
@@ -105,7 +110,7 @@ export default {
           }
         }
       });
-      return formValues;
+      return [formValues];
     }
   }
 };

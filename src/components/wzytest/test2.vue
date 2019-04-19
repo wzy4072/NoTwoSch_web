@@ -1,21 +1,5 @@
 <template>
   <div>
-    <!-- <div class="lev-wrap">
-      <span>{{pInfo.checkItemName}}</span>
-      <div>
-        <el-row>录入权限：有权限</el-row>
-        <el-row>目前表格状态：未录入</el-row>
-        <el-row>
-          <check-plan :rows="pRows" :cols="pCols" :colForId="colForId" :inited="inited"></check-plan>
-          <plan-uploads :list="pFiles"></plan-uploads>
-        </el-row>
-        <el-row>
-          审核反馈：
-          <br>三好学生的荣誉证书照片模糊，请重新上传后再次提交
-        </el-row>
-      </div>
-    </div>-->
-
     <div class="lev-wrap" v-for="(set,idx) in pSet" :key="idx">
       <span>{{set.checkItemName}}</span>
       <div>
@@ -28,8 +12,10 @@
             :rows="set.rows"
             :colForId="set.colForId"
             :inited="set.inited"
+            :where="set.where"
+            @upfileNames="getFilesName"
           ></component>
-          <plan-uploads :list="set.needFiles"></plan-uploads>
+          <plan-uploads :list="set.needFiles" :where="set.where"></plan-uploads>
           <!-- <check-plan :rows="pRows" :cols="pCols" :colForId="colForId" :inited="inited"></check-plan> -->
         </el-row>
         <el-row>
@@ -45,8 +31,9 @@
 import newPageConfig from "./common/newPageConfig.js";
 
 import eventHub from "./common/eventHub.js";
+import cMixin from "./common/cMixin.js";
 
-import CardOne from "./common/cardOne.vue";
+// import CardOne from "./common/cardOne.vue";
 import CardTwo from "./common/cardTwo.vue";
 import CheckPlanA from "./common/checkPlanA.vue";
 import CheckPlanB from "./common/checkPlanB.vue";
@@ -55,8 +42,9 @@ import api from "./api.js";
 
 export default {
   name: "mytest2",
+  mixins:[cMixin],
   components: {
-    CardOne,
+    // CardOne,
     CardTwo,
     CheckPlanA,
     CheckPlanB,
@@ -82,7 +70,9 @@ export default {
       //-----------------------------------
       backUpPageData: {},
       // 整理后的页面数据 如下
-      pSet: []
+      pSet: [],
+      vSet: [],
+      subResult: []
       //  {  cols,
       // rows,
       // colForId,
@@ -112,157 +102,108 @@ export default {
             let cItemList = pageInfo.studentCheckItemList;
 
             this.pSet = cItemList.map(bInfo => {
-              return this.initPageBlock(bInfo);
-              // console.log(this.initPageBlock(bInfo));
-            });
+              this.vSet.push({
+                where: {
+                  checkContId: pageInfo.checkContId, // 存储 思想品德id
+                  checkItemId: bInfo.checkItemId // 存储 活动项目id
+                },
+                formsProms: [], // 文件和输入框的数据promise.......
+                filesProms: [] // 文件和输入框的数据promise.......
+              });
 
-            // this.pInfo = cItemList[0];
-            // this.initRes();
+              return Object.assign({}, this.initPageBlock(bInfo), {
+                where: {
+                  checkContId: pageInfo.checkContId, // 存储 思想品德id
+                  checkItemId: bInfo.checkItemId // 存储 活动项目id
+                }
+              });
+            });
           } else {
             this.$message.error("error!", 3);
           }
         })
         .catch(e => console.error(e));
     },
-    collectUploadsInfo(i) {
-      return {
-        checkItemId: "",
-        name: i.checkDetailName,
-        checkDetailId: i.checkDetailId,
-        singleFileSize: i.singleFileSize,
-        fileCount: i.fileCount
-      };
+    async asyncBlock(s) {
+      let sIt = Object.assign({}, s.where, { studentId: "" });
+      sIt.applyDetailList = await Promise.all(s.formsProms).then(([...f]) => {
+        return f[0];
+      });
+      sIt.applyAttList = await Promise.all(s.filesProms).then(([...f]) => {
+        let files = [];
+        f.map(f => files.push(...f));
+        return files;
+      });
+      return sIt;
     },
+    async submitPage() {
+      this.vSet.map(s => {
+        s.formsProms = [];
+        s.filesProms = [];
+      });
 
-    // 根据页面判断使用哪一个页面
-    initPageBlock(bInfo) {
-      // get table title
-      // 判断是否是表格
-      let showAsTable = false;
-      // 用于数据渲染 id显示到col下
-      let idToCol = {};
-      // 存储 协助统计（表格方式显示时使用）
-      let cIdxs = [];
-      // 表体 及 单元格格式
-      let cols = [];
-      // !!! 目前只考虑了 table方式和普通方式 其他方式尚未考虑
+      eventHub.$emit("submit");
+      const subResult = await Promise.all(
+        this.vSet.map(set => this.asyncBlock(set))
+      );
+      console.log(subResult);
+    },
+    getFiles(f, where) {
+      let set = this.vSet[this.fIdx(this.vSet, where)];
+      set.filesProms.push(f);
+    },
+    getForms(f, where) {
+      let set = this.vSet[this.fIdx(this.vSet, where)];
+      set.formsProms.push(f);
+    },
+    // 用于接收 文件上传实时变动的文件名列表
+    getFilesName(nameArr, where) {
+      let set = this.pSet[this.fIdx(this.pSet, where)];
+      let newFiles = [];
+      // 这里 仅考虑了
+      // 1 name和needfiles 顺序相同
+      // 2 needfiles中都是同步名字
 
-      // 附件信息
-      let needFiles = [];
-      bInfo.detailList.map(detail => {
-        detail.needFile && needFiles.push(this.collectUploadsInfo(detail));
-        // 假如没有三级数据 // 暂时不考虑 table类型
-        const sIdx = detail.rowToColIndex;
-        if (!detail.detailList || detail.detailList.length === 0) {
-          // if (sIdx) {
-          //   showAsTable = true;
-          //   idToCol[detail.checkDetailId] = sIdx;
-          //   if (!cIdxs.includes(sIdx)) {
-          //     cIdxs.push(sIdx);
-          //     cols.push({
-          //       prop: sIdx,
-          //       label: detail.checkDetailName,
-          //       cellInfo: detail
-          //     });
-          //   }
-          // }
-          // 非 表格方式显示
-          cols.push({
-            prop: detail.checkDetailId,
-            label: detail.checkDetailName,
-            cellInfo: detail
-          });
-        } else {
-          //三级的处理
-          detail.detailList.map(vInfo => {
-            detail.vInfo && needFiles.push(this.collectUploadsInfo(vInfo));
-            const cIdx = vInfo.rowToColIndex;
-            if (cIdx) {
-              showAsTable = true;
-              idToCol[vInfo.checkDetailId] = cIdx;
-              if (!cIdxs.includes(cIdx)) {
-                cIdxs.push(cIdx);
-                cols.push({
-                  prop: cIdx,
-                  label: vInfo.checkDetailName,
-                  cellInfo: vInfo
-                });
-              }
-            } else {
-              // 非 表格方式显示
-              cols.push({
-                prop: vInfo.checkDetailId,
-                label: vInfo.checkDetailName,
-                cellInfo: vInfo
-              });
-            }
-          });
+      // 先判断是否是需要同步的
+      let syncName = false;
+      set.needFiles.map((file, idx) => {
+        if (file.syncName) {
+          syncName = true;
         }
       });
-      let rows = [];
-      let colForId = {};
-      if (showAsTable) {
-
-        cols.unshift({ prop: "name", label: bInfo.checkItemName, cellInfo: {} });
-
-        bInfo.detailList.map(detail => {
-          let row = {
-            checkDetailId: detail.checkDetailId,
-            name: detail.checkDetailName
-          }; // 表格首列
-          detail.detailList.map(vInfo => {
-            row[vInfo.rowToColIndex] = "1"; // 表格内单元格默认值
-            // 三级id_列序号 = 值id 为了换算得到id使用
-            colForId[detail.checkDetailId + "_" + vInfo.rowToColIndex] =
-              vInfo.checkDetailId;
-          });
-          rows.push(row);
+      if (syncName) {
+        set.needFiles = nameArr.map((na, ni) => {
+          let fNi = Object.assign({}, set.needFiles[ni] || set.needFiles[0]);
+          fNi.name = na;
+          return fNi;
         });
-      } 
-
-      let inited = !0;
-      // 根据初始数据 整理出 表头、表体 id查找工具 附件信息
-      return {
-        cols,
-        rows,
-        colForId,
-        inited,
-        needFiles,
-        showAsTable,
-        checkItemName: bInfo.checkItemName,
-        checkItemId: bInfo.checkItemId
-      };
+      }
     },
-  
-    submitPage() {
-      this.promiseForm = {
-        files: [],
-        forms: []
-      };
-      eventHub.$emit("submit");
-      Promise.all(this.promiseForm.forms)
-        .then(([...forms]) => {
-          console.log("收集完毕！form", forms);
-          Promise.all(this.promiseForm.files)
-            .then(([...files]) => {
-              console.log("收集完毕！files", files);
-              console.log(
-                "页面内所有Form和文件上传结果，收集完毕！可以进行提交了！"
-              );
-            })
-            .catch(e => {
-              this.$message.error(e.msg);
-            });
-        })
-        .catch(e => {
-          this.$message.error(e.msg);
-        });
-    },
-    getFiles(f) {
-      this.promiseForm.files.push(f);
-    },
-    getForms(f) {
-      this.promiseForm.forms.push(f);
+    // collectUploadsInfo(i) {
+    //   return {
+    //     fileId: "",
+    //     name: i.checkDetailName,
+    //     checkDetailId: i.checkDetailId,
+    //     singleFileSize: i.singleFileSize,
+    //     fileCount: i.fileCount,
+    //     // 标记 是否需要同步名字 （如果当前字段没有下一级，有值，那么就需要同步）
+    //     syncName: !i.detailList || i.detailList.length === 0
+    //   };
+    //   // syncName:
+    //   //   i.syncName !== undefined
+    //   //     ? i.syncName
+    //   //     : !i.detailList || i.detailList.length === 0
+    // },
+    fIdx(arr, where) {
+      for (let i = 0; i < arr.length; i++) {
+        if (
+          arr[i].where.checkContId === where.checkContId &&
+          arr[i].where.checkItemId === where.checkItemId
+        ) {
+          return i;
+          break;
+        }
+      }
     }
   }
 };
