@@ -7,9 +7,9 @@
           <div v-else>{{scope.row[scope.column.property]}}</div>
         </template>
       </el-table-column>
-      <el-table-column label="当前状态" prop="status">
+      <el-table-column label="当前状态">
         <template slot-scope="scope">
-          <div>草稿？？？</div>
+          <div>{{recordStatusLabel[scope.row.recordStatus]}}</div>
         </template>
       </el-table-column>
     </el-table>
@@ -37,7 +37,12 @@ export default {
   data() {
     return {
       tableData: [...this.rows],
-      forms: []
+      recordStatusLabel: {
+        "0": "草稿",
+        "1": "已提交",
+        "2": "审核通过",
+        "3": "审核不通过"
+      }
     };
   },
   watch: {

@@ -11,12 +11,14 @@
           <div>{{scope.row[scope.column.property]}}</div>
         </template>
       </el-table-column>
-      <el-table-column label="当前状态" prop="status">
+      <el-table-column label="当前状态" prop="recordStatus">
         <template slot-scope="scope">
-          <div>草稿？？？</div>
+          <div>{{recordStatusLabel[scope.row.recordStatus]}}</div>
         </template>
       </el-table-column>
     </el-table>
+    <!-- ---{{tableData}}
+    ---{{cols}} -->
   </div>
 </template>
 
@@ -40,7 +42,13 @@ export default {
   },
   data() {
     return {
-      tableData: [...this.rows]
+      tableData: [...this.rows],
+      recordStatusLabel: {
+        "0": "草稿",
+        "1": "已提交",
+        "2": "审核通过",
+        "3": "审核不通过"
+      }
     };
   },
   watch: {
@@ -67,11 +75,11 @@ export default {
     // 通过行信息获取对应的默认值
     getRowByCol() {
       const types = {
-        input: "input",
-        number: "number",
-        date: "2019-05-01",
-        text: "asdfasdfasdf",
-        select: "国家",
+        input: "",
+        number: "",
+        date: "",
+        text: "",
+        select: "",
         multiselect: []
       };
       let row = {};

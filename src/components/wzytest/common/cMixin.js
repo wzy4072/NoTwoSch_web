@@ -1,4 +1,15 @@
 var cMixin = {
+    data() {
+        return {
+            recordStatusLabel:
+            {
+                '0': '草稿',
+                '1': '已提交',
+                '2': '审核通过',
+                '3': '审核不通过',
+            }
+        }
+    },
     methods: {
         // 根据页面判断使用哪一个页面
         initPageBlock(bInfo, forShow) {
@@ -59,6 +70,7 @@ var cMixin = {
 
             let rows = [];
             let colForId = {};
+            let idForCol = {};
             if (showAsTable) {
                 cols.unshift({
                     prop: "name",
@@ -72,30 +84,28 @@ var cMixin = {
                         checkDetailId: detail.checkDetailId,
                         name: detail.checkDetailName
                     }; // 表格首列
+
                     detail.detailList.map(vInfo => {
                         row[vInfo.rowToColIndex] = Math.random()
                             .toString()
                             .slice(2, 5); // 表格内单元格默认值
-                        // 三级id_列序号 = 值id 为了换算得到id使用
+
+                        // colForId[三级id_值序列] = 值id 
                         colForId[detail.checkDetailId + "_" + vInfo.rowToColIndex] =
                             vInfo.checkDetailId;
+                        // idForCol[值id] =[值序列]
+                        idForCol[vInfo.checkDetailId] = vInfo.rowToColIndex
                     });
                     rows.push(row);
                 });
             }
-            // if (forShow) {
-            //     cols.push({
-            //         prop: "status",
-            //         label: '当前状态',
-            //     });
-            // }
-
             let inited = !0;
             // 根据初始数据 整理出 表头、表体 id查找工具 附件信息
             return {
                 cols,
                 rows,
                 colForId,
+                idForCol,
                 inited,
                 needFiles,
                 showAsTable,

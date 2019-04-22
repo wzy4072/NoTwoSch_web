@@ -1,0 +1,71 @@
+{
+    "code": 1,
+    "desc": "success",
+    "recordCount": null,
+    "currentPage": null,
+    "data": {
+        "1": {
+            "detailList": [
+                {
+                    "applyDetailId": 1,
+                    "schoolCode": "201604002",
+                    "applyRecordId": 1,
+                    "checkItemId": 1,
+                    "checkDetailLine": 1,
+                    "recordStatus": 3,
+                    "approveId": 2318448,
+                    "approveName": "刘劲松",
+                    "checkOpinion": "不同意",
+                    "checkDetail2": "15",
+                    "checkDetail3": "4",
+                    "checkDetail5": "5",
+                    "checkDetail6": "20",
+                    "checkDetail9": "2",
+                    "checkDetail10": "4",
+                    "checkDetail11": " 4",
+                    "checkDetail12": "4",
+                    "createBy": null,
+                    "createTime": 1555486155000,
+                    "modifyBy": 2318448,
+                    "modifyTime": 1555579643000
+                }
+            ],
+            "attList": [
+                {
+                    "applyAttId": 2,
+                    "schoolCode": null,
+                    "applyRecordId": 1,
+                    "checkItemId": 1,
+                    "checkDetailId": "1",
+                    "checkDetailLine": null,
+                    "attName": "图片",
+                    "attUrl": "www.baidu.com",
+                    "thumbnaiUrl": "www.baidu.com",
+                    "attType": "jpg",
+                    "attSize": 1000
+                }
+            ]
+        },
+        "2": {
+            "detailList": [
+                {
+                    "applyDetailId": 1,
+                    "schoolCode": "201604002",
+                    "applyRecordId": 1,
+                    "checkItemId": 1,
+                    "checkDetailLine": 1,
+                    "recordStatus": 3,
+                    "approveId": 2318448,
+                    "approveName": "刘劲松",
+                    "checkOpinion": "不同意",
+                    "checkDetail13": "XXX荣誉称号",
+                    "checkDetail14": "2019-05-01",
+                    "checkDetail15": "国家",
+                    "checkDetail16": "YYY单位"
+                }
+            ],
+            "attList": []
+        }
+    },
+    "list": null
+}
