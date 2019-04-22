@@ -32,7 +32,7 @@
         </div>
         <div v-else>
           <div v-if="loggingIn">登入中...</div>
-          <div v-else>对不起，您没有系统权限！</div>
+          <div v-else>对不起，您没有系统权限！123</div>
         </div>
       </el-main>
     </el-container>
