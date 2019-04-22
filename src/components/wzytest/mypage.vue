@@ -125,7 +125,7 @@ export default {
             const tbVals = itemTableData[0] || {};
             item.rows.map(row => {
               for (let col in row) {
-                if (/^[0-9]+$/.test(col)) {
+                if (isIdKey(col)) {
                   const valId = item.colForId[row.checkDetailId + "_" + col];
                   row[col] = tbVals[valId];
                 }

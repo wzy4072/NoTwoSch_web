@@ -23,7 +23,10 @@
 </template>
 
 <script>
+import cMixin from "./cMixin.js";
+
 export default {
+  mixins: [cMixin],
   props: {
     cols: {
       type: Array,
@@ -42,13 +45,7 @@ export default {
   },
   data() {
     return {
-      tableData: [...this.rows],
-      recordStatusLabel: {
-        "0": "草稿",
-        "1": "已提交",
-        "2": "审核通过",
-        "3": "审核不通过"
-      }
+      tableData: [...this.rows]
     };
   },
   watch: {
@@ -84,7 +81,7 @@ export default {
       };
       let row = {};
       this.cols.map(i => {
-        if (/^[0-9]+$/.test(i.prop)) {
+        if (isIdKey(i.prop)) {
           row[i.prop] = types[i.cellInfo.fieldType];
         }
       });

@@ -1,4 +1,5 @@
-var cMixin = {
+const RegNumberKey = /^[0-9]+$/
+const cMixin = {
     data() {
         return {
             recordStatusLabel:
@@ -11,6 +12,9 @@ var cMixin = {
         }
     },
     methods: {
+        isIdKey(key) {
+            return RegNumberKey.test(key)
+        },
         // 根据页面判断使用哪一个页面
         initPageBlock(bInfo, forShow) {
             // get table title
