@@ -8,13 +8,13 @@ var server = http.createServer(function (req, res) {
   console.log('url_info', url_info)
   let urlPath = url_info.pathname
   // 截取 以 /1 等结尾的 id类型的请求
-  const pattern = /\/[0-9]+/g
-  var resArr = urlPath.match(pattern)
-  if (resArr && resArr.length) {
-    urlPath = urlPath.slice(0, urlPath.lastIndexOf(resArr.pop()))
-  }
+  // const pattern = /\/[0-9]+/g
+  // var resArr = urlPath.match(pattern)
+  // if (resArr && resArr.length) {
+  //   urlPath = urlPath.slice(0, urlPath.lastIndexOf(resArr.pop()))
+  // }
   var file = './json' + urlPath + '.json'
-  console.log(file)
+  console.log('读取路径：',file)
   fs.exists(file, exists => {
     var result = {
       code: 0,

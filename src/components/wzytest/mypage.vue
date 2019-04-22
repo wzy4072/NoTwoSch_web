@@ -5,12 +5,11 @@
       <div class="lev-wrap" v-for="(cset,cIdx) in cCont.cList" :key="cIdx">
         <span>{{cset.checkItemName}}</span>
         <component
-          :is="cset.showAsTable ? 'CheckPlanA': 'CheckPlanB'"
+          :is="cset.showAsTable ? 'CheckShowA': 'CheckShowB'"
           :cols="cset.cols"
           :rows="cset.rows"
           :colForId="cset.colForId"
           :inited="cset.inited"
-          :where="cset.where"
         ></component>
       </div>
     </el-row>
@@ -21,15 +20,15 @@
 import api from "./api.js";
 import cMixin from "./common/cMixin.js";
 
-import CheckPlanA from "./common/checkPlanA.vue";
-import CheckPlanB from "./common/checkPlanB.vue";
+import CheckShowB from "./common/checkShowB.vue";
+import CheckShowA from "./common/checkShowA.vue";
 
 export default {
   name: "mypage",
   mixins: [cMixin],
   components: {
-    CheckPlanA,
-    CheckPlanB
+    CheckShowA,
+    CheckShowB
   },
   data() {
     return {
@@ -57,30 +56,13 @@ export default {
               };
 
               cItem.cList = cc.studentCheckItemList.map(cd => {
-                return Object.assign({}, this.initPageBlock(cd), {
+                return Object.assign({}, this.initPageBlock(cd, true), {
                   where: {
                     checkContId: cc.checkContId,
                     checkItemId: cd.checkItemId
                   }
                 });
               });
-              // cItem.cList = cc.studentCheckItemList.map(ci => {
-              //   let iItem = {
-              //     checkItemId: ci.checkItemId,
-              //     checkItemName: ci.checkItemName,
-              //     iList: []
-              //   };
-              //   iItem.iList = ci.detailList.map(cd => {
-              //     return Object.assign({}, this.initPageBlock(cd), {
-              //       where: {
-              //         checkContId: cc.checkContId,
-              //         checkItemId: ci.checkItemId,
-              //         checkDetailId: cd.checkDetailId
-              //       }
-              //     });
-              //   });
-              //   return iItem;
-              // });
               return cItem;
             });
           } else {

@@ -1,0 +1,15 @@
+{
+    "code": 1,
+    "desc": "success",
+    "recordCount": null,
+    "currentPage": null,
+    "data": {
+        "applyRecordId": 1,
+        "attName": "图片",
+        "attSize": 1000,
+        "attType": "jpg",
+        "attUrl": "www.baidu.com",
+        "thumbnaiUrl": "www.baidu.com"
+    },
+    "list": null
+}

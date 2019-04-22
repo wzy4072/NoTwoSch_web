@@ -1,0 +1,301 @@
+{
+    "code": 1,
+    "desc": "success",
+    "recordCount": 1,
+    "currentPage": null,
+    "data": null,
+    "list": [
+        {
+            "checkPlanId": 1,
+            "checkPlanName": "2018第一学期素质方案",
+            "semesterName": "2018-2019学年",
+            "studentName": "蔡宗展",
+            "seatNum": 45,
+            "studentApplyDetailList": [
+                {
+                    "checkContId": 1,
+                    "checkContName": "思想品德",
+                    "studentCheckItemList": [
+                        {
+                            "checkItemId": 1,
+                            "checkItemName": "活动项目",
+                            "detailList": [
+                                {
+                                    "checkDetailId": 1,
+                                    "checkDetailName": "党团活动",
+                                    "checkDetailIndex": 1,
+                                    "rowToColIndex": null,
+                                    "fieldType": "file",
+                                    "fieldPrompt": null,
+                                    "fieldTextLen": null,
+                                    "fieldMinvalue": null,
+                                    "fieldMaxvalue": null,
+                                    "comboOption": null,
+                                    "needFile": 1,
+                                    "fileCount": 5,
+                                    "singleFileSize": 10,
+                                    "detailList": [
+                                        {
+                                            "checkDetailId": 2,
+                                            "checkDetailName": "累计次数（次）",
+                                            "checkDetailIndex": 1,
+                                            "rowToColIndex": 1,
+                                            "fieldType": "number",
+                                            "fieldPrompt": "请输入正整数",
+                                            "fieldTextLen": null,
+                                            "fieldMinvalue": null,
+                                            "fieldMaxvalue": null,
+                                            "comboOption": null,
+                                            "needFile": null,
+                                            "fileCount": null,
+                                            "singleFileSize": null,
+                                            "detailList": null
+                                        },
+                                        {
+                                            "checkDetailId": 3,
+                                            "checkDetailName": "累计时间（小时）",
+                                            "checkDetailIndex": 2,
+                                            "rowToColIndex": 2,
+                                            "fieldType": "number",
+                                            "fieldPrompt": "请输入正整数",
+                                            "fieldTextLen": null,
+                                            "fieldMinvalue": null,
+                                            "fieldMaxvalue": null,
+                                            "comboOption": null,
+                                            "needFile": null,
+                                            "fileCount": null,
+                                            "singleFileSize": null,
+                                            "detailList": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "checkDetailId": 4,
+                                    "checkDetailName": "社团活动",
+                                    "checkDetailIndex": 2,
+                                    "rowToColIndex": null,
+                                    "fieldType": "file",
+                                    "fieldPrompt": null,
+                                    "fieldTextLen": null,
+                                    "fieldMinvalue": null,
+                                    "fieldMaxvalue": null,
+                                    "comboOption": null,
+                                    "needFile": 1,
+                                    "fileCount": 5,
+                                    "singleFileSize": 10,
+                                    "detailList": [
+                                        {
+                                            "checkDetailId": 5,
+                                            "checkDetailName": "累计次数（次）",
+                                            "checkDetailIndex": 3,
+                                            "rowToColIndex": 1,
+                                            "fieldType": "number",
+                                            "fieldPrompt": "请输入正整数",
+                                            "fieldTextLen": null,
+                                            "fieldMinvalue": null,
+                                            "fieldMaxvalue": null,
+                                            "comboOption": null,
+                                            "needFile": null,
+                                            "fileCount": null,
+                                            "singleFileSize": null,
+                                            "detailList": null
+                                        },
+                                        {
+                                            "checkDetailId": 6,
+                                            "checkDetailName": "累计时间（小时）",
+                                            "checkDetailIndex": 4,
+                                            "rowToColIndex": 2,
+                                            "fieldType": "number",
+                                            "fieldPrompt": "请输入正数",
+                                            "fieldTextLen": null,
+                                            "fieldMinvalue": null,
+                                            "fieldMaxvalue": null,
+                                            "comboOption": null,
+                                            "needFile": null,
+                                            "fileCount": null,
+                                            "singleFileSize": null,
+                                            "detailList": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "checkDetailId": 7,
+                                    "checkDetailName": "志愿服务",
+                                    "checkDetailIndex": 3,
+                                    "rowToColIndex": null,
+                                    "fieldType": "file",
+                                    "fieldPrompt": null,
+                                    "fieldTextLen": null,
+                                    "fieldMinvalue": null,
+                                    "fieldMaxvalue": null,
+                                    "comboOption": null,
+                                    "needFile": 1,
+                                    "fileCount": 5,
+                                    "singleFileSize": 10,
+                                    "detailList": [
+                                        {
+                                            "checkDetailId": 9,
+                                            "checkDetailName": "累计次数（次）",
+                                            "checkDetailIndex": 5,
+                                            "rowToColIndex": 1,
+                                            "fieldType": "number",
+                                            "fieldPrompt": "请输入正整数",
+                                            "fieldTextLen": null,
+                                            "fieldMinvalue": null,
+                                            "fieldMaxvalue": null,
+                                            "comboOption": null,
+                                            "needFile": null,
+                                            "fileCount": null,
+                                            "singleFileSize": null,
+                                            "detailList": null
+                                        },
+                                        {
+                                            "checkDetailId": 10,
+                                            "checkDetailName": "累计时间（小时）",
+                                            "checkDetailIndex": 6,
+                                            "rowToColIndex": 2,
+                                            "fieldType": "number",
+                                            "fieldPrompt": "请输入正数",
+                                            "fieldTextLen": null,
+                                            "fieldMinvalue": null,
+                                            "fieldMaxvalue": null,
+                                            "comboOption": null,
+                                            "needFile": null,
+                                            "fileCount": null,
+                                            "singleFileSize": null,
+                                            "detailList": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "checkDetailId": 8,
+                                    "checkDetailName": "公益服务",
+                                    "checkDetailIndex": 4,
+                                    "rowToColIndex": null,
+                                    "fieldType": "file",
+                                    "fieldPrompt": null,
+                                    "fieldTextLen": null,
+                                    "fieldMinvalue": null,
+                                    "fieldMaxvalue": null,
+                                    "comboOption": null,
+                                    "needFile": 1,
+                                    "fileCount": 5,
+                                    "singleFileSize": 10,
+                                    "detailList": [
+                                        {
+                                            "checkDetailId": 11,
+                                            "checkDetailName": "累计次数（次）",
+                                            "checkDetailIndex": 7,
+                                            "rowToColIndex": 1,
+                                            "fieldType": "number",
+                                            "fieldPrompt": "请输入正整数",
+                                            "fieldTextLen": null,
+                                            "fieldMinvalue": null,
+                                            "fieldMaxvalue": null,
+                                            "comboOption": null,
+                                            "needFile": null,
+                                            "fileCount": null,
+                                            "singleFileSize": null,
+                                            "detailList": null
+                                        },
+                                        {
+                                            "checkDetailId": 12,
+                                            "checkDetailName": "累计时间（小时）",
+                                            "checkDetailIndex": 8,
+                                            "rowToColIndex": 2,
+                                            "fieldType": "number",
+                                            "fieldPrompt": "请输入正数",
+                                            "fieldTextLen": null,
+                                            "fieldMinvalue": null,
+                                            "fieldMaxvalue": null,
+                                            "comboOption": null,
+                                            "needFile": null,
+                                            "fileCount": null,
+                                            "singleFileSize": null,
+                                            "detailList": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "checkItemId": 2,
+                            "checkItemName": "先进个人荣誉称号",
+                            "detailList": [
+                                {
+                                    "checkDetailId": 13,
+                                    "checkDetailName": "先进个人荣誉称号",
+                                    "checkDetailIndex": 1,
+                                    "rowToColIndex": null,
+                                    "fieldType": "text",
+                                    "fieldPrompt": "请输入先进荣誉名称，最多35字",
+                                    "fieldTextLen": 35,
+                                    "fieldMinvalue": null,
+                                    "fieldMaxvalue": null,
+                                    "comboOption": null,
+                                    "needFile": 1,
+                                    "fileCount": 5,
+                                    "singleFileSize": 10,
+                                    "detailList": []
+                                },
+                                {
+                                    "checkDetailId": 14,
+                                    "checkDetailName": "日期",
+                                    "checkDetailIndex": 2,
+                                    "rowToColIndex": null,
+                                    "fieldType": "date",
+                                    "fieldPrompt": "请选择日期",
+                                    "fieldTextLen": null,
+                                    "fieldMinvalue": null,
+                                    "fieldMaxvalue": null,
+                                    "comboOption": null,
+                                    "needFile": null,
+                                    "fileCount": null,
+                                    "singleFileSize": null,
+                                    "detailList": []
+                                },
+                                {
+                                    "checkDetailId": 15,
+                                    "checkDetailName": "级别",
+                                    "checkDetailIndex": 3,
+                                    "rowToColIndex": null,
+                                    "fieldType": "select",
+                                    "fieldPrompt": "请选择",
+                                    "fieldTextLen": null,
+                                    "fieldMinvalue": null,
+                                    "fieldMaxvalue": null,
+                                    "comboOption": "国家;省;市;区县;学校",
+                                    "needFile": null,
+                                    "fileCount": null,
+                                    "singleFileSize": null,
+                                    "detailList": []
+                                },
+                                {
+                                    "checkDetailId": 16,
+                                    "checkDetailName": "评选单位",
+                                    "checkDetailIndex": 4,
+                                    "rowToColIndex": null,
+                                    "fieldType": "text",
+                                    "fieldPrompt": "请输入评选单位名称，最多35字",
+                                    "fieldTextLen": 35,
+                                    "fieldMinvalue": null,
+                                    "fieldMaxvalue": null,
+                                    "comboOption": null,
+                                    "needFile": null,
+                                    "fileCount": null,
+                                    "singleFileSize": null,
+                                    "detailList": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "checkContId": 2,
+                    "checkContName": "学业水平",
+                    "studentCheckItemList": []
+                }
+            ]
+        }
+    ]
+}

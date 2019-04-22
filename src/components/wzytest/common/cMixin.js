@@ -1,7 +1,7 @@
 var cMixin = {
     methods: {
         // 根据页面判断使用哪一个页面
-        initPageBlock(bInfo) {
+        initPageBlock(bInfo, forShow) {
             // get table title
             // 判断是否是表格
             let showAsTable = false;
@@ -56,6 +56,7 @@ var cMixin = {
                     });
                 }
             });
+
             let rows = [];
             let colForId = {};
             if (showAsTable) {
@@ -64,6 +65,7 @@ var cMixin = {
                     label: bInfo.checkItemName,
                     cellInfo: {}
                 });
+
 
                 bInfo.detailList.map(detail => {
                     let row = {
@@ -81,6 +83,12 @@ var cMixin = {
                     rows.push(row);
                 });
             }
+            // if (forShow) {
+            //     cols.push({
+            //         prop: "status",
+            //         label: '当前状态',
+            //     });
+            // }
 
             let inited = !0;
             // 根据初始数据 整理出 表头、表体 id查找工具 附件信息

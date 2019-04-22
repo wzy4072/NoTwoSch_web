@@ -1,0 +1,80 @@
+{
+    "code": 1,
+    "desc": "success",
+    "recordCount": null,
+    "currentPage": null,
+    "data": {
+        "checkItemId": 11,
+        "checkItemName": "先进个人荣誉称号",
+        "allowMultiRecord": 1,
+        "studentCanInput": 1,
+        "mustInputFlag": 1,
+        "checkDetailList": [
+            {
+                "checkDetailId": 21,
+                "checkDetailName": "先进个人荣誉称号",
+                "checkDetailIndex": null,
+                "rowToColIndex": null,
+                "fieldType": "input",
+                "fieldPrompt": "请输入",
+                "fieldTextLen": null,
+                "fieldMinvalue": null,
+                "fieldMaxvalue": null,
+                "comboOption": null,
+                "needFile": 1,
+                "fileCount": null,
+                "singleFileSize": null,
+                "detailList": null
+            },
+            {
+                "checkDetailId": 22,
+                "checkDetailName": "日期",
+                "checkDetailIndex": null,
+                "rowToColIndex": null,
+                "fieldType": "input",
+                "fieldPrompt": "请输入",
+                "fieldTextLen": null,
+                "fieldMinvalue": null,
+                "fieldMaxvalue": null,
+                "comboOption": null,
+                "needFile": 1,
+                "fileCount": null,
+                "singleFileSize": null,
+                "detailList": null
+            },
+            {
+                "checkDetailId": 23,
+                "checkDetailName": "级别",
+                "checkDetailIndex": null,
+                "rowToColIndex": null,
+                "fieldType": "input",
+                "fieldPrompt": "请输入",
+                "fieldTextLen": 35,
+                "fieldMinvalue": null,
+                "fieldMaxvalue": null,
+                "comboOption": null,
+                "needFile": 1,
+                "fileCount": null,
+                "singleFileSize": null,
+                "detailList": null
+            },
+            {
+                "checkDetailId": 24,
+                "checkDetailName": "评选单位",
+                "checkDetailIndex": null,
+                "rowToColIndex": null,
+                "fieldType": "input",
+                "fieldPrompt": "请输入",
+                "fieldTextLen": 35,
+                "fieldMinvalue": null,
+                "fieldMaxvalue": null,
+                "comboOption": null,
+                "needFile": 1,
+                "fileCount": null,
+                "singleFileSize": null,
+                "detailList": null
+            }
+        ]
+    },
+    "list": null
+}
